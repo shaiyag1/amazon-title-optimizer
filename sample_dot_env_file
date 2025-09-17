@@ -1,0 +1,5 @@
+# Environment variables for Title Optimizer
+OPENAI_API_KEY=your_openai_api_key_here
+LLM_MODEL_NAME=gpt-3.5-turbo
+MAX_TOKENS=500
+TEMPERATURE=0.7
