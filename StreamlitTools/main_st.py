@@ -764,22 +764,68 @@ def main():
                     
                     # Show search term selection for optimization
                     if 'product_search_terms' in locals() and len(product_search_terms) > 0:
-                        st.write("**Select Search Term for Optimization:**")
+                        st.write("**Select Search Terms for Optimization:**")
                         
-                        # Get all search terms for this product
-                        all_product_terms = product_search_terms['search_term'].unique()
-                        all_product_terms = sorted(all_product_terms)
+                        # Get all search terms for this product with cluster info
+                        search_terms_with_clusters = []
+                        for _, row in product_search_terms.iterrows():
+                            cluster_id = row['cluster_id']
+                            search_term = row['search_term']
+                            display_text = f"[Cluster {cluster_id}] {search_term}"
+                            search_terms_with_clusters.append((display_text, search_term, cluster_id))
                         
-                        # Create a selectbox for all search terms for this product
-                        selected_search_term = st.selectbox(
-                            "Choose Search Term to Optimize For:",
-                            all_product_terms,
-                            help="Select the search term you want to optimize the title for"
+                        # Sort by cluster ID, then by search term
+                        search_terms_with_clusters.sort(key=lambda x: (x[2], x[1]))
+                        
+                        # Multi-select for search terms
+                        selected_display_terms = st.multiselect(
+                            "Choose Search Terms to Optimize For:",
+                            [item[0] for item in search_terms_with_clusters],
+                            help="Select one or more search terms you want to optimize the title for"
+                        )
+                        
+                        # Manual search term input
+                        st.write("**Or Add Custom Search Terms:**")
+                        manual_search_terms = st.text_area(
+                            "Add custom search terms (one per line):",
+                            help="Enter additional search terms that aren't in the list above",
+                            height=100
+                        )
+                        
+                        # Process manual search terms
+                        custom_terms = []
+                        if manual_search_terms.strip():
+                            custom_terms = [term.strip() for term in manual_search_terms.split('\n') if term.strip()]
+                        
+                        # Extract the actual search terms (without cluster prefix)
+                        selected_search_terms = []
+                        for display_term in selected_display_terms:
+                            actual_term = next(item[1] for item in search_terms_with_clusters if item[0] == display_term)
+                            selected_search_terms.append(actual_term)
+                        
+                        # Combine selected and custom terms
+                        all_search_terms = selected_search_terms + custom_terms
+                        
+                        # Show selected terms
+                        if all_search_terms:
+                            st.write("**Selected Search Terms:**")
+                            for i, term in enumerate(all_search_terms, 1):
+                                st.write(f"{i}. {term}")
+                        else:
+                            st.warning("⚠️ Please select at least one search term or add custom terms")
+                        
+                        # Prompt mode selection
+                        st.write("**Optimization Mode:**")
+                        prompt_mode = st.selectbox(
+                            "Choose optimization approach:",
+                            ["preserve", "standard"],
+                            format_func=lambda x: "🛡️ Preserve Max Info (Default)" if x == "preserve" else "⚡ Standard Optimization",
+                            help="Preserve Max Info keeps most of the original title. Standard is more aggressive optimization."
                         )
                         
                         # Show optimization button
                         if st.button("🚀 Optimize Title", type="primary"):
-                            if 'title_optimizer' in st.session_state:
+                            if 'title_optimizer' in st.session_state and all_search_terms:
                                 try:
                                     # Prepare product data
                                     product_data = ProductData(
@@ -793,11 +839,14 @@ def main():
                                         features=selected_product.get('features', [])
                                     )
                                     
+                                    # Set prompt mode
+                                    st.session_state.title_optimizer.set_prompt_mode(prompt_mode)
+                                    
                                     # Optimize title
                                     with st.spinner("🔍 Optimizing title with AI..."):
                                         result = st.session_state.title_optimizer.optimize_title(
                                             product_data, 
-                                            selected_search_term
+                                            all_search_terms
                                         )
                                     
                                     # Store the optimized title for similarity calculation
@@ -858,9 +907,25 @@ def main():
                                         st.success(result.optimized_title)
                                     
                                     # Additional details
-                                    st.write(f"**Confidence Score:** {result.confidence_score:.2f}")
-                                    st.write(f"**Processing Time:** {result.processing_time:.2f} seconds")
-                                    st.write(f"**Model Used:** {result.model_used}")
+                                    col1, col2, col3 = st.columns(3)
+                                    with col1:
+                                        st.metric("Confidence Score", f"{result.confidence_score:.2f}")
+                                    with col2:
+                                        st.metric("Processing Time", f"{result.processing_time:.2f}s")
+                                    with col3:
+                                        st.metric("Model Used", result.model_used)
+                                    
+                                    # Show preservation metrics if available
+                                    if hasattr(result, 'preservation_score') and result.preservation_score > 0:
+                                        st.write("**📊 Preservation Metrics:**")
+                                        col1, col2 = st.columns(2)
+                                        with col1:
+                                            st.metric("Content Preserved", f"{result.preservation_score:.1f}%")
+                                        with col2:
+                                            original_len = len(result.original_title)
+                                            optimized_len = len(result.optimized_title)
+                                            length_change = ((optimized_len - original_len) / original_len) * 100
+                                            st.metric("Length Change", f"{length_change:+.1f}%")
                                     
                                     # Reasoning
                                     with st.expander("🧠 Optimization Reasoning", expanded=True):
@@ -883,6 +948,8 @@ def main():
                                 except Exception as e:
                                     st.error(f"❌ Error during optimization: {e}")
                                     st.info("Please check your API key and try again")
+                            elif not all_search_terms:
+                                st.error("❌ Please select at least one search term or add custom terms")
                             else:
                                 st.error("❌ Title optimizer not initialized")
                     else:

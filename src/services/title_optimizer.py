@@ -22,7 +22,69 @@ class TitleOptimizer:
     
     def _load_prompts(self):
         """Load optimization prompt templates"""
+        
+        # Default: Keep Max Info Prompt (prioritizes preserving original content)
         self.optimization_prompt = """
+You are an expert Amazon product title optimizer. Your PRIMARY GOAL is to preserve as much of the original title as possible while incorporating target search terms naturally.
+
+PRODUCT INFORMATION:
+- Product ID: {product_id}
+- Current Title: {current_title}
+- Brand: {brand}
+- Description: {description}
+- Product Type: {product_type}
+- Manufacturer: {manufacturer}
+- Category: {category}
+- Features: {features}
+
+{search_terms_instruction}
+
+CRITICAL PRESERVATION RULES (in order of priority):
+1. PRESERVE FIRST: Keep 90%+ of the original title content
+2. LENGTH PRESERVATION: Keep the optimized title similar in length to the original (within 20% difference)
+3. CONTENT PRESERVATION: Don't remove important specifications, quantities, or features
+4. STRUCTURE PRESERVATION: Maintain the original title's structure and flow
+5. HONESTY: Never add features that don't exist in the original
+
+OPTIMIZATION STRATEGY:
+- ADDITIVE APPROACH: Add target search terms to existing content
+- ENHANCEMENT APPROACH: Replace weak/generic words with target terms
+- INTEGRATION APPROACH: Weave target terms into existing phrases
+- MINIMAL REMOVAL: Only remove redundant words if absolutely necessary
+
+LENGTH GUIDELINES:
+- If original title is under 150 chars: Keep optimized title under 200 chars
+- If original title is 150-200 chars: Keep optimized title under 250 chars
+- If original title exceeds 200 chars: Keep optimized title within 20% of original length
+
+EXAMPLES OF GOOD PRESERVATION:
+Original: "Purity Eyeglass Len Cleaner Kit - Includes Eyeglass Lens Cleaner Kit (2x8oz & 1x2oz Lens Cleaner)& 6 Microfiber Lens Cleaning Cloths - for Eyeglasses,Screens,Lenses, Phones and Other Delicate Surfaces"
+Target: "eyeglass cleaner refill, Spray"
+Good: "Purity Eyeglass Lens Cleaner Kit Refill Spray - Includes Eyeglass Lens Cleaner Kit (2x8oz & 1x2oz Lens Cleaner) & 6 Microfiber Lens Cleaning Cloths - for Eyeglasses, Screens, Lenses, Phones and Other Delicate Surfaces"
+Bad: "Eyeglass Lens Cleaner Kit Refill Spray - Includes 2x8oz & 1x2oz Lens Cleaner, 6 Microfiber Cloths" (loses too much)
+
+RESPONSE FORMAT:
+Provide your response in this exact format:
+
+OPTIMIZED_TITLE: [Your optimized title here]
+CONFIDENCE: [Score from 0.0 to 1.0]
+REASONING: [Brief explanation focusing on what you preserved vs. what you changed]
+PRESERVATION_SCORE: [Percentage of original content preserved, 0-100]
+KEYWORDS_USED: [List of keywords you incorporated]
+CHANGES_MADE: [Specific changes: Added/Removed/Moved elements]
+WARNINGS: [Any concerns or limitations, or "None" if no concerns]
+
+SUCCESS METRICS:
+- High preservation score (80%+)
+- Similar length to original
+- All target search terms incorporated
+- Original specifications maintained
+
+Now optimize the title while preserving maximum original content:
+"""
+
+        # Alternative: Standard Prompt (more aggressive optimization)
+        self.standard_optimization_prompt = """
 You are an expert Amazon product title optimizer. Your task is to optimize a product title to better match a target search term while maintaining honesty and accuracy.
 
 PRODUCT INFORMATION:
@@ -35,12 +97,12 @@ PRODUCT INFORMATION:
 - Category: {category}
 - Features: {features}
 
-TARGET SEARCH TERM: {target_search_term}
+{search_terms_instruction}
 
 OPTIMIZATION RULES:
 1. Be completely honest - don't add features that don't exist
 2. Keep the brand name if it exists
-3. Include the target search term naturally in the title
+3. Include the target search term(s) naturally in the title
 4. Maintain Amazon title best practices (under 200 characters)
 5. Keep important specifications and key features
 6. Don't make false claims or misleading statements
@@ -118,20 +180,21 @@ Now optimize the title:
 
     Now optimize the title:
     """
-    def optimize_title(self, product_data: ProductData, target_search_term: str) -> OptimizationResult:
-        """Optimize product title for target search term"""
+    def optimize_title(self, product_data: ProductData, target_search_terms: List[str]) -> OptimizationResult:
+        """Optimize product title for target search terms"""
         start_time = time.time()
         
         try:
             # Prepare the prompt
-            prompt = self._prepare_prompt(product_data, target_search_term)
+            prompt = self._prepare_prompt(product_data, target_search_terms)
             
             # Get LLM response
-            self.logger.info(f"Optimizing title for product {product_data.product_id} with search term: {target_search_term}")
+            search_terms_str = ", ".join(target_search_terms)
+            self.logger.info(f"Optimizing title for product {product_data.product_id} with search terms: {search_terms_str}")
             response = self.llm_client.generate_response(prompt)
             
             # Parse the response
-            result = self._parse_response(response, product_data, target_search_term, start_time)
+            result = self._parse_response(response, product_data, target_search_terms, start_time)
             
             self.logger.info(f"Title optimization completed for product {product_data.product_id}")
             return result
@@ -140,10 +203,18 @@ Now optimize the title:
             self.logger.error(f"Error optimizing title: {e}")
             raise
     
-    def _prepare_prompt(self, product_data: ProductData, target_search_term: str) -> str:
+    def _prepare_prompt(self, product_data: ProductData, target_search_terms: List[str]) -> str:
         """Prepare the optimization prompt"""
         # Convert features list to string
         features_str = ", ".join(product_data.features) if product_data.features else "None"
+        
+        # Format search terms for the prompt
+        if len(target_search_terms) == 1:
+            search_terms_display = target_search_terms[0]
+            search_terms_instruction = f"TARGET SEARCH TERM: {target_search_terms[0]}"
+        else:
+            search_terms_display = ", ".join(target_search_terms)
+            search_terms_instruction = f"TARGET SEARCH TERMS: {', '.join(target_search_terms)}\n\nIMPORTANT: You must incorporate ALL of these search terms naturally into the optimized title. Prioritize the most important/relevant terms but try to include as many as possible."
         
         return self.optimization_prompt.format(
             product_id=product_data.product_id,
@@ -154,10 +225,11 @@ Now optimize the title:
             manufacturer=product_data.manufacturer or "Not specified",
             category=product_data.category or "Not specified",
             features=features_str,
-            target_search_term=target_search_term
+            target_search_term=search_terms_display,
+            search_terms_instruction=search_terms_instruction
         )
     
-    def _parse_response(self, response: str, product_data: ProductData, target_search_term: str, start_time: float) -> OptimizationResult:
+    def _parse_response(self, response: str, product_data: ProductData, target_search_terms: List[str], start_time: float) -> OptimizationResult:
         """Parse LLM response into OptimizationResult"""
         try:
             lines = response.strip().split('\n')
@@ -168,6 +240,8 @@ Now optimize the title:
             reasoning = "Unable to parse response"
             keywords_used = []
             warnings = ["Failed to parse LLM response"]
+            preservation_score = 0
+            changes_made = []
             
             # Parse each line
             for line in lines:
@@ -181,9 +255,17 @@ Now optimize the title:
                         confidence_score = 0.5
                 elif line.startswith('REASONING:'):
                     reasoning = line.replace('REASONING:', '').strip()
+                elif line.startswith('PRESERVATION_SCORE:'):
+                    try:
+                        preservation_score = float(line.replace('PRESERVATION_SCORE:', '').strip())
+                    except ValueError:
+                        preservation_score = 0
                 elif line.startswith('KEYWORDS_USED:'):
                     keywords_str = line.replace('KEYWORDS_USED:', '').strip()
                     keywords_used = [kw.strip() for kw in keywords_str.split(',') if kw.strip()]
+                elif line.startswith('CHANGES_MADE:'):
+                    changes_str = line.replace('CHANGES_MADE:', '').strip()
+                    changes_made = [c.strip() for c in changes_str.split(',') if c.strip()]
                 elif line.startswith('WARNINGS:'):
                     warnings_str = line.replace('WARNINGS:', '').strip()
                     if warnings_str.lower() != 'none':
@@ -196,7 +278,7 @@ Now optimize the title:
             return OptimizationResult(
                 original_title=product_data.current_title,
                 optimized_title=optimized_title,
-                target_search_term=target_search_term,
+                target_search_term=", ".join(target_search_terms),  # Join multiple terms for display
                 confidence_score=confidence_score,
                 optimization_reasoning=reasoning,
                 keywords_used=keywords_used,
@@ -211,7 +293,7 @@ Now optimize the title:
             return OptimizationResult(
                 original_title=product_data.current_title,
                 optimized_title=product_data.current_title,
-                target_search_term=target_search_term,
+                target_search_term=", ".join(target_search_terms),  # Join multiple terms for display
                 confidence_score=0.0,
                 optimization_reasoning=f"Error parsing response: {str(e)}",
                 keywords_used=[],
@@ -220,9 +302,21 @@ Now optimize the title:
                 model_used=self.llm_client.model_name
             )
     
+    def set_prompt_mode(self, mode: str = "preserve"):
+        """Set the optimization prompt mode"""
+        if mode == "preserve":
+            # Use the default preserve prompt (already loaded)
+            pass
+        elif mode == "standard":
+            # Switch to standard prompt
+            self.optimization_prompt = self.standard_optimization_prompt
+        else:
+            raise ValueError(f"Unknown prompt mode: {mode}. Use 'preserve' or 'standard'")
+    
     def get_optimizer_info(self) -> Dict[str, Any]:
         """Get information about the optimizer"""
         return {
             'llm_info': self.llm_client.get_model_info(),
-            'prompt_loaded': bool(self.optimization_prompt)
+            'prompt_loaded': bool(self.optimization_prompt),
+            'current_prompt_mode': 'preserve' if 'PRESERVE FIRST' in self.optimization_prompt else 'standard'
         }

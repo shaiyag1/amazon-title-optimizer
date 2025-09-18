@@ -1,0 +1,38 @@
+(deepenv) PS C:\Dev\DeepM\amazon_title_optimizer> python optimize_title_cli.py "Purity Eyeglass Len Cleaner Kit - Includes Eyeglass Lens Cleaner Kit (2x8oz & 1x2oz Lens Cleaner)& 6 Microfiber Lens Cleaning Cloths - for Eyeglasses,Screens,Lenses, Phones and Other Delicate Surfaces" "eyeglass cleaner refill"
+🔧 Initializing LLM client...
+🚀 Initializing title optimizer...
+
+================================================================================
+📋 OPTIMIZATION INPUT
+================================================================================
+Original Title: Purity Eyeglass Len Cleaner Kit - Includes Eyeglass Lens Cleaner Kit (2x8oz & 1x2oz Lens Cleaner)& 6 Microfiber Lens Cleaning Cloths - for Eyeglasses,Screens,Lenses, Phones and Other Delicate Surfaces
+Search Terms: eyeglass cleaner refill
+Optimization Mode: preserve
+LLM Model: gpt-3.5-turbo
+Title Length: 200 characters
+
+🔍 Optimizing title...
+
+================================================================================
+🎯 OPTIMIZATION RESULTS
+================================================================================
+✅ Optimized Title: Purity Eyeglass Lens Cleaner Kit Refill - Includes Eyeglass Lens Cleaner Kit (2x8oz & 1x2oz) & 6 Microfiber Lens Cleaning Cloths - for Eyeglasses, Screens, Lenses, Phones and Other Delicate Surfaces
+📊 Confidence Score: 0.90
+⏱️  Processing Time: 2.22 seconds
+📏 Length Change: -1.0% (200 → 198 chars)
+
+--------------------------------------------------------------------------------
+📊 BEFORE vs AFTER COMPARISON
+--------------------------------------------------------------------------------
+BEFORE: Purity Eyeglass Len Cleaner Kit - Includes Eyeglass Lens Cleaner Kit (2x8oz & 1x2oz Lens Cleaner)& 6 Microfiber Lens Cleaning Cloths - for Eyeglasses,Screens,Lenses, Phones and Other Delicate Surfaces
+AFTER:  Purity Eyeglass Lens Cleaner Kit Refill - Includes Eyeglass Lens Cleaner Kit (2x8oz & 1x2oz) & 6 Microfiber Lens Cleaning Cloths - for Eyeglasses, Screens, Lenses, Phones and Other Delicate Surfaces
+
+--------------------------------------------------------------------------------
+✅ SUCCESS INDICATORS
+--------------------------------------------------------------------------------
+🟢 High confidence optimization
+🟢 Length change within acceptable range (±20%)
+🟢 No warnings or concerns
+
+🎉 Optimization completed successfully!
+(deepenv) PS C:\Dev\DeepM\amazon_title_optimizer> ב
