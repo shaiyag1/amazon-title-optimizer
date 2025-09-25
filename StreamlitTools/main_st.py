@@ -506,10 +506,22 @@ def main():
             if selected_file == "Products":
                 # Create options for row selection
                 row_options = list(range(len(df_to_show)))
+                
+                # Safe format function that handles missing columns
+                def format_row_option(x):
+                    try:
+                        if 'title' in df_to_show.columns:
+                            title = str(df_to_show.iloc[x]['title'])
+                            return f"Row {x}: {title[:40]}..."
+                        else:
+                            return f"Row {x}"
+                    except (KeyError, IndexError):
+                        return f"Row {x}"
+                
                 selected_row = st.selectbox(
                     "Select Product Row:",
                     row_options,
-                    format_func=lambda x: f"Row {x}: {df_to_show.iloc[x]['title'][:40]}..." if 'title' in df_to_show.columns else f"Row {x}"
+                    format_func=format_row_option
                 )
             else:
                 selected_row = None

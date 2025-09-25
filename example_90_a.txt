@@ -1,50 +1,50 @@
-python optimize_title_cli.py "Purity Eyeglass Len Cleaner Kit - Includes Eyeglass Lens Cleaner Kit (2x8oz & 1x2oz Lens Cleaner)& 6 Microfiber Lens Cleaning Cloths - for Eyeglasses,Screens,Lenses, Phones and Other Delicate Surfaces" "eyeglass cleaner refill"
+(deepenv) PS C:\Dev\DeepM\amazon_title_optimizer> python optimize_title_cli.py "Super Ninja Fruit Fly Traps for Indoors - 2 Traps - Highly Effective Eco-Friendly Fruit Fly Catcher for Indoors - Pet and Child Safe - Up to 3 Weeks per Bottle" "gnat killer indoor spray"
 🔧 Initializing LLM client...
 🚀 Initializing title optimizer...
 
 ================================================================================
 📋 OPTIMIZATION INPUT
 ================================================================================
-Original Title: Purity Eyeglass Len Cleaner Kit - Includes Eyeglass Lens Cleaner Kit (2x8oz & 1x2oz Lens Cleaner)& 6 Microfiber Lens Cleaning Cloths - for Eyeglasses,Screens,Lenses, Phones and Other Delicate Surfaces
-Search Terms: eyeglass cleaner refill
+Original Title: Super Ninja Fruit Fly Traps for Indoors - 2 Traps - Highly Effective Eco-Friendly Fruit Fly Catcher for Indoors - Pet and Child Safe - Up to 3 Weeks per Bottle
+Search Terms: gnat killer indoor spray
 Optimization Mode: preserve
 LLM Model: gpt-3.5-turbo
-Title Length: 200 characters
+Title Length: 159 characters
 🧠 Initializing LLM encoding service for similarity analysis...
 ✅ Encoding service ready!
 
 📊 Calculating BEFORE similarity scores...
-   'eyeglass cleaner refill': 0.587
+   'gnat killer indoor spray': 0.497
 
 🔍 Optimizing title...
 
 ================================================================================
 🎯 OPTIMIZATION RESULTS
 ================================================================================
-✅ Optimized Title: Purity Eyeglass Lens Cleaner Kit Refill - Includes Eyeglass Lens Cleaner Kit (2x8oz & 1x2oz) and 6 Microfiber Lens Cleaning Cloths - for Eyeglasses, Screens, Lenses, Phones, and Other Delicate Surfaces
-📊 Confidence Score: 0.85
-⏱️  Processing Time: 2.61 seconds
-📏 Length Change: +0.5% (200 → 201 chars)
+✅ Optimized Title: Super Ninja Fruit Fly Traps for Indoors - 2 Traps - Highly Effective Gnat Killer Indoor Spray - Eco-Friendly Fruit Fly Catcher for Indoors - Pet and Child Safe - Up to 3 Weeks per Bottle
+📊 Confidence Score: 0.90
+⏱️  Processing Time: 2.62 seconds
+📏 Length Change: +17.0% (159 → 186 chars)
 
 📊 Calculating AFTER similarity scores...
-   'eyeglass cleaner refill': 0.706
+   'gnat killer indoor spray': 0.699
 
 --------------------------------------------------------------------------------
 🎯 SIMILARITY SCORE COMPARISON
 --------------------------------------------------------------------------------
 Search Term               BEFORE   AFTER    CHANGE   STATUS
 --------------------------------------------------------------------------------
-eyeglass cleaner refill   0.587    0.706    +0.118 (+20.2%) 🟢 IMPROVED
+gnat killer indoor spray  0.497    0.699    +0.202 (+40.6%) 🟢 IMPROVED
 --------------------------------------------------------------------------------
-Average Improvement: +0.118
+Average Improvement: +0.202
 Terms Improved: 1/1
 🎉 Overall: SIGNIFICANT IMPROVEMENT!
 
 --------------------------------------------------------------------------------
 📊 BEFORE vs AFTER COMPARISON
 --------------------------------------------------------------------------------
-BEFORE: Purity Eyeglass Len Cleaner Kit - Includes Eyeglass Lens Cleaner Kit (2x8oz & 1x2oz Lens Cleaner)& 6 Microfiber Lens Cleaning Cloths - for Eyeglasses,Screens,Lenses, Phones and Other Delicate Surfaces
-AFTER:  Purity Eyeglass Lens Cleaner Kit Refill - Includes Eyeglass Lens Cleaner Kit (2x8oz & 1x2oz) and 6 Microfiber Lens Cleaning Cloths - for Eyeglasses, Screens, Lenses, Phones, and Other Delicate Surfaces
+BEFORE: Super Ninja Fruit Fly Traps for Indoors - 2 Traps - Highly Effective Eco-Friendly Fruit Fly Catcher for Indoors - Pet and Child Safe - Up to 3 Weeks per Bottle
+AFTER:  Super Ninja Fruit Fly Traps for Indoors - 2 Traps - Highly Effective Gnat Killer Indoor Spray - Eco-Friendly Fruit Fly Catcher for Indoors - Pet and Child Safe - Up to 3 Weeks per Bottle
 
 --------------------------------------------------------------------------------
 ✅ SUCCESS INDICATORS
@@ -56,3 +56,4 @@ AFTER:  Purity Eyeglass Lens Cleaner Kit Refill - Includes Eyeglass Lens Cleaner
 📈 1/1 search terms improved
 
 🎉 Optimization completed successfully!
+(deepenv) PS C:\Dev\DeepM\amazon_title_optimizer> ב

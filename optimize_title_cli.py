@@ -16,6 +16,7 @@ sys.path.insert(0, str(Path(__file__).parent / "src"))
 from services.llm_client import LLMClient
 from services.title_optimizer import TitleOptimizer
 from services.data_models import ProductData
+from services.encoding_service import EncodingService
 
 
 def main():
@@ -74,6 +75,12 @@ Examples:
         help="Show detailed output including reasoning and metrics"
     )
     
+    parser.add_argument(
+        "--no-similarity",
+        action="store_true",
+        help="Skip LLM similarity calculations (faster but less detailed)"
+    )
+    
     # Parse arguments
     args = parser.parse_args()
     
@@ -128,6 +135,31 @@ Examples:
         print(f"LLM Model: {args.model}")
         print(f"Title Length: {len(args.original_title)} characters")
         
+        # Initialize encoding service for similarity calculations (if not skipped)
+        encoding_service = None
+        if not args.no_similarity:
+            try:
+                print("🧠 Initializing LLM encoding service for similarity analysis...")
+                encoding_service = EncodingService(model_name="sentence-transformers/all-MiniLM-L6-v2")
+                print("✅ Encoding service ready!")
+            except Exception as e:
+                print(f"⚠️  Warning: Could not initialize encoding service: {e}")
+                print("   Continuing without similarity analysis...")
+                encoding_service = None
+        
+        # Calculate BEFORE similarity scores
+        before_similarities = {}
+        if encoding_service:
+            print("\n📊 Calculating BEFORE similarity scores...")
+            try:
+                similarities = encoding_service.calculate_similarities(args.original_title, search_terms)
+                for term, similarity in similarities:
+                    before_similarities[term] = similarity
+                    print(f"   '{term}': {similarity:.3f}")
+            except Exception as e:
+                print(f"⚠️  Error calculating before similarities: {e}")
+                before_similarities = {}
+        
         # Run optimization
         print("\n🔍 Optimizing title...")
         result = optimizer.optimize_title(product_data, search_terms)
@@ -147,6 +179,19 @@ Examples:
         length_change = ((optimized_len - original_len) / original_len) * 100
         print(f"📏 Length Change: {length_change:+.1f}% ({original_len} → {optimized_len} chars)")
         
+        # Calculate AFTER similarity scores
+        after_similarities = {}
+        if encoding_service:
+            print("\n📊 Calculating AFTER similarity scores...")
+            try:
+                similarities = encoding_service.calculate_similarities(result.optimized_title, search_terms)
+                for term, similarity in similarities:
+                    after_similarities[term] = similarity
+                    print(f"   '{term}': {similarity:.3f}")
+            except Exception as e:
+                print(f"⚠️  Error calculating after similarities: {e}")
+                after_similarities = {}
+        
         if args.verbose:
             print("\n" + "-"*80)
             print("📝 DETAILED ANALYSIS")
@@ -161,6 +206,47 @@ Examples:
             
             if hasattr(result, 'changes_made') and result.changes_made:
                 print(f"Changes Made: {', '.join(result.changes_made)}")
+        
+        # Show similarity comparison if available
+        if before_similarities and after_similarities:
+            print("\n" + "-"*80)
+            print("🎯 SIMILARITY SCORE COMPARISON")
+            print("-"*80)
+            print(f"{'Search Term':<25} {'BEFORE':<8} {'AFTER':<8} {'CHANGE':<8} {'STATUS'}")
+            print("-" * 80)
+            
+            total_improvement = 0
+            improved_terms = 0
+            
+            for term in search_terms:
+                before = before_similarities.get(term, 0)
+                after = after_similarities.get(term, 0)
+                change = after - before
+                change_pct = (change / before * 100) if before > 0 else 0
+                
+                if change > 0:
+                    status = "🟢 IMPROVED"
+                    improved_terms += 1
+                elif change < -0.05:  # Significant decrease
+                    status = "🔴 WORSE"
+                else:
+                    status = "🟡 SIMILAR"
+                
+                total_improvement += change
+                
+                print(f"{term:<25} {before:<8.3f} {after:<8.3f} {change:+.3f} ({change_pct:+.1f}%) {status}")
+            
+            print("-" * 80)
+            avg_improvement = total_improvement / len(search_terms)
+            print(f"Average Improvement: {avg_improvement:+.3f}")
+            print(f"Terms Improved: {improved_terms}/{len(search_terms)}")
+            
+            if avg_improvement > 0.05:
+                print("🎉 Overall: SIGNIFICANT IMPROVEMENT!")
+            elif avg_improvement > 0:
+                print("✅ Overall: MODERATE IMPROVEMENT")
+            else:
+                print("⚠️  Overall: NO IMPROVEMENT or DECREASE")
         
         # Show comparison
         print("\n" + "-"*80)
@@ -190,6 +276,22 @@ Examples:
             print("🟢 No warnings or concerns")
         else:
             print(f"🟡 {len(result.warnings)} warning(s) - check details above")
+        
+        # Similarity improvement indicators
+        if before_similarities and after_similarities:
+            avg_improvement = sum(after_similarities[term] - before_similarities[term] for term in search_terms) / len(search_terms)
+            improved_count = sum(1 for term in search_terms if after_similarities[term] > before_similarities[term])
+            
+            if avg_improvement > 0.05:
+                print("🎉 Excellent similarity improvement!")
+            elif avg_improvement > 0:
+                print("✅ Good similarity improvement")
+            else:
+                print("⚠️  No similarity improvement detected")
+            
+            print(f"📈 {improved_count}/{len(search_terms)} search terms improved")
+        else:
+            print("ℹ️  Similarity analysis skipped (use without --no-similarity for detailed analysis)")
         
         print("\n🎉 Optimization completed successfully!")
         
