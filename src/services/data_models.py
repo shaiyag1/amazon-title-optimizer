@@ -55,10 +55,14 @@ class OptimizationResult:
     warnings: List[str]
     processing_time: float  # seconds
     model_used: str
+    # Feature refinement fields
+    original_features: Optional[str] = None
+    refined_features: Optional[str] = None
+    feature_refinement_mode: bool = False
     
     def to_dict(self) -> Dict[str, Any]:
         """Convert to dictionary for display"""
-        return {
+        result = {
             'original_title': self.original_title,
             'optimized_title': self.optimized_title,
             'target_search_term': self.target_search_term,
@@ -67,5 +71,14 @@ class OptimizationResult:
             'keywords_used': self.keywords_used,
             'warnings': self.warnings,
             'processing_time': self.processing_time,
-            'model_used': self.model_used
+            'model_used': self.model_used,
+            'feature_refinement_mode': self.feature_refinement_mode
         }
+        
+        # Add feature fields if they exist
+        if self.original_features is not None:
+            result['original_features'] = self.original_features
+        if self.refined_features is not None:
+            result['refined_features'] = self.refined_features
+            
+        return result

@@ -504,25 +504,53 @@ def main():
             
             # Product selection (only for Products file)
             if selected_file == "Products":
-                # Create options for row selection
-                row_options = list(range(len(df_to_show)))
+                # Add checkbox to filter products with search terms
+                show_only_with_search_terms = st.checkbox(
+                    "Show only products with search terms", 
+                    value=False,
+                    help="Filter the product list to only show products that have associated search terms"
+                )
                 
-                # Safe format function that handles missing columns
-                def format_row_option(x):
+                # Filter products based on checkbox selection
+                if show_only_with_search_terms and st.session_state.keywords_df is not None:
+                    # Get product IDs that have search terms
+                    products_with_search_terms = set(st.session_state.keywords_df['product_id'].astype(str))
+                    
+                    # Filter df_to_show to only include products with search terms
+                    filtered_df = df_to_show[df_to_show['product_id'].astype(str).isin(products_with_search_terms)]
+                    
+                    if len(filtered_df) == 0:
+                        st.warning("⚠️ No products found with search terms. Showing all products.")
+                        filtered_df = df_to_show
+                        show_only_with_search_terms = False
+                    else:
+                        st.info(f"🔍 Showing {len(filtered_df)} products with search terms (out of {len(df_to_show)} total)")
+                else:
+                    filtered_df = df_to_show
+                
+                # Create options for row selection based on filtered data
+                # Use original indices to preserve indexing
+                row_options = filtered_df.index.tolist()
+                
+                # Safe format function that handles missing columns and preserves original row numbers
+                def format_row_option(original_index):
                     try:
-                        if 'title' in df_to_show.columns:
-                            title = str(df_to_show.iloc[x]['title'])
-                            return f"Row {x}: {title[:40]}..."
+                        if 'title' in filtered_df.columns:
+                            title = str(filtered_df.loc[original_index, 'title'])
+                            return f"Row {original_index}: {title[:40]}..."
                         else:
-                            return f"Row {x}"
+                            return f"Row {original_index}"
                     except (KeyError, IndexError):
-                        return f"Row {x}"
+                        return f"Row {original_index}"
                 
                 selected_row = st.selectbox(
                     "Select Product Row:",
                     row_options,
                     format_func=format_row_option
                 )
+                
+                # Update df_to_show to use filtered data for display
+                df_to_show = filtered_df
             else:
                 selected_row = None
             
@@ -553,20 +581,56 @@ def main():
             if selected_file == "Products" and selected_row is not None:
                 st.subheader("🎯 Selected Product Details")
                 
-                # Get selected product data
-                selected_product = df_to_show.iloc[selected_row]
+                # Get selected product data using the original index
+                selected_product = df_to_show.loc[selected_row]
                 
-                # Display product information in columns
-                col1, col2 = st.columns(2)
-                with col1:
-                    st.write(f"**Product ID:** {selected_product['product_id']}")
-                    if 'title' in selected_product:
-                        st.write(f"**Title:** {selected_product['title']}")
-                with col2:
-                    if 'brand' in selected_product:
-                        st.write(f"**Brand:** {selected_product['brand']}")
-                    if 'product_type' in selected_product:
-                        st.write(f"**Type:** {selected_product['product_type']}")
+                # Display product information
+                st.write(f"**Product ID:** {selected_product['product_id']}")
+                
+                if 'title' in selected_product:
+                    st.write(f"**Title:** {selected_product['title']}")
+                
+                # Display features if available, otherwise show brand and type
+                if 'features' in selected_product and pd.notna(selected_product['features']) and str(selected_product['features']).strip():
+                    st.write("**Features:**")
+                    # Parse and display features as bullet points
+                    features_text = str(selected_product['features']).strip()
+                    
+                    # Decode HTML entities
+                    import html
+                    features_text = html.unescape(features_text)
+                    
+                    # Split by common delimiters and clean up
+                    if ';' in features_text:
+                        features_list = [f.strip() for f in features_text.split(';') if f.strip()]
+                    elif '\n' in features_text:
+                        features_list = [f.strip() for f in features_text.split('\n') if f.strip()]
+                    elif ',' in features_text:
+                        features_list = [f.strip() for f in features_text.split(',') if f.strip()]
+                    else:
+                        features_list = [features_text]
+                    
+                    # Clean up and display features
+                    for feature in features_list:
+                        if feature:
+                            # Remove HTML entities that are just symbols and clean up
+                            cleaned_feature = feature.strip()
+                            # Remove standalone symbols like ⭐ and ✅ that don't add value
+                            if cleaned_feature in ['⭐', '✅', '•', '▪', '▫']:
+                                continue
+                            # Remove leading symbols and clean up
+                            cleaned_feature = cleaned_feature.lstrip('⭐✅•▪▫').strip()
+                            if cleaned_feature and len(cleaned_feature) > 3:  # Only show meaningful features
+                                st.write(f"• {cleaned_feature}")
+                else:
+                    # Fallback to brand and type if no features
+                    col1, col2 = st.columns(2)
+                    with col1:
+                        if 'brand' in selected_product and pd.notna(selected_product['brand']):
+                            st.write(f"**Brand:** {selected_product['brand']}")
+                    with col2:
+                        if 'product_type' in selected_product and pd.notna(selected_product['product_type']):
+                            st.write(f"**Type:** {selected_product['product_type']}")
                 
                 # Add button to set this product for cluster exploration
                 st.write("---")
@@ -835,11 +899,34 @@ def main():
                             help="Preserve Max Info keeps most of the original title. Standard is more aggressive optimization."
                         )
                         
+                        # Feature refinement mode checkbox
+                        st.write("**Feature Refinement Options:**")
+                        
+                        # Check if product has features
+                        has_features = 'features' in selected_product and pd.notna(selected_product['features']) and str(selected_product['features']).strip()
+                        
+                        if has_features:
+                            feature_refinement_mode = st.checkbox(
+                                "Enable Feature Refinement Mode",
+                                value=False,
+                                help="When enabled, the AI can refine both the title AND add one new feature to better incorporate search terms. Similarity will be calculated against title + refined features."
+                            )
+                        else:
+                            st.info("ℹ️ **No features available for this product. Feature refinement mode is disabled.**")
+                            feature_refinement_mode = False
+                        
                         # Show optimization button
                         if st.button("🚀 Optimize Title", type="primary"):
                             if 'title_optimizer' in st.session_state and all_search_terms:
                                 try:
                                     # Prepare product data
+                                    # Handle features properly - convert string to list if needed
+                                    features = selected_product.get('features', [])
+                                    
+                                    if isinstance(features, str):
+                                        # If features is a string, convert it to a list
+                                        features = [features] if features.strip() else []
+                                    
                                     product_data = ProductData(
                                         product_id=selected_product['product_id'],
                                         current_title=selected_product['title'],
@@ -848,7 +935,7 @@ def main():
                                         product_type=selected_product.get('product_type'),
                                         manufacturer=selected_product.get('manufacturer'),
                                         category=selected_product.get('category'),
-                                        features=selected_product.get('features', [])
+                                        features=features
                                     )
                                     
                                     # Set prompt mode
@@ -858,7 +945,8 @@ def main():
                                     with st.spinner("🔍 Optimizing title with AI..."):
                                         result = st.session_state.title_optimizer.optimize_title(
                                             product_data, 
-                                            all_search_terms
+                                            all_search_terms,
+                                            feature_refinement_mode
                                         )
                                     
                                     # Store the optimized title for similarity calculation
@@ -881,9 +969,14 @@ def main():
                                                 first_term = cluster_terms['search_term'].iloc[0]
                                                 
                                                 # Calculate similarity between optimized title and first term
+                                                # Use title + refined features if feature refinement mode is enabled
+                                                text_for_similarity = result.optimized_title
+                                                if feature_refinement_mode and result.refined_features:
+                                                    text_for_similarity = f"{result.optimized_title} {result.refined_features}"
+                                                
                                                 if st.session_state.encoding_service is not None:
                                                     similarities = st.session_state.encoding_service.calculate_similarities(
-                                                        result.optimized_title, 
+                                                        text_for_similarity, 
                                                         [first_term]
                                                     )
                                                     optimize_score = similarities[0][1]
@@ -892,7 +985,7 @@ def main():
                                                     from sklearn.feature_extraction.text import TfidfVectorizer
                                                     from sklearn.metrics.pairwise import cosine_similarity
                                                     
-                                                    texts = [result.optimized_title, first_term]
+                                                    texts = [text_for_similarity, first_term]
                                                     vectorizer = TfidfVectorizer(stop_words='english', lowercase=True)
                                                     tfidf_matrix = vectorizer.fit_transform(texts)
                                                     optimize_score = cosine_similarity(tfidf_matrix[0:1], tfidf_matrix[1:2])[0][0]
@@ -909,6 +1002,7 @@ def main():
                                     # Display results
                                     st.subheader("🎯 Optimization Results")
                                     
+                                    
                                     # Side by side comparison
                                     col1, col2 = st.columns(2)
                                     with col1:
@@ -917,6 +1011,38 @@ def main():
                                     with col2:
                                         st.write("**Optimized Title:**")
                                         st.success(result.optimized_title)
+                                    
+                                    # Show features section
+                                    if result.original_features or result.refined_features:
+                                        st.write("**🔧 Product Features:**")
+                                        
+                                        if result.refined_features and result.refined_features.lower() != "no changes to features":
+                                            # Show both original and refined features
+                                            col1, col2 = st.columns(2)
+                                            with col1:
+                                                st.write("**Original Features:**")
+                                                if result.original_features:
+                                                    st.info(result.original_features)
+                                                else:
+                                                    st.info("No original features")
+                                            with col2:
+                                                st.write("**Refined Features:**")
+                                                st.success(result.refined_features)
+                                        elif result.refined_features and result.refined_features.lower() == "no changes to features":
+                                            # Show only original features with note that they weren't changed
+                                            st.write("**Original Features (No Changes):**")
+                                            if result.original_features:
+                                                st.info(result.original_features)
+                                            else:
+                                                st.info("No features available")
+                                            st.info("ℹ️ **Features were not modified** - search terms were incorporated into the title only")
+                                        else:
+                                            # Show only original features
+                                            st.write("**Original Features:**")
+                                            if result.original_features:
+                                                st.info(result.original_features)
+                                            else:
+                                                st.info("No features available")
                                     
                                     # Additional details
                                     col1, col2, col3 = st.columns(3)

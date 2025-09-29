@@ -83,6 +83,135 @@ SUCCESS METRICS:
 Now optimize the title while preserving maximum original content:
 """
 
+        # Comprehensive Title & Feature Optimization Prompt
+        self.feature_refinement_prompt = """
+You are an expert Amazon product optimizer specializing in BOTH title and feature optimization. Your mission is to maximize search term integration while preserving the original product's comprehensive information and length.
+
+PRODUCT INFORMATION:
+- Product ID: {product_id}
+- Current Title: {current_title}
+- Brand: {brand}
+- Description: {description}
+- Product Type: {product_type}
+- Manufacturer: {manufacturer}
+- Category: {category}
+- Current Features: {features}
+
+{search_terms_instruction}
+
+CORE OPTIMIZATION PRINCIPLES:
+
+1. SEARCH TERM INCORPORATION STRATEGY:
+   You have THREE options for incorporating search terms:
+   
+   OPTION A - TITLE OPTIMIZATION ONLY:
+   - Add search terms directly to the title
+   - Replace generic words in title with specific search terms
+   - Keep all original title content and length
+   - Leave features unchanged
+   
+   OPTION B - FEATURE REFINEMENT ONLY:
+   - Refine existing features to incorporate search terms
+   - Add ONE new feature that includes search terms
+   - Keep title mostly unchanged
+   
+   OPTION C - COMBINED APPROACH:
+   - Use both title optimization AND feature refinement
+   - Distribute search terms between title and features as appropriate
+   
+   DECISION CRITERIA:
+   - ANALYZE EXISTING FEATURES: Look at the current feature list and assess if it already covers the search terms
+   - If search terms fit naturally in title AND features are already comprehensive → use OPTION A
+   - If search terms are better suited for features OR existing features lack search term coverage → use OPTION B  
+   - If you can effectively use both title and features → use OPTION C
+   - Always explain your choice in the REASONING field, specifically referencing the existing features
+
+2. TITLE OPTIMIZATION RULES (when chosen):
+   - PRESERVE LENGTH: Keep within 10% of original length (prefer longer)
+   - ADDITIVE APPROACH: Add search terms without removing important information
+   - ENHANCEMENT METHOD: Replace generic words with specific search terms
+   - STRUCTURE MAINTENANCE: Keep original title's flow and organization
+   - SPECIFICATION PRESERVATION: Never remove quantities, measurements, or technical details
+
+3. FEATURE REFINEMENT RULES (when chosen):
+   - REFINE EXISTING: Modify existing features to incorporate search terms naturally
+   - ADD NEW FEATURE: Add ONE new feature that includes target search terms
+   - PRESERVE ORIGINAL: Keep all original features unless refining them
+   - SEARCH-OPTIMIZED: Ensure search terms are naturally incorporated
+   - FORMAT CONSISTENCY: Match the style and format of existing features
+
+4. LENGTH PRESERVATION RULES:
+   - Original < 150 chars → Optimized should be 150-200 chars
+   - Original 150-200 chars → Optimized should be 200-250 chars  
+   - Original > 200 chars → Optimized should be within 10% of original length
+   - NEVER make the title significantly shorter than the original
+
+5. CONTENT PRESERVATION REQUIREMENTS:
+   - Keep 95%+ of original title content
+   - Maintain all specifications, quantities, and technical details
+   - Preserve brand names, model numbers, and key identifiers
+   - Keep all important product descriptors and features
+   - Maintain the original title's professional tone and structure
+
+OPTIMIZATION EXAMPLES:
+
+GOOD TITLE OPTIMIZATION:
+Original: "Super Ninja Fruit Fly Traps for Indoors - 2 Traps - Highly Effective Eco-Friendly Fruit Fly Catcher for Indoors - Pet and Child Safe - Up to 3 Weeks per Bottle"
+Search Terms: "gnat killer indoor spray"
+Optimized: "Super Ninja Fruit Fly Traps for Indoors - 2 Traps - Highly Effective Gnat Killer Indoor Spray - Eco-Friendly Fruit Fly Catcher for Indoors - Pet and Child Safe - Up to 3 Weeks per Bottle"
+✅ Added search terms while preserving all original content
+
+BAD TITLE OPTIMIZATION:
+Original: "Super Ninja Fruit Fly Traps for Indoors - 2 Traps - Highly Effective Eco-Friendly Fruit Fly Catcher for Indoors - Pet and Child Safe - Up to 3 Weeks per Bottle"
+Search Terms: "gnat killer indoor spray"
+Bad: "Gnat Killer Indoor Spray - Fruit Fly Traps - 2 Traps - Eco-Friendly"
+❌ Removed too much important information
+
+FEATURE OPTIMIZATION EXAMPLE:
+Original Features: "T8 LED Bulbs 4 Foot, Tube Single Sided Ballast Bypass Type B; BRIGHT AS DAY: Swap your old fluorescent tubes..."
+Search Terms: "energy efficient LED lighting"
+New Feature: "ENERGY EFFICIENT LED LIGHTING: Reduces electricity costs by up to 60% compared to traditional fluorescent tubes while providing superior brightness and longevity"
+
+REASONING EXAMPLES:
+
+GOOD REASONING (OPTION A - Title Only):
+"I chose OPTION A (title optimization only) because the search terms 'energy efficient LED lighting' fit naturally into the existing title structure. The current features already cover brightness and technical specifications well, so adding search terms to the title was more effective than modifying the comprehensive feature list."
+
+GOOD REASONING (OPTION B - Features Only):
+"I chose OPTION B (feature refinement only) because the search terms 'commercial grade durability' are better suited for the features section. The existing features focus on brightness and installation, so adding a new feature about durability and commercial use complements the existing feature list without cluttering the title."
+
+GOOD REASONING (OPTION C - Combined):
+"I chose OPTION C (combined approach) because 'energy efficient' works well in the title, while 'LED lighting' is better suited for a new feature. I added 'ENERGY EFFICIENT' to the title and created a new feature 'ENERGY EFFICIENT LED LIGHTING: Reduces electricity costs by 60%' to cover both aspects comprehensively."
+
+RESPONSE FORMAT:
+You MUST respond in this exact format:
+
+OPTIMIZED_TITLE: [Your optimized title here]
+REFINED_FEATURES: [If you chose OPTION A: "No changes to features" | If you chose OPTION B or C: Original features + refined/new features]
+CONFIDENCE: [Score from 0.0 to 1.0]
+REASONING: [Explain your optimization strategy - which option you chose (A, B, or C) and why. MUST include: 1) Why you chose to modify/not modify the features, 2) How the existing features influenced your decision, 3) Specific details about what you changed in features (if any)]
+PRESERVATION_SCORE: [Percentage of original content preserved, 0-100]
+KEYWORDS_USED: [List of keywords you incorporated in title and features]
+CHANGES_MADE: [Specific changes made to title and features]
+WARNINGS: [Any concerns or "None"]
+
+IMPORTANT: 
+- If you chose OPTION A (title only): REFINED_FEATURES should be "No changes to features"
+- If you chose OPTION B (features only): REFINED_FEATURES should contain refined original features + one new feature
+- If you chose OPTION C (combined): REFINED_FEATURES should contain all original features + one new feature
+- Always explain in REASONING which option you chose and why
+
+SUCCESS CRITERIA:
+- Title length within 10% of original (prefer longer)
+- 95%+ content preservation
+- All search terms naturally incorporated
+- One relevant new feature added
+- Original specifications maintained
+- Professional, Amazon-ready format
+
+Now optimize the title and refine the features while maximizing search term integration and content preservation:
+"""
+
         # Alternative: Standard Prompt (more aggressive optimization)
         self.standard_optimization_prompt = """
 You are an expert Amazon product title optimizer. Your task is to optimize a product title to better match a target search term while maintaining honesty and accuracy.
@@ -180,21 +309,40 @@ Now optimize the title:
 
     Now optimize the title:
     """
-    def optimize_title(self, product_data: ProductData, target_search_terms: List[str]) -> OptimizationResult:
+    def optimize_title(self, product_data: ProductData, target_search_terms: List[str], feature_refinement_mode: bool = False) -> OptimizationResult:
         """Optimize product title for target search terms"""
         start_time = time.time()
         
         try:
-            # Prepare the prompt
-            prompt = self._prepare_prompt(product_data, target_search_terms)
+            # Check if features exist for feature refinement mode
+            has_features = product_data.features and len(product_data.features) > 0 and any(feature.strip() for feature in product_data.features if isinstance(feature, str))
+            
+            # If feature refinement mode is requested but no features exist, fall back to title-only mode
+            if feature_refinement_mode and not has_features:
+                self.logger.info("Feature refinement mode requested but no features available, falling back to title-only optimization")
+                feature_refinement_mode = False
+            
+            # Prepare the prompt based on mode
+            prompt = self._prepare_prompt(product_data, target_search_terms, feature_refinement_mode)
             
             # Get LLM response
             search_terms_str = ", ".join(target_search_terms)
-            self.logger.info(f"Optimizing title for product {product_data.product_id} with search terms: {search_terms_str}")
+            mode_str = "with feature refinement" if feature_refinement_mode else "title only"
+            self.logger.info(f"Optimizing title for product {product_data.product_id} with search terms: {search_terms_str} ({mode_str})")
             response = self.llm_client.generate_response(prompt)
             
+            # Log the response for debugging
+            self.logger.info(f"LLM Response received: {response[:200]}...")
+            if feature_refinement_mode:
+                self.logger.info(f"Full LLM Response for feature refinement: {response}")
+            
             # Parse the response
-            result = self._parse_response(response, product_data, target_search_terms, start_time)
+            result = self._parse_response(response, product_data, target_search_terms, start_time, feature_refinement_mode)
+            
+            # Log parsing results for debugging
+            if feature_refinement_mode:
+                self.logger.info(f"Parsed refined features: {result.refined_features}")
+                self.logger.info(f"Feature refinement mode in result: {result.feature_refinement_mode}")
             
             self.logger.info(f"Title optimization completed for product {product_data.product_id}")
             return result
@@ -203,10 +351,17 @@ Now optimize the title:
             self.logger.error(f"Error optimizing title: {e}")
             raise
     
-    def _prepare_prompt(self, product_data: ProductData, target_search_terms: List[str]) -> str:
+    def _prepare_prompt(self, product_data: ProductData, target_search_terms: List[str], feature_refinement_mode: bool = False) -> str:
         """Prepare the optimization prompt"""
         # Convert features list to string
-        features_str = ", ".join(product_data.features) if product_data.features else "None"
+        if product_data.features:
+            if isinstance(product_data.features, list):
+                features_str = ", ".join(product_data.features)
+            else:
+                # If features is already a string, use it directly
+                features_str = str(product_data.features)
+        else:
+            features_str = "None"
         
         # Format search terms for the prompt
         if len(target_search_terms) == 1:
@@ -216,7 +371,13 @@ Now optimize the title:
             search_terms_display = ", ".join(target_search_terms)
             search_terms_instruction = f"TARGET SEARCH TERMS: {', '.join(target_search_terms)}\n\nIMPORTANT: You must incorporate ALL of these search terms naturally into the optimized title. Prioritize the most important/relevant terms but try to include as many as possible."
         
-        return self.optimization_prompt.format(
+        # Choose the appropriate prompt template
+        if feature_refinement_mode:
+            prompt_template = self.feature_refinement_prompt
+        else:
+            prompt_template = self.optimization_prompt
+        
+        return prompt_template.format(
             product_id=product_data.product_id,
             current_title=product_data.current_title,
             brand=product_data.brand or "Not specified",
@@ -229,7 +390,7 @@ Now optimize the title:
             search_terms_instruction=search_terms_instruction
         )
     
-    def _parse_response(self, response: str, product_data: ProductData, target_search_terms: List[str], start_time: float) -> OptimizationResult:
+    def _parse_response(self, response: str, product_data: ProductData, target_search_terms: List[str], start_time: float, feature_refinement_mode: bool = False) -> OptimizationResult:
         """Parse LLM response into OptimizationResult"""
         try:
             lines = response.strip().split('\n')
@@ -239,39 +400,84 @@ Now optimize the title:
             confidence_score = 0.5
             reasoning = "Unable to parse response"
             keywords_used = []
-            warnings = ["Failed to parse LLM response"]
+            warnings = []
             preservation_score = 0
             changes_made = []
+            refined_features = None
             
-            # Parse each line
+            # Handle features properly for display
+            if product_data.features:
+                if isinstance(product_data.features, list):
+                    original_features = ", ".join(product_data.features)
+                else:
+                    original_features = str(product_data.features)
+            else:
+                original_features = None
+            
+            # Parse each line with more flexible matching
             for line in lines:
                 line = line.strip()
-                if line.startswith('OPTIMIZED_TITLE:'):
-                    optimized_title = line.replace('OPTIMIZED_TITLE:', '').strip()
-                elif line.startswith('CONFIDENCE:'):
+                
+                # More flexible parsing - handle variations in format
+                if 'OPTIMIZED_TITLE' in line and ':' in line:
+                    optimized_title = line.split(':', 1)[1].strip()
+                elif 'CONFIDENCE' in line and ':' in line:
                     try:
-                        confidence_score = float(line.replace('CONFIDENCE:', '').strip())
+                        confidence_score = float(line.split(':', 1)[1].strip())
                     except ValueError:
                         confidence_score = 0.5
-                elif line.startswith('REASONING:'):
-                    reasoning = line.replace('REASONING:', '').strip()
-                elif line.startswith('PRESERVATION_SCORE:'):
+                elif 'REASONING' in line and ':' in line:
+                    reasoning = line.split(':', 1)[1].strip()
+                elif 'PRESERVATION_SCORE' in line and ':' in line:
                     try:
-                        preservation_score = float(line.replace('PRESERVATION_SCORE:', '').strip())
+                        preservation_score = float(line.split(':', 1)[1].strip())
                     except ValueError:
                         preservation_score = 0
-                elif line.startswith('KEYWORDS_USED:'):
-                    keywords_str = line.replace('KEYWORDS_USED:', '').strip()
+                elif 'KEYWORDS_USED' in line and ':' in line:
+                    keywords_str = line.split(':', 1)[1].strip()
                     keywords_used = [kw.strip() for kw in keywords_str.split(',') if kw.strip()]
-                elif line.startswith('CHANGES_MADE:'):
-                    changes_str = line.replace('CHANGES_MADE:', '').strip()
+                elif 'CHANGES_MADE' in line and ':' in line:
+                    changes_str = line.split(':', 1)[1].strip()
                     changes_made = [c.strip() for c in changes_str.split(',') if c.strip()]
-                elif line.startswith('WARNINGS:'):
-                    warnings_str = line.replace('WARNINGS:', '').strip()
-                    if warnings_str.lower() != 'none':
+                elif 'WARNINGS' in line and ':' in line:
+                    warnings_str = line.split(':', 1)[1].strip()
+                    if warnings_str.lower() not in ['none', 'n/a', '']:
                         warnings = [w.strip() for w in warnings_str.split(',') if w.strip()]
                     else:
                         warnings = []
+                elif 'REFINED_FEATURES' in line and ':' in line:
+                    refined_features = line.split(':', 1)[1].strip()
+                    self.logger.info(f"Found REFINED_FEATURES: {refined_features[:100]}...")
+            
+            # If we couldn't parse anything meaningful, try to extract title from the response
+            if optimized_title == product_data.current_title and len(response.strip()) > 50:
+                # Look for the first line that looks like a title (longer than 20 chars, not a field name)
+                for line in lines:
+                    line = line.strip()
+                    if (len(line) > 20 and 
+                        not any(field in line.upper() for field in ['OPTIMIZED_TITLE', 'CONFIDENCE', 'REASONING', 'PRESERVATION', 'KEYWORDS', 'CHANGES', 'WARNINGS', 'REFINED'])):
+                        optimized_title = line
+                        break
+            
+            # If still no title found, use the original
+            if optimized_title == product_data.current_title:
+                warnings.append("Could not parse optimized title from response")
+            
+            # If no reasoning found, create a basic one
+            if reasoning == "Unable to parse response":
+                reasoning = f"Optimized title based on search terms: {', '.join(target_search_terms)}"
+            
+            # If no refined features found but we're in feature refinement mode, try to find them
+            if feature_refinement_mode and not refined_features and original_features:
+                # Look for any line that might contain refined features
+                for line in lines:
+                    line = line.strip()
+                    if (len(line) > 50 and 
+                        ('feature' in line.lower() or 'benefit' in line.lower() or 'advantage' in line.lower()) and
+                        not any(field in line.upper() for field in ['OPTIMIZED_TITLE', 'CONFIDENCE', 'REASONING', 'PRESERVATION', 'KEYWORDS', 'CHANGES', 'WARNINGS'])):
+                        refined_features = line
+                        self.logger.info(f"Found potential refined features in fallback: {refined_features[:100]}...")
+                        break
             
             processing_time = time.time() - start_time
             
@@ -284,7 +490,10 @@ Now optimize the title:
                 keywords_used=keywords_used,
                 warnings=warnings,
                 processing_time=processing_time,
-                model_used=self.llm_client.model_name
+                model_used=self.llm_client.model_name,
+                original_features=original_features,
+                refined_features=refined_features,
+                feature_refinement_mode=feature_refinement_mode
             )
             
         except Exception as e:
@@ -299,7 +508,10 @@ Now optimize the title:
                 keywords_used=[],
                 warnings=[f"Parsing error: {str(e)}"],
                 processing_time=time.time() - start_time,
-                model_used=self.llm_client.model_name
+                model_used=self.llm_client.model_name,
+                original_features=original_features,
+                refined_features=None,
+                feature_refinement_mode=feature_refinement_mode
             )
     
     def set_prompt_mode(self, mode: str = "preserve"):
