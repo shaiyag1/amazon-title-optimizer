@@ -1,0 +1,622 @@
+select_box,parent_product_id,product_id,search_term,cluster_id,inf_config,kw-prediction_iteration_selected,kw-target_rank,kw-estimated_additional_sales,kw-estimated_additional_loss,kw-total_soft_score,kw-total_hard_score,sr_rc-prediction_iteration_selected,sr_rc-target_rank,sr_rc-estimated_additional_sales,sr_rc-estimated_additional_loss,sr_rc-total_soft_score,sr_rc-total_hard_score,kw_sr_rc-prediction_iteration_selected,kw_sr_rc-target_rank,kw_sr_rc-estimated_additional_sales,kw_sr_rc-estimated_additional_loss,kw_sr_rc-total_soft_score,kw_sr_rc-total_hard_score,pr-prediction_iteration_selected,pr-target_rank,pr-estimated_additional_sales,pr-estimated_additional_loss,pr-total_soft_score,pr-total_hard_score,total_soft_score_product,color_code,biz_configuration_id,session_sequence,session_id,optimization_metric
+FALSE,B0DDL25FQQ,B09HH4K1LZ,sourdough starter kit,1,kw,8,1,137880,0,4535,0,20,3,791,544,0,-1,8,1,137880,200,22,-1,2,3,3283,0,112,-1,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,sourdough kit,1,kw,5,1,18164,0,790,0,99,4,178,2805,0,-1,5,1,18164,114,6,-1,2,4,202,0,8,-1,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+TRUE,B0DDL25FQQ,B09HH4K1LZ,sourdough bread starter kit,1,kw,10,1,1056,0,42,0,98,5,6,2776,0,-2,10,1,1056,258,0,-1,2,5,7,0,0,-2,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,sourdough starter kit with scale,1,kw,41,1,1661,0,38,-1,51,5,203,1431,0,-2,30,1,1661,830,0,-2,2,23,0,0,0,-3,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,sourdough starter kit beginners,1,kw,10,1,1136,0,36,-1,100,4,11,2833,0,-3,10,1,1136,258,0,-2,2,4,10,0,0,-3,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,sourdough kits,1,kw,3,1,617,0,22,-1,99,2,43,2805,0,-3,3,1,617,57,0,-2,2,2,62,0,2,-3,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,beginner sourdough starter kit,1,kw,6,1,411,0,16,0,99,2,32,2804,0,-2,6,1,411,143,0,-1,2,2,47,0,2,-2,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,starter kit,1,kw,15,1,426,0,15,0,62,1,426,1746,0,-1,13,1,426,343,0,-1,2,11,0,0,0,-2,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,sourdough starter kits,1,kw,16,1,439,0,15,0,98,7,1,2776,0,-2,16,1,439,429,0,-1,2,7,1,0,0,-2,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,sourdough starter kit￼,1,kw,15,1,308,0,10,0,6,6,0,143,0,-2,15,1,308,401,0,-1,2,6,1,0,0,-2,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,organic sourdough starter kit,1,kw,14,1,255,0,8,-1,100,6,1,2833,0,-3,14,1,255,372,0,-2,50,4,11,0,0,-3,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,sourdough starter kit with flour,1,kw,37,1,319,0,8,-1,7,24,0,172,0,-3,37,1,319,1030,0,-2,2,24,0,0,0,-3,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,sourdough starter kit with culture,1,kw,41,1,276,0,6,-1,4,18,0,86,0,-3,41,1,276,1144,0,-2,2,18,0,0,0,-3,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,best sourdough starter kit,1,kw,4,1,132,0,5,0,99,2,9,2804,0,-2,4,1,132,86,0,-1,2,2,8,0,0,-2,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,sourdough starter kit with jar,1,kw,85,1,456,0,3,0,100,37,0,2833,0,-2,85,1,456,2404,0,-1,2,37,0,0,0,-2,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,starter sourdough,1,kw,100,12,17,0,0,-2,68,31,3,1918,0,-2,67,1,442,1889,0,-1,2,53,0,0,0,-2,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,sourdough starter jar kit,1,kw,100,84,10,0,0,-3,7,136,0,172,0,-3,100,84,10,2833,0,-3,2,136,0,0,0,-3,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+TRUE,B0DDL25FQQ,B09HH4K1LZ,banneton bread proofing basket,2,kw,6,1,75498,0,3195,0,100,5,1362,2833,0,-1,6,1,75498,143,21,-1,2,6,366,0,15,-1,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,bread basket,2,kw,15,1,17778,0,657,-1,5,15,1,114,0,-3,15,1,17778,401,2,-2,2,15,20,0,1,-3,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+TRUE,B0DDL25FQQ,B09HH4K1LZ,bread proofing basket,2,kw,13,1,15540,0,624,0,99,7,38,2805,0,-2,13,1,15540,343,2,-1,2,7,95,0,4,-1,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+TRUE,B0DDL25FQQ,B09HH4K1LZ,banneton basket,2,kw,4,1,14487,0,571,0,99,3,729,2805,0,-1,4,1,14487,86,6,-1,46,1,7965,0,300,-1,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,banneton,2,kw,12,1,14085,0,495,0,99,10,15,2805,0,-2,12,1,14085,315,1,-1,2,10,38,0,1,-2,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,bread basket proofing,2,kw,11,1,3832,0,135,-1,99,6,14,2805,0,-3,11,1,3832,286,0,-2,2,6,32,0,1,-3,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,banneton baskets,2,kw,15,1,3257,0,109,0,7,19,0,172,0,-2,15,1,3257,401,0,-1,2,19,2,0,0,-2,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,banneton bread proofing basket set,2,kw,5,1,2672,0,100,-1,99,5,15,2805,0,-3,5,1,2710,114,1,-2,2,5,39,0,1,-3,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+TRUE,B0DDL25FQQ,B09HH4K1LZ,bread proofing,2,kw,5,1,2019,0,77,0,4,4,1,86,0,-2,5,1,2019,114,1,-1,2,4,24,0,1,-2,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,bread banneton,2,kw,5,1,1890,0,67,0,100,4,18,2833,0,-2,5,1,1890,114,1,-1,46,1,661,0,22,-1,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+TRUE,B0DDL25FQQ,B09HH4K1LZ,bread banneton proofing basket,2,kw,6,1,1368,0,59,0,6,5,1,143,0,-2,6,1,1368,143,0,-1,38,2,188,0,8,-1,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+TRUE,B0DDL25FQQ,B09HH4K1LZ,bread proofing baskets,2,kw,20,1,1433,0,51,0,100,12,4,2833,0,-2,20,1,1433,544,0,-1,2,13,2,0,0,-2,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+TRUE,B0DDL25FQQ,B09HH4K1LZ,banneton proofing basket,2,kw,12,1,874,0,32,0,100,10,3,2833,0,-2,12,1,874,315,0,-1,2,11,2,0,0,-2,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,proofing baskets,2,kw,3,1,791,0,29,0,6,2,4,143,0,-2,3,1,791,57,0,-1,2,2,128,0,4,-1,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+TRUE,B0DDL25FQQ,B09HH4K1LZ,banneton bread basket,2,kw,5,1,583,0,25,0,99,5,3,2805,0,-2,5,1,583,114,0,-1,38,2,91,0,4,-1,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,banneton for bread,2,kw,5,1,490,0,24,0,99,4,5,2805,0,-2,5,1,490,114,0,-1,54,1,220,0,11,-1,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,bannetons,2,kw,38,1,961,0,23,-1,7,25,0,172,0,-3,38,1,961,1059,0,-2,2,25,0,0,0,-3,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+TRUE,B0DDL25FQQ,B09HH4K1LZ,bread proof basket,2,kw,9,1,500,0,20,0,100,5,3,2833,0,-2,9,1,500,229,0,-1,38,2,109,0,4,-1,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,bread baskets,2,kw,71,1,1518,0,17,-1,100,62,0,2832,0,-3,71,1,1518,2003,0,-2,2,62,0,0,0,-3,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,round banneton bread proofing basket,2,kw,17,1,307,0,10,0,7,17,0,172,0,-2,17,1,307,458,0,-1,2,17,0,0,0,-2,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,basket for bread,2,kw,34,1,257,0,7,-1,5,37,0,114,0,-3,34,1,257,944,0,-2,2,37,0,0,0,-3,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,bread banneton basket,2,kw,6,1,112,0,5,-1,100,5,1,2833,0,-2,6,1,112,143,0,-1,38,2,16,0,1,-2,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,proofing basket,2,kw,1,1,0,0,0,-1,1,1,0,0,0,-2,1,1,0,0,0,-2,1,1,0,0,0,-2,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,sourdough proofing basket,3,pr,14,1,15272,0,591,0,6,13,1,143,0,-2,14,1,15272,372,2,-1,2,13,23,0,1,-2,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,proofing baskets for sourdough bread baking,3,pr,4,1,6930,0,277,0,99,2,789,2805,0,-1,4,1,6930,86,3,-1,26,1,4633,0,177,-1,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,sourdough basket,3,pr,18,1,6918,0,232,0,100,17,9,2833,0,-2,18,1,6918,487,1,-1,2,18,5,0,0,-2,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,bread proofing baskets for sourdough,3,pr,5,1,4220,0,174,0,100,2,501,2833,0,-1,5,1,4220,114,1,-1,22,1,2924,0,118,-1,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,sourdough bread basket,3,pr,13,1,2290,0,76,-1,99,9,3,2805,0,-3,13,1,2290,343,0,-2,2,9,7,0,0,-3,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,bread baking,3,pr,5,1,1871,0,66,0,10,1,1831,257,0,-1,4,1,1871,86,1,-1,15,1,1609,0,55,-1,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,sourdough bread proofing basket,3,pr,7,1,1355,0,53,0,99,5,8,2805,0,-2,7,1,1374,172,0,-1,2,5,23,0,1,-2,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,sourdough basket proofing,3,sr_rc,13,1,805,0,31,0,6,9,0,143,0,-2,13,1,805,343,0,-1,2,9,2,0,0,-2,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,sourdough proofing baskets,3,sr_rc,14,1,839,0,30,0,6,11,0,143,0,-2,14,1,839,372,0,-1,2,11,1,0,0,-2,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,sourdough baskets,3,sr_rc,19,1,948,0,30,0,7,19,0,172,0,-2,19,1,948,515,0,-1,2,19,1,0,0,-2,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,sourdough bread baking supplies proofing baskets,3,pr,3,1,577,0,26,0,100,3,14,2833,0,-2,3,1,577,57,0,-1,34,1,380,0,16,-1,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,sourdough bread basket proofing,3,pr,7,1,563,0,20,0,6,5,0,143,0,-2,7,1,563,172,0,-1,38,2,80,0,3,-1,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,baking bread,3,pr,7,1,510,0,17,0,19,1,493,515,0,-1,5,1,462,114,0,-1,37,1,326,0,11,-1,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,sourdough bread baking basket,3,pr,4,1,363,0,16,0,6,3,1,143,0,-2,4,1,363,86,0,-1,38,1,260,0,11,-1,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,sourdough proofing,3,pr,4,1,403,0,15,0,5,2,2,114,0,-2,4,1,403,86,0,-1,22,1,318,0,11,-1,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,sourdough bread baking,3,pr,8,1,300,0,11,0,7,1,290,172,0,-1,5,1,300,114,0,-1,2,3,4,0,0,-2,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,bread bake,3,sr_rc,60,1,470,0,7,0,100,19,5,2833,0,-2,47,1,470,1317,0,-1,51,29,0,0,0,-2,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,bake bread,3,sr_rc,85,1,976,0,5,0,100,24,6,2833,0,-2,67,1,976,1889,0,-1,2,32,0,0,0,-2,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,sourdough baking,3,sr_rc,1,1,0,0,0,-2,1,1,0,0,0,-2,1,1,0,0,0,-2,1,1,0,0,0,-2,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,bread making accessories,4,pr,2,1,3548,0,149,0,19,2,207,515,0,-1,2,1,3548,29,5,-1,14,1,2771,0,110,-1,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,bread making,4,pr,3,1,2840,0,105,0,4,1,2840,86,1,-1,3,1,2965,57,2,-1,18,1,2461,0,86,-1,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,accessories for bread,4,sr_rc,1,1,0,0,0,-3,1,1,0,0,0,-3,1,1,0,0,0,-3,1,1,0,0,0,-3,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,bread accessories,4,sr_rc,1,1,0,0,0,-3,1,1,0,0,0,-3,1,1,0,0,0,-3,1,1,0,0,0,-3,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,baking gifts,5,pr,35,1,9178,0,232,0,100,2,5070,2832,0,-1,28,1,9178,772,0,-1,62,13,52,0,2,-1,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,baking gifts for women,5,pr,6,1,3910,0,137,-1,4,1,3910,86,1,-2,3,1,3511,57,2,-2,20,1,3167,0,108,-2,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,baking gift,5,pr,16,1,1708,0,57,0,100,3,299,2833,0,-1,15,1,1708,401,0,-1,66,4,76,0,3,-1,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,baking set gifts women,5,sr_rc,24,1,359,0,11,0,32,1,359,887,0,-1,15,1,359,400,0,-1,2,11,0,0,0,-2,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,sourdough gifts for women,5,pr,25,1,339,0,10,-1,18,6,23,487,0,-3,15,1,339,401,0,-2,46,11,3,0,0,-3,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,baking accessories,6,pr,2,1,2838,0,115,0,19,1,2778,515,0,-1,2,1,2838,29,4,-1,21,1,2270,0,86,-1,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,baking accessories and gadgets,6,pr,10,1,1139,0,44,0,100,3,232,2832,0,-1,9,1,1139,229,0,-1,70,5,33,0,1,-1,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,bread baking accessories,6,pr,4,1,353,0,14,-1,10,1,332,258,0,-2,4,1,353,86,0,-2,54,1,166,0,6,-2,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,baking accessories gifts,6,pr,11,1,341,0,12,-1,100,3,65,2833,0,-3,10,1,323,258,0,-2,70,3,21,0,1,-2,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,baking accessories for women,6,pr,15,1,326,0,12,-1,20,5,1,544,0,-3,15,1,326,401,0,-2,46,1,179,0,7,-2,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,baking tools and accessories,6,sr_rc,15,1,292,0,11,0,100,7,18,2833,0,-2,15,1,292,401,0,-1,2,15,0,0,0,-2,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,artisan sourdough made simple,7,pr,5,1,2121,0,60,0,28,2,187,773,0,-1,5,1,2167,114,0,-1,22,1,1991,0,53,-1,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,baking supplies,8,pr,21,1,35435,0,1134,0,100,10,1090,2832,0,-1,19,1,35435,515,2,-1,42,17,86,0,3,-1,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,sourdough baking supplies,8,pr,4,1,2003,0,90,0,5,3,14,114,0,-2,4,1,2003,86,1,-1,47,1,1029,0,44,-1,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,sourdough bread baking supplies kit,8,sr_rc,9,1,632,0,27,0,100,7,6,2833,0,-2,9,1,632,229,0,-1,2,7,2,0,0,-2,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,baking bread supplies,8,sr_rc,5,1,350,0,15,0,49,1,350,1374,0,-1,5,1,350,114,0,-1,2,5,3,0,0,-2,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,"banneton bread proofing basket, sourdough bread baking supplies",8,pr,2,1,195,0,8,0,100,1,88,2833,0,-2,2,1,195,29,0,-1,2,2,21,0,1,-2,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,sourdough bread baking supplies starter,8,pr,5,1,167,0,8,0,99,3,3,2805,0,-2,5,1,167,114,0,-1,2,3,4,0,0,-2,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,baking supplies sourdough,8,sr_rc,1,1,0,0,0,-3,1,1,0,0,0,-3,1,1,0,0,0,-3,1,1,0,0,0,-3,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,bread baking supplies,8,sr_rc,1,1,0,0,0,-1,1,1,0,0,0,-2,1,1,0,0,0,-2,1,1,0,0,0,-2,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,sourdough bread baking supplies,8,sr_rc,1,1,0,0,0,-2,1,1,0,0,0,-2,1,1,0,0,0,-2,1,1,0,0,0,-2,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,sourdough bread baking supplies dutch oven,8,sr_rc,100,18,3,0,0,-2,4,65,0,86,0,-3,100,18,3,2832,0,-3,2,65,0,0,0,-3,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,sourdough supplies,8,sr_rc,1,1,0,0,0,-2,1,1,0,0,0,-2,1,1,0,0,0,-2,1,1,0,0,0,-2,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,sourdough gifts,9,pr,4,1,1713,0,63,0,7,1,1713,172,0,-1,3,1,1713,57,1,-1,28,1,1250,0,44,-1,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,gifts for sourdough bakers,9,pr,5,1,1306,0,50,0,12,1,1306,315,0,-1,4,1,1306,86,1,-1,74,1,204,0,8,-1,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,sourdough accessories gift,9,pr,5,1,1086,0,43,-1,3,4,1,57,0,-3,5,1,1086,114,0,-2,42,1,641,0,25,-2,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,sourdough gifts for bakers,9,pr,9,1,855,0,33,0,18,1,855,487,0,-1,6,1,855,143,0,-1,74,2,60,0,2,-1,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,sourdough gift,9,pr,27,1,629,0,19,0,37,1,637,1030,0,-1,17,1,637,458,0,-1,42,10,6,0,0,-2,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,gifts for sourdough bread bakers,9,sr_rc,16,1,360,0,12,-1,43,1,360,1202,0,-2,12,1,360,315,0,-2,2,16,0,0,0,-3,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,banton proofing basket,10,pr,4,1,1524,0,51,-2,99,2,173,2805,0,-3,4,1,1524,86,1,-2,26,1,1035,0,33,-2,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,gifts for bakers,11,pr,15,1,6346,0,224,0,26,1,6346,716,0,-1,10,1,6102,258,1,-1,2,10,13,0,0,-2,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,baker gifts,11,pr,27,1,1952,0,49,-1,5,17,0,114,0,-3,27,1,1952,744,0,-2,50,14,9,0,0,-3,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,gifts for bread bakers,11,pr,4,1,1126,0,45,0,7,1,1126,172,0,-1,3,1,1126,57,1,-1,28,1,822,0,32,-1,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,gifts for a baker,11,pr,21,1,1045,0,36,0,100,6,82,2833,0,-2,19,1,1045,515,0,-1,42,14,5,0,0,-2,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,gift for baker,11,pr,15,1,943,0,35,0,23,1,943,630,0,-1,11,1,943,286,0,-1,62,5,28,0,1,-1,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,bread gifts,11,pr,24,1,598,0,18,-1,51,1,598,1431,0,-2,16,1,598,429,0,-2,46,16,2,0,0,-3,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,gifts for baker,11,pr,21,1,514,0,17,0,43,1,514,1202,0,-1,15,1,514,401,0,-1,50,12,3,0,0,-2,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,bread baker gifts,11,pr,8,1,461,0,17,-1,18,1,461,487,0,-2,6,1,461,143,0,-2,64,3,37,0,1,-2,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,baker gift,11,pr,35,1,569,0,16,0,5,17,0,114,0,-2,34,1,562,944,0,-1,62,12,3,0,0,-2,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,gifts for the baker,11,sr_rc,21,1,434,0,14,-1,48,1,434,1345,0,-2,15,1,434,401,0,-2,2,18,0,0,0,-3,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,bakers gifts,11,sr_rc,33,1,401,0,11,0,4,20,0,86,0,-2,32,1,396,887,0,-1,50,17,1,0,0,-2,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,bread bowl,12,pr,26,1,2669,0,73,0,23,1,2669,630,0,-1,13,1,2669,343,0,-1,2,8,9,0,0,-2,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,bread bowls for rising and baking,12,pr,7,1,1174,0,42,0,7,1,1117,172,0,-1,4,1,1174,86,0,-1,30,1,755,0,26,-1,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,bread rising bowl,12,pr,10,1,579,0,18,0,6,4,0,143,0,-2,10,1,579,258,0,-1,48,1,302,0,10,-1,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,bread bowls,12,sr_rc,19,1,360,0,10,-1,14,1,370,372,0,-2,10,1,370,258,0,-2,2,7,2,0,0,-3,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,sourdough bowls for rising,12,sr_rc,18,1,309,0,10,0,6,10,0,143,0,-2,18,1,309,487,0,-1,2,10,1,0,0,-2,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,bread baking bowl,12,pr,4,1,131,0,5,-1,4,1,169,86,0,-1,3,1,169,57,0,-1,10,1,154,0,6,0,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,proofing bowls for sourdough bread,13,pr,12,1,6997,0,214,-1,100,5,124,2833,0,-2,12,1,6997,315,1,-2,42,3,587,0,19,-2,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,sourdough bowl,13,pr,9,1,2497,0,82,0,9,1,2497,229,0,-1,5,1,2097,114,1,-1,38,2,785,0,26,-1,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,sourdough proofing bowl,13,pr,8,1,1094,0,40,0,4,4,1,86,0,-2,8,1,1110,200,0,-1,42,1,675,0,25,-1,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,battan bowl for sourdough,13,pr,10,1,882,0,30,-1,98,6,3,2776,0,-2,10,1,882,258,0,-1,2,6,7,0,0,-2,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,sourdough bread bowl,13,pr,16,1,844,0,27,0,20,1,844,544,0,-1,10,1,844,258,0,-1,42,4,56,0,2,-1,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,sourdough bowls,13,pr,11,1,514,0,16,0,11,1,514,286,0,-1,6,1,514,143,0,-1,54,2,104,0,3,-1,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,sourdough bowl covers,13,sr_rc,100,8,119,0,0,-1,100,54,0,2833,0,-2,100,7,129,2833,0,-1,9,50,1,0,0,-2,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,sourdough mixing bowl,13,sr_rc,89,43,4,0,0,-1,34,50,2,944,0,-2,89,29,11,2519,0,-2,2,64,0,0,0,-2,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,glass bowl for sourdough bread,13,sr_rc,100,48,16,0,0,-1,34,68,5,944,0,-2,100,34,34,2833,0,-2,2,81,0,0,0,-2,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,bread making gifts,14,pr,3,1,936,0,36,-1,7,1,952,172,0,-2,3,1,952,57,1,-2,35,1,628,0,23,-2,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,sourdough must haves,15,pr,3,1,721,0,29,-1,3,2,3,57,0,-3,3,1,721,57,0,-2,20,1,559,0,22,-2,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,baking must haves,15,sr_rc,33,1,317,0,8,-1,100,14,4,2832,0,-3,28,1,317,772,0,-2,2,20,0,0,0,-3,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,baking tools,16,pr,28,1,3756,0,107,0,100,11,106,2832,0,-2,25,1,3756,687,0,-1,74,14,12,0,0,-2,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,bread baking tools,16,pr,4,1,763,0,28,-1,3,1,671,57,0,-2,3,1,763,57,0,-2,14,1,622,0,22,-2,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,baking,16,pr,100,15,1045,0,0,-1,96,32,177,2719,0,-1,100,3,9761,2833,0,-1,28,42,14,0,0,-1,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,bread tools,16,sr_rc,1,1,0,0,0,-2,1,1,0,0,0,-2,1,1,0,0,0,-2,1,1,0,0,0,-2,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,sourdough bread baking tools,16,sr_rc,1,1,0,0,0,-1,1,1,0,0,0,-2,1,1,0,0,0,-2,1,1,0,0,0,-2,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,sourdough essentials,17,pr,6,1,2528,0,87,-1,37,1,2528,1030,0,-2,6,1,2528,143,1,-2,76,1,623,0,21,-2,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,baking tools and gadgets,18,pr,3,1,636,0,26,0,18,1,636,486,0,-1,2,1,481,29,1,-1,18,1,528,0,21,-1,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,baking gadgets,18,sr_rc,94,1,1620,0,4,-1,100,30,4,2832,0,-3,78,1,1620,2203,0,-2,42,32,1,0,0,-3,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,sour dough bowl,19,pr,4,1,509,0,19,0,5,2,2,114,0,-2,4,1,509,86,0,-1,10,1,463,0,17,-1,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,sour dough,19,pr,97,1,11678,0,11,0,100,12,292,2833,0,-1,66,1,11678,1860,0,-1,42,21,21,0,0,-2,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,homesteading gifts,20,pr,16,1,1533,0,50,0,14,1,1533,372,0,-1,8,1,1533,200,0,-1,70,1,269,0,10,-1,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,homesteader gifts,20,pr,8,1,609,0,22,0,7,1,579,172,0,-1,5,1,609,114,0,-1,30,1,432,0,16,-1,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,gifts for homesteaders,20,pr,9,1,624,0,22,-1,14,1,624,372,0,-2,6,1,624,143,0,-2,62,2,87,0,3,-2,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,best gifts for homesteaders,20,pr,19,1,306,0,10,-1,26,1,306,715,0,-2,11,1,306,286,0,-2,42,6,8,0,0,-3,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,homestead gifts for women,20,sr_rc,49,1,204,0,4,0,18,9,7,487,0,-2,29,1,204,801,0,-1,42,14,1,0,0,-2,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,bread tools for homemade bread,21,pr,3,1,439,0,19,0,3,1,386,57,0,-1,3,1,439,57,0,-1,13,1,370,0,15,-1,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,homemade bread,21,pr,6,1,177,0,6,0,7,1,177,172,0,-1,4,1,177,86,0,-1,37,1,113,0,4,-1,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,baking gifts for men,22,pr,12,1,612,0,21,-1,63,1,612,1774,0,-2,10,1,612,258,0,-2,42,1,361,0,13,-2,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,proofing bowl,23,pr,21,1,1925,0,58,0,11,1,1925,286,0,-1,8,1,1769,200,0,-1,74,1,365,0,13,-1,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,bread proofing bowl,23,pr,15,1,883,0,30,-1,5,5,0,114,0,-3,14,1,834,372,0,-2,54,2,161,0,6,-2,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,proofing,23,pr,7,1,395,0,14,0,20,1,444,544,0,-1,5,1,406,114,0,-1,2,4,5,0,0,-2,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,dough proofing bowl,23,pr,20,1,386,0,13,0,4,5,0,86,0,-2,20,1,386,544,0,-1,54,2,67,0,3,-1,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,sourdough bread accessories,24,pr,2,1,347,0,15,0,4,1,386,86,0,-1,2,1,386,29,0,-1,14,1,302,0,12,-1,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,sourdough accessories,24,sr_rc,1,1,0,0,0,-2,1,1,0,0,0,-2,1,1,0,0,0,-2,1,1,0,0,0,-2,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,bread baking gifts,25,pr,3,1,418,0,17,-1,7,1,418,172,0,-2,3,1,418,57,0,-2,30,1,296,0,11,-2,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,bread supplies,26,sr_rc,6,1,343,0,14,0,20,1,343,544,0,-1,5,1,343,114,0,-1,2,7,1,0,0,-2,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,bread making supplies for homemade bread,26,pr,3,1,258,0,10,-1,4,1,252,86,0,-2,2,1,227,29,0,-2,18,1,214,0,8,-2,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,bread supplies for homemade bread,26,pr,3,1,103,0,4,-1,4,1,103,86,0,-2,2,1,103,29,0,-2,2,2,12,0,0,-2,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,bread making supplies,26,sr_rc,1,1,0,0,0,-1,1,1,0,0,0,-2,1,1,0,0,0,-2,1,1,0,0,0,-2,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,brotform proofing basket and liner,27,pr,17,1,671,0,22,0,99,5,4,2805,0,-2,17,1,671,458,0,-1,2,5,8,0,0,-2,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,brotform,27,pr,67,1,993,0,12,0,10,1,921,258,0,-1,9,1,993,229,0,-1,38,2,228,0,8,-1,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,brotform proofing basket,27,sr_rc,17,1,146,0,5,0,99,7,0,2805,0,-2,17,1,146,458,0,-1,2,7,1,0,0,-2,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,sourdough utensils,28,pr,3,1,269,0,9,-1,3,2,1,57,0,-3,3,1,269,57,0,-2,18,1,223,0,7,-2,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,gifts for baking lovers,29,pr,7,1,285,0,11,-1,10,1,269,258,0,-2,5,1,273,114,0,-2,34,1,191,0,7,-2,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,sour dough accessories,30,pr,3,1,329,0,12,-1,17,2,8,458,0,-3,3,1,329,57,0,-2,10,1,181,0,7,-2,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,bread making kit,31,pr,6,1,8579,0,374,0,6,4,6,143,0,-2,6,1,8579,143,2,-1,2,4,134,0,6,-1,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,bread kit,31,pr,3,1,1163,0,46,-1,98,2,68,2776,0,-3,3,1,1163,57,1,-2,2,2,98,0,4,-2,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,sourdough bread making kit,31,pr,6,1,546,0,23,0,7,3,1,172,0,-2,6,1,546,143,0,-1,2,3,15,0,1,-2,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,artisan bread making kit,31,sr_rc,1,1,0,0,0,-2,1,1,0,0,0,-3,1,1,0,0,0,-3,1,1,0,0,0,-3,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,bread making kits for homemade bread,31,sr_rc,1,1,0,0,0,-2,1,1,0,0,0,-2,1,1,0,0,0,-2,1,1,0,0,0,-2,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,sourdough making kit,31,sr_rc,1,1,0,0,0,-2,1,1,0,0,0,-2,1,1,0,0,0,-2,1,1,0,0,0,-2,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,breadmaking,32,pr,4,1,181,0,7,0,84,2,21,2375,0,-2,4,1,181,86,0,-1,22,1,143,0,6,-1,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,breadmaking tools and supplies,32,sr_rc,1,1,0,0,0,-1,1,1,0,0,0,-2,1,1,0,0,0,-2,1,1,0,0,0,-2,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,proving baskets for sourdough,33,pr,4,1,339,0,11,-1,99,4,4,2805,0,-3,4,1,344,86,0,-2,38,1,164,0,5,-2,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,sour dough kit,34,pr,9,1,13818,0,549,-1,99,5,77,2805,0,-3,9,1,13818,229,2,-2,2,5,111,0,5,-2,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,sour dough starter kit,34,pr,16,1,5778,0,208,0,99,8,10,2805,0,-2,16,1,5778,429,0,-1,2,8,16,0,1,-2,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,sour dough starter kits,34,sr_rc,18,1,656,0,18,-1,100,10,1,2833,0,-3,18,1,656,487,0,-2,2,10,1,0,0,-3,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,sour dough bread starter kit,34,pr,9,1,561,0,17,-1,99,5,3,2805,0,-3,9,1,561,229,0,-2,2,5,4,0,0,-3,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,sour dough kits,34,sr_rc,9,1,437,0,16,-1,99,6,2,2805,0,-3,9,1,437,229,0,-2,2,6,3,0,0,-3,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,sour dough starter kit for beginners,34,sr_rc,12,1,421,0,14,-1,99,5,2,2805,0,-3,12,1,421,315,0,-2,2,5,2,0,0,-3,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,sour dough bread kit,34,pr,3,1,269,0,10,-1,98,2,17,2776,0,-3,3,1,269,57,0,-2,2,2,23,0,1,-3,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,sour dough kit starter,34,sr_rc,14,1,220,0,7,-1,99,6,1,2805,0,-3,14,1,220,372,0,-2,2,6,1,0,0,-3,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,bread maker accessories,35,pr,6,1,747,0,28,-1,12,1,747,315,0,-2,5,1,747,114,0,-2,74,1,113,0,4,-2,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,bread proofing kit,36,pr,3,1,531,0,23,0,100,2,37,2833,0,-2,3,1,531,57,0,-1,2,2,79,0,3,-1,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,sourdough starter tools,37,pr,7,1,210,0,8,-1,99,3,5,2805,0,-3,7,1,210,172,0,-2,62,1,82,0,3,-2,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,sourdough tools,37,sr_rc,1,1,0,0,0,-2,1,1,0,0,0,-2,1,1,0,0,0,-2,1,1,0,0,0,-2,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,banaton for bread making,38,pr,10,1,2385,0,86,-1,100,3,125,2833,0,-2,10,1,2385,258,0,-2,2,4,69,0,3,-2,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,banaton,38,pr,7,1,687,0,21,0,5,5,0,114,0,-2,7,1,697,172,0,-1,2,5,12,0,0,-2,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,sourdough proofing kit,39,pr,3,1,347,0,15,0,100,1,149,2833,0,-1,3,1,347,57,0,-1,2,2,52,0,2,-2,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,sourdough supplies kit,40,pr,3,1,556,0,26,0,100,1,232,2833,0,-1,3,1,556,57,0,-1,2,2,50,0,2,-2,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,sour dough proofing baskets,41,pr,9,1,4398,0,163,0,100,4,127,2833,0,-1,9,1,4398,229,1,-1,2,5,56,0,2,-2,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,sour dough basket,41,pr,11,1,534,0,18,-1,99,7,1,2805,0,-3,11,1,534,286,0,-2,2,7,3,0,0,-3,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,sour dough baskets,41,sr_rc,11,1,438,0,15,-1,6,8,0,143,0,-3,11,1,438,286,0,-2,2,8,2,0,0,-3,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,sour dough tools,42,pr,14,1,8735,0,296,0,19,6,11,515,0,-2,13,1,8267,343,1,-1,2,6,47,0,2,-2,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,bread baking kit,43,pr,5,1,1256,0,52,0,99,3,26,2805,0,-2,5,1,1256,114,0,-1,2,3,42,0,2,-2,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,sourdough kit sourdough bread baking,43,pr,7,1,806,0,32,0,99,4,7,2805,0,-2,7,1,806,172,0,-1,2,4,9,0,0,-2,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,sourdough bread baking kit,43,sr_rc,10,1,835,0,31,-1,100,6,10,2833,0,-3,10,1,835,258,0,-2,2,7,2,0,0,-3,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,gifts for bakers women,44,pr,29,1,4044,0,111,-1,38,1,4044,1059,0,-2,18,1,4044,487,0,-2,54,9,46,0,2,-2,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,baker gifts for women,44,pr,50,1,1594,0,32,-1,51,3,416,1431,0,-2,30,1,1574,830,0,-2,50,16,7,0,0,-3,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,gift for bakers women,44,pr,45,1,434,0,9,-1,18,9,15,487,0,-3,29,1,434,801,0,-2,50,13,3,0,0,-3,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,bakers must haves,45,pr,5,1,130,0,5,0,48,1,129,1345,0,-1,5,1,130,114,0,-1,74,1,35,0,1,-1,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,sourdough tool kit,46,pr,3,1,327,0,14,0,100,2,103,2833,0,-2,3,1,327,57,0,-1,2,2,35,0,1,-2,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,sourdough bread kit,47,pr,6,1,2107,0,96,0,99,4,21,2805,0,-2,6,1,2107,143,1,-1,2,4,25,0,1,-2,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,bread kits for homemade bread,48,pr,5,1,786,0,33,0,99,3,18,2805,0,-2,5,1,786,114,0,-1,2,3,29,0,1,-2,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,baking gift for friend,49,pr,24,1,827,0,24,0,29,1,827,801,0,-1,15,1,827,401,0,-1,67,5,24,0,1,-1,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,baking essentials for home baker,50,pr,9,1,739,0,30,0,82,1,739,2318,0,-1,8,1,666,200,0,-1,70,5,17,0,1,-2,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,bread scraper for sourdough,51,pr,31,1,2364,0,50,0,32,1,2364,887,0,-1,16,1,2364,429,0,-1,82,7,23,0,1,-1,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,bread scraper,51,pr,100,9,334,0,0,-1,51,19,97,1431,0,-2,64,1,6520,1803,0,-1,80,31,4,0,0,-1,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,sourdough scraper,51,pr,100,18,64,0,0,-1,51,39,13,1431,0,-2,99,1,3200,2805,0,-1,78,51,1,0,0,-1,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,sourdough banneton basket,52,pr,15,1,9703,0,361,0,7,19,0,172,0,-2,15,1,9703,401,1,-1,2,19,7,0,0,-2,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,sourdough baskets banneton,52,pr,8,1,2982,0,99,-2,6,9,0,143,0,-3,8,1,2982,200,1,-2,2,9,8,0,0,-3,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,banneton baskets for sourdough,52,sr_rc,11,1,1351,0,50,0,99,13,1,2805,0,-2,11,1,1351,286,0,-1,2,13,2,0,0,-2,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,sourdough banneton,52,pr,12,1,1320,0,45,0,99,10,1,2805,0,-2,12,1,1320,315,0,-1,2,10,4,0,0,-2,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,banneton basket for sourdough,52,pr,5,1,747,0,30,0,6,5,0,143,0,-2,5,1,747,114,0,-1,2,5,14,0,1,-2,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,bread score,53,pr,21,1,435,0,12,0,100,8,1,2833,0,-2,21,1,435,572,0,-1,78,3,20,0,1,-1,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,bread scoring,53,pr,52,1,430,0,7,0,18,12,9,487,0,-2,31,1,430,859,0,-1,74,14,2,0,0,-2,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,bread scoring tool,53,pr,100,6,1770,0,1,0,8,41,0,200,0,-2,100,6,1787,2833,0,-1,74,35,10,0,0,-2,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,scoring tool for sourdough bread,53,pr,100,2,472,0,0,0,100,36,0,2833,0,-2,100,2,637,2833,0,-1,74,30,1,0,0,-2,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,artisan bread tools,54,pr,5,1,117,0,4,-2,3,1,103,57,0,-3,3,1,117,57,0,-2,2,2,14,0,1,-3,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,sourdough cutter tool,55,pr,22,1,569,0,16,0,6,8,0,143,0,-2,22,1,569,601,0,-1,78,4,15,0,1,-1,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,sourdough cutter,55,sr_rc,95,1,1506,0,3,0,6,28,0,143,0,-2,95,1,1506,2690,0,-1,74,26,1,0,0,-2,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,baking gift ideas,56,pr,16,1,403,0,14,-1,26,1,403,716,0,-2,12,1,403,315,0,-2,62,5,13,0,0,-3,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,bread proofing set,57,pr,6,1,362,0,15,0,100,4,4,2833,0,-2,6,1,362,143,0,-1,2,4,8,0,0,-2,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,bread proofing basket set,57,pr,8,1,356,0,13,0,99,5,2,2805,0,-2,8,1,356,200,0,-1,2,5,5,0,0,-2,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,bread maker kit,58,pr,3,1,286,0,12,0,4,2,1,86,0,-2,3,1,286,57,0,-1,2,2,11,0,0,-2,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,sourdough proofing basket set,59,pr,5,1,436,0,17,0,99,4,4,2805,0,-2,5,1,436,114,0,-1,2,4,8,0,0,-2,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,sourdough set,59,pr,7,1,429,0,17,0,100,3,22,2833,0,-2,7,1,429,172,0,-1,2,4,9,0,0,-2,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,sourdough baking kit,60,pr,7,1,1693,0,66,-1,100,4,54,2833,0,-3,7,1,1740,172,0,-2,2,5,12,0,0,-3,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,baking items,61,pr,7,1,511,0,18,-1,85,1,511,2403,0,-2,7,1,511,172,0,-2,74,4,13,0,0,-3,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,baking items for gift,61,pr,21,1,331,0,10,-1,40,1,335,1116,0,-2,15,1,335,401,0,-2,42,11,3,0,0,-3,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,bread starter kit,62,pr,6,1,1168,0,42,-1,99,4,11,2805,0,-3,6,1,1168,143,0,-2,2,4,13,0,0,-3,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,bread rising basket,63,pr,7,1,821,0,30,-1,100,5,14,2833,0,-3,7,1,821,172,0,-2,2,6,9,0,0,-3,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,bread whisk,64,pr,43,1,9913,0,182,0,2,16,0,29,0,-2,43,1,9913,1202,0,-1,2,16,5,0,0,-2,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,sourdough bread whisk,64,pr,14,1,2801,0,86,-1,100,8,8,2833,0,-3,14,1,2801,372,0,-2,2,8,10,0,0,-3,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,banaton basket,65,pr,12,1,4826,0,144,-1,6,11,0,143,0,-3,12,1,4826,315,0,-2,2,11,8,0,0,-3,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,best gifts for bakers,66,pr,16,1,449,0,14,-1,5,10,0,114,0,-3,16,1,449,429,0,-2,62,6,8,0,0,-3,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,sourdough loaf proofing basket,67,pr,8,1,614,0,27,0,100,6,7,2833,0,-2,8,1,614,200,0,-1,2,7,4,0,0,-2,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,proofing basket set,68,pr,6,1,287,0,12,0,100,5,2,2833,0,-2,6,1,287,143,0,-1,2,5,4,0,0,-2,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,banneton set,69,pr,6,1,561,0,23,0,99,4,16,2805,0,-2,6,1,561,143,0,-1,2,5,5,0,0,-2,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,banneton basket set,69,pr,6,1,390,0,15,-1,100,5,7,2833,0,-3,6,1,390,143,0,-2,2,6,5,0,0,-3,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,baking needs,70,pr,15,1,452,0,14,-1,100,4,71,2832,0,-3,13,1,429,343,0,-2,70,10,3,0,0,-3,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,baking needs for home baker,70,pr,11,1,343,0,12,-1,89,1,343,2519,0,-2,10,1,343,258,0,-2,74,5,6,0,0,-3,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,sour dough bread basket,71,pr,8,1,283,0,11,0,99,5,2,2805,0,-2,8,1,283,200,0,-1,2,5,4,0,0,-2,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,sour dough bread baking supplies,72,pr,6,1,394,0,16,0,5,4,0,114,0,-2,6,1,394,143,0,-1,2,4,6,0,0,-2,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,sour dough supplies,72,sr_rc,1,1,0,0,0,-2,1,1,0,0,0,-2,1,1,0,0,0,-2,1,1,0,0,0,-2,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,kitchen gift basket,73,pr,7,1,382,0,14,-1,28,1,371,773,0,-2,6,1,382,143,0,-2,2,4,5,0,0,-3,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,bread baking set,74,pr,5,1,227,0,9,-1,7,1,216,172,0,-2,4,1,227,86,0,-2,2,3,5,0,0,-3,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,bread making bowl,75,pr,8,1,188,0,7,0,4,4,0,86,0,-2,8,1,188,200,0,-1,2,4,5,0,0,-2,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,sourdough scoring tool,76,pr,100,25,230,0,0,-1,100,53,1,2833,0,-2,100,24,239,2833,0,-1,74,47,7,0,0,-1,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,sourdough lame scoring tool,76,sr_rc,100,14,46,0,0,-1,17,35,4,458,0,-2,100,6,158,2833,0,-1,2,42,0,0,0,-2,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,scoring tool,76,sr_rc,95,89,1,0,0,-1,100,92,0,2833,0,-2,95,88,1,2690,0,-2,2,92,0,0,0,-2,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,sourdough stuff,77,pr,14,1,832,0,27,0,4,7,0,86,0,-2,14,1,832,372,0,-1,2,7,3,0,0,-2,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,batton sourdough baskets,78,pr,11,1,1798,0,59,-1,99,11,2,2805,0,-3,11,1,1798,286,0,-2,2,11,3,0,0,-3,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,scorer for sourdough,79,pr,45,1,2164,0,37,0,100,22,1,2833,0,-2,45,1,2164,1259,0,-1,74,16,5,0,0,-2,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,sourdough scorer,79,pr,47,1,1200,0,21,0,100,17,1,2833,0,-2,47,1,1200,1317,0,-1,78,11,6,0,0,-2,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,sourdough bread scorer tool,79,pr,49,1,490,0,10,-1,100,21,0,2833,0,-3,49,1,490,1374,0,-2,74,14,2,0,0,-3,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,sourdough knife scorer,79,sr_rc,90,1,350,0,1,0,99,36,0,2805,0,-2,90,1,350,2547,0,-1,74,28,0,0,0,-2,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,sourdough blade scorer,79,pr,100,12,71,0,0,-1,100,52,0,2833,0,-2,100,12,76,2833,0,-2,78,45,1,0,0,-1,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,baking equipment,80,pr,7,1,920,0,38,0,26,1,920,716,0,-1,6,1,920,143,0,-1,30,8,4,0,0,-2,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,baking equipment for home bakery,80,sr_rc,13,1,246,0,8,-1,18,8,10,486,0,-3,10,1,246,257,0,-2,2,16,0,0,0,-3,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,bread stirring tool,81,pr,63,1,429,0,6,0,3,17,0,57,0,-2,63,1,429,1774,0,-1,80,8,4,0,0,-2,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,dough scraper for sourdough,82,pr,93,1,2988,0,9,0,51,8,182,1431,0,-1,41,1,2988,1145,0,-1,79,20,4,0,0,-2,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,bagel making kit,83,pr,15,1,124,0,4,-2,3,8,0,57,0,-3,15,1,124,401,0,-2,38,7,2,0,0,-3,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,sour dough whisk,84,pr,42,1,660,0,15,0,100,16,0,2833,0,-2,42,1,660,1173,0,-1,70,11,4,0,0,-2,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,dough whisk,84,sr_rc,100,36,159,0,0,0,16,64,0,429,0,-2,100,36,161,2833,0,-1,2,64,1,0,0,-2,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,baking supplies for home bakers,85,sr_rc,14,1,3171,0,111,-1,41,1,3171,1144,0,-2,11,1,3171,286,0,-2,2,14,2,0,0,-3,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,dough scoring tool,86,pr,100,8,104,0,0,-1,7,31,0,172,0,-2,100,8,105,2833,0,-1,75,24,2,0,0,-1,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,bread dough whisk,87,pr,94,1,2351,0,5,0,99,26,0,2805,0,-2,93,1,2351,2633,0,-1,70,21,4,0,0,-2,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,lame bread tool,88,pr,99,39,62,0,0,-2,17,60,10,458,0,-2,99,31,102,2805,0,-1,74,60,2,0,0,-1,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,gluten free sourdough starter,89,sr_rc,51,1,6394,0,111,0,47,1,6476,1317,0,-1,31,1,6476,859,0,-1,2,16,2,0,0,-2,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,gluten free sourdough starter kit,89,sr_rc,24,1,721,0,19,-1,23,1,721,630,0,-2,15,1,721,401,0,-2,2,8,2,0,0,-3,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,gluten free sourdough bread starter,89,sr_rc,46,1,180,0,4,0,47,1,180,1317,0,-1,26,1,180,716,0,-1,2,16,0,0,0,-2,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,bread scorer tool,90,pr,60,1,2186,0,32,-1,8,28,0,200,0,-3,60,1,2186,1689,0,-2,78,22,3,0,0,-3,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,sourdough for beginners,91,pr,27,1,569,0,15,0,6,7,0,143,0,-2,27,1,569,744,0,-1,100,2,2,0,0,-1,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,bread cloth,92,pr,87,1,1417,0,7,0,68,7,101,1918,0,-2,53,1,1417,1488,0,-1,66,24,2,0,0,-2,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,bread cloth for homemade bread,92,sr_rc,100,19,8,0,0,-1,68,22,6,1918,0,-2,90,1,486,2547,0,-1,2,44,0,0,0,-2,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,sourdough mixer,93,pr,37,1,1299,0,28,0,3,17,0,57,0,-2,37,1,1299,1030,0,-1,70,15,2,0,0,-2,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,sourdough design tools,94,pr,32,1,295,0,8,-1,5,21,0,114,0,-3,32,1,295,887,0,-2,74,14,1,0,0,-3,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,razor for sourdough bread,95,pr,59,1,600,0,10,0,7,21,0,172,0,-2,59,1,600,1660,0,-1,74,15,2,0,0,-2,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,9 inch banneton proofing basket,96,sr_rc,10,1,890,0,34,0,99,10,1,2805,0,-2,10,1,890,258,0,-1,2,10,2,0,0,-2,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,active sourdough starter,97,sr_rc,100,29,13,0,0,-2,100,66,0,2833,0,-2,100,29,13,2833,0,-2,22,65,0,0,0,-2,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,bakers lame,98,sr_rc,96,1,484,0,1,0,8,47,0,200,0,-2,96,1,484,2719,0,-1,2,47,0,0,0,-2,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,bakery tools,99,sr_rc,21,1,155,0,5,0,45,1,155,1259,0,-1,16,1,155,429,0,-1,2,17,0,0,0,-2,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,baking dish for sourdough bread,100,sr_rc,75,1,733,0,7,0,68,8,43,1918,0,-2,42,1,733,1173,0,-1,2,30,0,0,0,-2,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,sourdough baking dish,100,sr_rc,81,1,677,0,7,0,68,7,49,1918,0,-2,42,1,677,1173,0,-1,2,29,0,0,0,-2,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,baking gift basket,101,sr_rc,13,1,443,0,16,-1,3,13,0,57,0,-3,13,1,443,343,0,-2,2,13,0,0,0,-3,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,baking gift set,102,sr_rc,29,1,893,0,27,0,68,4,145,1917,0,-1,22,1,893,601,0,-1,2,26,0,0,0,-2,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,baking gift sets,102,sr_rc,16,1,199,0,7,0,38,1,199,1059,0,-1,12,1,199,315,0,-1,2,13,0,0,0,-2,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,baking gifts for teens,103,sr_rc,41,1,392,0,9,-1,4,19,0,86,0,-3,41,1,392,1144,0,-2,2,19,0,0,0,-3,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,baking stuff for women,104,sr_rc,69,1,370,0,5,0,68,2,148,1918,0,-1,37,1,370,1030,0,-1,42,21,1,0,0,-2,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,ballerina farm,105,sr_rc,50,1,142,0,3,0,24,6,1,658,0,-2,46,1,142,1287,0,-1,2,6,1,0,0,-2,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,baneton,106,sr_rc,31,1,821,0,19,0,6,9,0,143,0,-2,31,1,821,859,0,-1,2,9,3,0,0,-2,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,banetons,106,sr_rc,11,1,459,0,14,0,6,8,0,143,0,-2,11,1,465,286,0,-1,2,8,2,0,0,-2,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,round banneton basket,107,sr_rc,14,1,1196,0,37,0,99,11,1,2805,0,-2,14,1,1212,372,0,-1,2,11,2,0,0,-2,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,round banneton,107,sr_rc,38,1,588,0,15,0,7,25,0,172,0,-2,38,1,588,1059,0,-1,2,25,0,0,0,-2,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,banneton basket round,107,sr_rc,22,1,252,0,9,0,7,16,0,172,0,-2,22,1,252,601,0,-1,2,16,0,0,0,-2,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,batard banneton basket,108,sr_rc,35,1,760,0,18,-1,99,32,0,2805,0,-3,35,1,760,973,0,-2,2,32,0,0,0,-3,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,batard proofing basket,109,sr_rc,43,1,851,0,17,0,7,22,0,172,0,-2,43,1,851,1202,0,-1,2,22,0,0,0,-2,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,baton baskets for sourdough,110,sr_rc,7,1,368,0,13,-1,99,7,1,2805,0,-3,7,1,368,172,0,-2,2,7,2,0,0,-3,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,benton baskets for sourdough,111,sr_rc,14,1,333,0,11,-1,7,16,0,172,0,-3,14,1,333,372,0,-2,2,16,0,0,0,-3,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,best baking gifts,112,sr_rc,1,1,0,0,0,-2,1,1,0,0,0,-3,1,1,0,0,0,-3,1,1,0,0,0,-3,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,best sourdough starter,113,sr_rc,32,1,2597,0,67,-1,53,1,2597,1488,0,-2,23,1,2597,630,0,-2,2,18,1,0,0,-3,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,best jar for sourdough starter,113,sr_rc,100,14,25,0,0,-2,6,51,0,143,0,-2,100,14,26,2833,0,-2,2,51,0,0,0,-2,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,best jars for sourdough starter,113,sr_rc,100,16,27,0,0,-3,6,65,0,143,0,-3,100,16,27,2832,0,-3,2,65,0,0,0,-3,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,jar for sourdough starter,113,sr_rc,100,126,2,0,0,-2,6,166,0,143,0,-2,100,126,2,2833,0,-2,2,166,0,0,0,-2,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,best sourdough dutch oven,114,sr_rc,43,39,1,0,0,-1,4,55,0,86,0,-2,43,39,1,1202,0,-2,4,55,0,0,0,-2,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,dutch oven sourdough,114,sr_rc,24,62,0,0,0,-1,4,70,0,86,0,-2,24,62,0,658,0,-2,2,70,0,0,0,-2,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+TRUE,B0DDL25FQQ,B09HH4K1LZ,sour dough bread baking pan,115,sr_rc,61,1,1360,0,22,0,56,1,1360,1574,0,-1,31,1,1360,859,0,-1,2,19,0,0,0,-2,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,sourdough pans for baking,115,sr_rc,99,1,2150,0,2,0,68,23,24,1918,0,-2,51,1,2150,1431,0,-1,3,45,0,0,0,-2,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,sourdough bread baking pan,115,sr_rc,100,1,1581,0,1,0,68,16,32,1918,0,-2,51,1,1581,1431,0,-1,2,38,0,0,0,-2,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,sourdough baking pan,115,sr_rc,98,54,15,0,0,-1,67,66,7,1889,0,-2,100,32,46,2833,0,-2,2,88,0,0,0,-2,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,bread baking pan,115,sr_rc,100,85,4,0,0,-1,67,90,3,1889,0,-2,68,71,8,1918,0,-2,6,112,0,0,0,-2,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,sourdough bread pans for baking,115,sr_rc,100,22,3,0,0,-2,68,46,1,1917,0,-3,98,1,160,2775,0,-2,10,68,0,0,0,-3,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,bread cloche,116,sr_rc,98,23,31,0,0,-1,6,55,0,143,0,-2,98,23,31,2776,0,-2,2,55,0,0,0,-2,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,bread cover,117,sr_rc,97,132,0,0,0,-1,7,176,0,172,0,-2,97,132,0,2747,0,-2,2,176,0,0,0,-2,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,sourdough cover,117,sr_rc,100,77,0,0,0,-1,100,121,0,2833,0,-2,100,77,0,2833,0,-2,17,116,0,0,0,-2,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,bread dipping set,118,sr_rc,99,1,978,0,1,-1,100,44,0,2833,0,-3,98,1,978,2776,0,-2,14,44,0,0,0,-3,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,bread kneader,119,sr_rc,78,1,170,0,1,0,54,33,0,1516,0,-2,78,1,172,2203,0,-1,2,33,0,0,0,-2,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,gifts for bread makers,120,sr_rc,13,1,890,0,31,-1,91,1,890,2576,0,-2,11,1,867,286,0,-2,3,11,1,0,0,-3,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,bread maker gifts,120,sr_rc,10,1,313,0,11,-1,69,9,1,1946,0,-3,10,1,313,258,0,-2,2,9,0,0,0,-3,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,bread making essentials,121,sr_rc,1,1,0,0,0,-3,1,1,0,0,0,-3,1,1,0,0,0,-3,1,1,0,0,0,-3,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,bread making tools,122,sr_rc,1,1,0,0,0,-2,1,1,0,0,0,-2,1,1,0,0,0,-2,1,1,0,0,0,-2,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,bread making tools and supplies,122,sr_rc,1,1,0,0,0,-1,1,1,0,0,0,-2,1,1,0,0,0,-2,1,1,0,0,0,-2,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,bread pans for homemade bread,123,sr_rc,97,127,13,0,0,-1,67,156,4,1889,0,-2,85,110,21,2404,0,-2,2,178,0,0,0,-2,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,bread pans for sourdough,124,sr_rc,41,1,438,0,10,-1,68,5,50,1918,0,-3,27,1,438,744,0,-2,2,27,0,0,0,-3,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,sourdough pan,124,sr_rc,100,4,298,0,0,0,68,27,16,1918,0,-2,62,1,1882,1746,0,-1,2,49,0,0,0,-2,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,sourdough bread pan,124,sr_rc,100,25,42,0,0,-1,68,42,13,1918,0,-2,100,3,853,2833,0,-1,2,64,0,0,0,-2,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,bread proofer,125,sr_rc,30,1,2654,0,79,0,99,27,0,2804,0,-2,30,1,2654,830,0,-1,2,27,0,0,0,-2,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,sourdough proofer,125,sr_rc,32,1,267,0,7,-1,6,23,0,143,0,-3,32,1,267,887,0,-2,2,23,0,0,0,-3,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,bread proofing box,126,sr_rc,67,1,5694,0,79,-1,18,46,0,487,0,-3,66,1,5623,1860,0,-2,2,46,0,0,0,-3,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,proofing box for sourdough bread baking,126,sr_rc,19,1,2030,0,66,-1,6,19,0,143,0,-3,19,1,2030,515,0,-2,2,19,1,0,0,-3,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,sourdough proofing box,126,sr_rc,100,6,90,0,0,-2,100,53,0,2832,0,-3,100,6,103,2832,0,-3,2,54,0,0,0,-3,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,bread rising container,127,sr_rc,46,1,235,0,5,0,19,27,0,515,0,-2,46,1,235,1288,0,-1,2,27,0,0,0,-2,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,bread spatula,128,sr_rc,100,38,4,0,0,-1,68,40,4,1918,0,-2,100,16,22,2833,0,-2,9,59,0,0,0,-2,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,bread starter jar,129,sr_rc,100,14,32,0,0,-2,100,61,0,2833,0,-2,100,13,34,2833,0,-2,2,62,0,0,0,-2,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,sourdough bread starter jar,129,sr_rc,100,38,4,0,0,-2,100,76,0,2833,0,-2,100,38,4,2833,0,-2,2,76,0,0,0,-2,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,bread storage for sourdough,130,sr_rc,57,1,190,0,3,-1,51,16,4,1431,0,-3,39,1,190,1088,0,-2,3,34,0,0,0,-3,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,bread towels for homemade bread,131,sr_rc,100,2,159,0,0,0,4,33,0,86,0,-2,100,2,167,2833,0,-1,54,29,0,0,0,-2,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,bread towel,131,sr_rc,100,23,15,0,0,-1,6,49,0,143,0,-2,100,22,15,2833,0,-2,54,44,1,0,0,-2,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,sourdough towel,131,sr_rc,83,38,2,0,0,-1,6,57,0,143,0,-2,83,38,2,2347,0,-2,2,57,0,0,0,-2,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,bread tray,132,sr_rc,93,1,246,0,1,0,68,22,3,1917,0,-2,55,1,246,1545,0,-1,2,44,0,0,0,-2,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,bread warmer basket with stone,133,sr_rc,100,39,17,0,0,-2,100,86,0,2832,0,-3,100,39,18,2832,0,-3,2,86,0,0,0,-3,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,bread wisk,134,sr_rc,34,1,1074,0,23,0,3,15,0,57,0,-2,34,1,1074,944,0,-1,2,15,1,0,0,-2,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,sourdough wisk,134,sr_rc,100,10,36,0,0,-1,4,45,0,86,0,-2,100,10,37,2833,0,-2,2,45,0,0,0,-2,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,cooking gift basket,135,sr_rc,19,1,329,0,11,0,41,1,329,1144,0,-1,14,1,329,372,0,-1,2,14,0,0,0,-2,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,cooking gifts,135,sr_rc,100,36,128,0,0,0,87,70,13,2460,0,-2,100,26,231,2832,0,-1,14,78,1,0,0,-2,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,cool gifts for bakers,136,sr_rc,32,1,943,0,26,-1,56,1,943,1574,0,-2,22,1,943,601,0,-2,2,19,0,0,0,-3,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,couche for bread dough,137,sr_rc,100,10,20,0,0,-1,5,39,0,114,0,-2,100,9,21,2833,0,-2,2,39,0,0,0,-2,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,danish hook,138,sr_rc,95,28,1,0,0,-1,100,34,0,2833,0,-2,99,28,1,2805,0,-2,13,26,1,0,0,-2,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,dough mixer hand tool,139,sr_rc,100,25,4,0,0,-1,68,23,5,1918,0,-2,100,3,104,2833,0,-1,70,41,0,0,0,-2,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,dough rising bucket,140,sr_rc,58,1,611,0,10,0,6,23,0,143,0,-2,58,1,611,1631,0,-1,2,23,0,0,0,-2,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,dough rising bucket with lid,140,sr_rc,94,29,13,0,0,-1,6,53,0,143,0,-2,94,29,13,2662,0,-2,2,53,0,0,0,-2,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,dough tub,141,sr_rc,100,12,22,0,0,-1,5,44,0,114,0,-2,100,12,23,2833,0,-2,2,44,0,0,0,-2,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,dough wisk,142,sr_rc,65,42,6,0,0,-1,3,62,0,57,0,-2,65,42,6,1832,0,-2,2,62,0,0,0,-2,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,dutch dough whisk,143,sr_rc,75,32,5,0,0,-1,3,51,0,57,0,-2,75,32,5,2118,0,-2,70,45,0,0,0,-2,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,einkorn sourdough starter,144,sr_rc,57,1,357,0,6,-1,99,30,0,2805,0,-3,57,1,357,1603,0,-2,22,29,0,0,0,-3,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,focaccia bread kit,145,sr_rc,18,1,337,0,10,0,100,8,2,2833,0,-2,18,1,337,487,0,-1,2,9,0,0,0,-2,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,focaccia bread pan,146,sr_rc,99,30,18,0,0,-1,68,29,19,1918,0,-2,100,8,176,2833,0,-1,2,51,0,0,0,-2,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,food making kit,147,sr_rc,100,48,1,0,0,-2,15,110,0,401,0,-3,100,48,1,2832,0,-3,2,110,0,0,0,-3,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,fresh sourdough starter,148,sr_rc,67,1,566,0,7,0,99,27,0,2805,0,-2,66,1,566,1860,0,-1,2,27,0,0,0,-2,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,gifts for bakers men,149,sr_rc,1,1,0,0,0,-2,1,1,0,0,0,-3,1,1,0,0,0,-3,1,1,0,0,0,-3,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,homemade bread accessories,150,sr_rc,1,1,0,0,0,-2,1,1,0,0,0,-3,1,1,0,0,0,-3,1,1,0,0,0,-3,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,organic sourdough starter,151,sr_rc,96,1,1175,0,2,0,34,17,19,944,0,-2,48,1,1175,1345,0,-1,2,30,0,0,0,-2,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,parchment paper for sourdough baking,152,sr_rc,58,79,1,0,0,-1,100,80,1,2833,0,-2,72,65,2,2032,0,-2,5,94,0,0,0,-2,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,proofing basket liner,153,sr_rc,68,1,443,0,6,-1,100,32,0,2833,0,-3,68,1,443,1918,0,-2,2,33,0,0,0,-3,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,proofing cloth,154,sr_rc,100,42,0,0,0,-1,68,24,4,1918,0,-2,68,23,5,1918,0,-2,2,46,0,0,0,-2,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,round proofing basket,155,sr_rc,30,1,420,0,12,0,7,11,0,172,0,-2,30,1,420,830,0,-1,2,11,1,0,0,-2,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,scoring lame,156,sr_rc,85,34,0,0,0,-1,99,35,0,2805,0,-2,100,34,0,2833,0,-2,78,28,1,0,0,-2,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,silicone banneton basket,157,sr_rc,100,41,29,0,0,-2,100,106,0,2833,0,-3,100,40,29,2833,0,-3,2,107,0,0,0,-3,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,silicone sourdough proofing basket,158,sr_rc,100,13,26,0,0,-2,7,73,0,172,0,-3,100,13,26,2833,0,-3,2,73,0,0,0,-3,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,sour dough pan,159,sr_rc,39,1,444,0,11,0,29,1,444,801,0,-1,18,1,444,487,0,-1,2,11,0,0,0,-2,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,sour dough baking pans,159,sr_rc,100,24,9,0,0,-1,68,40,3,1918,0,-2,100,2,270,2833,0,-1,2,62,0,0,0,-2,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,sour dough banneton,160,sr_rc,11,1,251,0,9,-1,99,7,1,2805,0,-3,11,1,251,286,0,-2,2,7,1,0,0,-3,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,sour dough bread slicer,161,sr_rc,100,12,11,0,0,-1,17,33,1,458,0,-2,100,4,48,2832,0,-2,22,39,0,0,0,-2,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,sour dough gifts,162,sr_rc,33,1,299,0,8,-1,51,1,299,1431,0,-2,20,1,299,544,0,-2,2,19,0,0,0,-3,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,sour dough starter jars,163,sr_rc,100,81,19,0,0,-2,5,122,0,114,0,-2,100,81,19,2833,0,-2,2,122,0,0,0,-2,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,sour dough jars,163,sr_rc,99,99,1,0,0,-2,6,135,0,143,0,-2,99,99,1,2805,0,-2,2,135,0,0,0,-2,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,sour dough starter jar,163,sr_rc,100,76,2,0,0,-2,4,109,0,86,0,-2,100,76,2,2833,0,-2,2,109,0,0,0,-2,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,sourdough baking pans for oven,164,sr_rc,100,46,0,0,0,-1,67,72,0,1888,0,-2,100,24,1,2832,0,-2,3,94,0,0,0,-2,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,sourdough boule,165,sr_rc,28,1,1443,0,34,0,100,6,81,2833,0,-2,23,1,1443,630,0,-1,2,9,2,0,0,-2,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,sourdough bread design stencils,166,sr_rc,43,1,127,0,3,-1,100,20,0,2833,0,-3,42,1,127,1173,0,-2,6,20,0,0,0,-3,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,sourdough bread jar,167,sr_rc,100,4,148,0,0,-1,6,39,0,143,0,-2,100,4,156,2833,0,-1,2,39,0,0,0,-2,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,sourdough bread maker,168,sr_rc,83,1,1450,0,11,-1,89,43,0,2519,0,-3,83,1,1450,2347,0,-2,35,43,0,0,0,-3,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,sourdough bread making supplies,169,sr_rc,9,1,368,0,15,0,3,9,0,57,0,-2,9,1,368,229,0,-1,2,9,1,0,0,-2,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,sourdough bread supplies,169,sr_rc,1,1,0,0,0,-2,1,1,0,0,0,-2,1,1,0,0,0,-2,1,1,0,0,0,-2,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,sourdough bread mix,170,sr_rc,21,151,0,0,0,-2,67,136,0,1889,0,-2,68,119,0,1918,0,-2,50,154,0,0,0,-2,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,sourdough bread tools,171,sr_rc,1,1,0,0,0,-2,1,1,0,0,0,-2,1,1,0,0,0,-2,1,1,0,0,0,-2,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,tools for sourdough bread,171,sr_rc,1,1,0,0,0,-2,1,1,0,0,0,-2,1,1,0,0,0,-2,1,1,0,0,0,-2,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,sourdough starter crock,172,sr_rc,55,1,271,0,5,0,4,34,0,86,0,-2,55,1,271,1545,0,-1,2,34,0,0,0,-2,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,sourdough crock,172,sr_rc,100,4,174,0,0,-1,4,40,0,86,0,-2,100,4,185,2833,0,-1,2,40,0,0,0,-2,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,sourdough crock with lid,172,sr_rc,100,34,3,0,0,-2,5,60,0,114,0,-2,100,34,3,2833,0,-2,2,60,0,0,0,-2,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,sourdough discard jar,173,sr_rc,64,77,1,0,0,-2,6,94,0,143,0,-2,64,77,1,1803,0,-2,2,94,0,0,0,-2,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,sourdough glass jar with lid,174,sr_rc,99,159,0,0,0,-2,67,152,0,1889,0,-2,68,145,0,1918,0,-2,2,174,0,0,0,-2,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,sourdough jar glass,174,sr_rc,100,115,0,0,0,-2,67,116,0,1889,0,-2,68,101,0,1918,0,-2,2,138,0,0,0,-2,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,sourdough home,175,sr_rc,100,14,60,0,0,-1,99,50,0,2804,0,-2,100,14,62,2832,0,-2,6,50,0,0,0,-2,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,sourdough jar kit,176,sr_rc,100,29,5,0,0,-3,100,84,0,2833,0,-3,100,29,5,2833,0,-3,2,85,0,0,0,-3,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+TRUE,B0DDL25FQQ,B09HH4K1LZ,sourdough kit with scale,177,sr_rc,32,1,1045,0,29,0,51,1,1045,1431,0,-1,21,1,1045,572,0,-1,2,19,0,0,0,-2,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,sourdough necessities,178,sr_rc,1,1,0,0,0,-3,1,1,0,0,0,-3,1,1,0,0,0,-3,1,1,0,0,0,-3,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,sourdough scoring blade,179,sr_rc,100,25,2,0,0,-1,100,52,0,2833,0,-2,100,25,3,2833,0,-2,74,45,0,0,0,-2,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,sourdough scraper tool,180,sr_rc,99,32,14,0,0,-1,51,41,7,1431,0,-2,99,14,65,2805,0,-1,74,53,1,0,0,-2,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,sourdough spoon,181,sr_rc,100,4,53,0,0,-1,68,19,4,1918,0,-2,62,1,286,1746,0,-1,13,38,0,0,0,-2,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,sourdough starter container,182,sr_rc,100,61,3,0,0,-3,4,114,0,86,0,-3,100,61,3,2833,0,-3,2,114,0,0,0,-3,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,sourdough starter incubator,183,sr_rc,58,1,284,0,4,0,6,23,0,143,0,-2,58,1,284,1631,0,-1,22,23,0,0,0,-2,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,sourdough starter kit with dutch oven,184,sr_rc,53,1,2373,0,46,-1,6,32,0,143,0,-3,53,1,2373,1488,0,-2,2,32,0,0,0,-3,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,sourdough starter supplies,185,sr_rc,1,1,0,0,0,-3,1,1,0,0,0,-3,1,1,0,0,0,-3,1,1,0,0,0,-3,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,sourdough starter￼,186,sr_rc,100,53,1,0,0,-2,67,69,0,1889,0,-2,100,31,3,2833,0,-2,2,91,0,0,0,-2,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,sourdough tools and supplies,187,sr_rc,1,1,0,0,0,-2,1,1,0,0,0,-2,1,1,0,0,0,-2,1,1,0,0,0,-2,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,sourdough warmer,188,sr_rc,80,158,1,0,0,-2,67,158,1,1888,0,-2,70,139,3,1974,0,-2,6,180,0,0,0,-2,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,spurdough,189,sr_rc,85,1,600,0,3,0,62,1,600,1746,0,-1,34,1,600,944,0,-1,42,19,1,0,0,-2,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,tea cloths for sourdough,190,sr_rc,100,19,18,0,0,-1,68,30,7,1918,0,-2,89,1,993,2519,0,-1,54,47,0,0,0,-2,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,weak jars for sourdough,191,sr_rc,100,4,83,0,0,-2,5,36,0,114,0,-2,100,4,87,2833,0,-2,2,36,0,0,0,-2,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,wood pulp banneton bread proofing basket,192,sr_rc,15,1,491,0,19,0,99,13,0,2805,0,-2,15,1,491,401,0,-1,2,13,1,0,0,-2,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B09HH4K1LZ,wooden dowel for sourdough mixing,193,sr_rc,98,27,4,0,0,-1,100,45,0,2833,0,-2,99,26,4,2805,0,-2,11,42,0,0,0,-2,7,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B0B4DPT25Q,oval banneton basket,1,kw,40,1,5862,0,131,0,100,29,12,2833,0,-2,38,1,5862,1059,0,-1,13,32,3,0,0,-2,0,1,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B0B4DPT25Q,banneton bread proofing basket oval,1,kw,23,1,1300,0,39,0,100,22,5,2833,0,-2,23,1,1300,630,0,-1,9,25,1,0,0,-2,0,1,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B0B4DPT25Q,oval banneton,1,kw,44,1,1760,0,32,0,100,22,7,2833,0,-2,42,1,1760,1173,0,-1,13,25,2,0,0,-2,0,1,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B0B4DPT25Q,oval banneton bread proofing basket,1,kw,22,1,545,0,17,0,100,23,2,2833,0,-2,21,1,545,572,0,-1,27,25,1,0,0,-2,0,1,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B0B4DPT25Q,banneton oval,1,kw,40,1,901,0,16,0,100,23,3,2833,0,-2,37,1,901,1030,0,-1,16,26,1,0,0,-2,0,1,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+TRUE,B0DDL25FQQ,B0B4DPT25Q,oval bread proofing basket,2,kw,15,1,1044,0,38,0,100,19,4,2833,0,-2,14,1,1044,372,0,-1,16,21,2,0,0,-2,0,1,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B0B4DPT25Q,oval proofing basket,2,kw,25,1,1019,0,30,0,100,23,3,2833,0,-2,24,1,1019,658,0,-1,16,25,1,0,0,-2,0,1,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B0B4DPT25Q,oval proofing baskets for sourdough bread baking,2,kw,15,1,473,0,16,0,100,17,2,2833,0,-2,14,1,473,372,0,-1,16,19,1,0,0,-2,0,1,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B0CKTKK5GT,baking set gift,1,kw,25,1,214,0,4,0,27,21,0,744,0,-2,25,1,214,687,0,-1,64,16,1,0,0,-2,0,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0DDL25FQQ,B0CKTKK5GT,gifts for the bread baker,2,kw,53,33,2,0,0,-2,3,61,0,57,0,-2,53,33,2,1488,0,-2,28,60,0,0,0,-2,0,2,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0D9BX84R5,B0D9BX84R5,sourdough starter kit,1,kw,5,1,118638,0,6047,0,29,1,118638,41,98,-1,4,1,118638,4,1043,-1,18,6,916,0,44,-1,205,1,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0D9BX84R5,B0D9BX84R5,sourdough starter,1,kw,49,1,43058,0,1118,0,100,17,583,145,0,-1,37,1,43058,53,24,-1,19,27,13,0,1,-2,205,1,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0D9BX84R5,B0D9BX84R5,sourdough kit,1,kw,77,1,15763,0,224,0,100,38,66,145,0,-2,57,1,15763,82,5,-1,13,56,0,0,0,-2,205,1,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0D9BX84R5,B0D9BX84R5,sourdough starter jar kit,1,kw,4,1,3455,0,198,-1,23,1,3455,32,5,-2,4,1,3455,4,34,-2,18,4,69,0,4,-2,205,1,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+TRUE,B0D9BX84R5,B0D9BX84R5,sourdough bread starter kit,1,kw,10,1,837,0,49,0,61,1,837,88,0,-1,9,1,837,12,4,-1,7,12,0,0,0,-2,205,1,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+TRUE,B0D9BX84R5,B0D9BX84R5,sourdough starter kit beginners,1,kw,4,1,860,0,48,0,23,1,860,32,1,-1,4,1,860,4,8,-1,13,5,4,0,0,-2,205,1,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0D9BX84R5,B0D9BX84R5,sourdough starters,1,kw,21,1,861,0,37,-1,74,1,861,107,0,-2,16,1,861,22,2,-2,18,20,1,0,0,-3,205,1,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0D9BX84R5,B0D9BX84R5,sourdough kits,1,kw,21,1,754,0,33,-1,100,10,32,145,0,-3,19,1,754,26,1,-2,14,28,0,0,0,-3,205,1,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0D9BX84R5,B0D9BX84R5,sourdough starter kit with scale,1,kw,50,1,1206,0,32,-1,100,27,7,145,0,-3,38,1,1206,54,1,-2,13,39,0,0,0,-3,205,1,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0D9BX84R5,B0D9BX84R5,beginner sourdough starter kit,1,kw,3,1,478,0,30,0,18,1,478,25,1,-1,3,1,478,3,7,-1,2,4,1,0,0,-2,205,1,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0D9BX84R5,B0D9BX84R5,sourdough starter kits,1,kw,5,1,309,0,17,-1,29,1,309,41,0,-2,5,1,309,6,2,-2,18,6,2,0,0,-3,205,1,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0D9BX84R5,B0D9BX84R5,sourdough starter kit jar,1,kw,4,1,348,0,16,-1,16,1,348,22,1,-2,4,1,348,4,3,-2,18,5,6,0,0,-3,205,1,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0D9BX84R5,B0D9BX84R5,sourdough starter kit with jar,1,kw,17,1,326,0,15,-1,100,8,19,145,0,-3,15,1,326,21,1,-2,13,26,0,0,0,-3,205,1,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0D9BX84R5,B0D9BX84R5,starter kit,1,kw,18,1,311,0,14,0,100,9,8,145,0,-2,17,1,311,23,1,-1,8,15,0,0,0,-2,205,1,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0D9BX84R5,B0D9BX84R5,sourdough starter kit with flour,1,kw,6,1,216,0,12,-1,40,1,216,57,0,-2,5,1,190,6,1,-2,29,7,1,0,0,-3,205,1,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0D9BX84R5,B0D9BX84R5,sourdough starter kit￼,1,kw,5,1,204,0,12,-1,18,1,204,25,0,-2,4,1,204,4,2,-2,29,4,5,0,0,-3,205,1,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0D9BX84R5,B0D9BX84R5,organic sourdough starter kit,1,kw,10,1,196,0,10,-1,61,1,196,88,0,-2,9,1,196,12,1,-2,18,12,0,0,0,-3,205,1,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0D9BX84R5,B0D9BX84R5,starter sourdough,1,kw,46,1,314,0,10,0,100,13,7,145,0,-2,34,1,314,48,0,-1,18,23,0,0,0,-2,205,1,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0D9BX84R5,B0D9BX84R5,sourdough starter kit with culture,1,kw,6,1,177,0,9,-1,23,1,177,32,0,-2,5,1,177,6,1,-2,18,5,2,0,0,-3,205,1,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0D9BX84R5,B0D9BX84R5,best sourdough starter kit,1,kw,19,1,160,0,7,-1,100,1,160,145,0,-2,16,1,160,22,0,-2,13,19,0,0,0,-3,205,1,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+TRUE,B0D9BX84R5,B0D9BX84R5,sourdough starter jar,2,kw,4,1,41404,0,2248,0,17,1,41404,23,73,-1,3,1,41404,3,539,-1,30,3,1777,0,91,-1,205,1,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+TRUE,B0D9BX84R5,B0D9BX84R5,sourdough jar,2,kw,15,1,14717,0,681,0,100,6,1245,145,0,-1,14,1,14717,19,32,-1,18,16,17,0,1,-2,205,1,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0D9BX84R5,B0D9BX84R5,sourdough starter jar glass,2,kw,15,1,4333,0,221,0,66,1,4333,95,1,-1,13,1,4333,18,11,-1,18,12,9,0,1,-2,205,1,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+TRUE,B0D9BX84R5,B0D9BX84R5,glass jar for sourdough starter,2,kw,16,1,2026,0,100,0,76,1,2000,110,0,-1,14,1,2026,19,5,-1,18,14,4,0,0,-2,205,1,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0D9BX84R5,B0D9BX84R5,jar for sourdough starter,2,kw,9,1,1504,0,80,0,55,1,1504,79,0,-1,8,1,1504,10,7,-1,18,10,4,0,0,-2,205,1,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+TRUE,B0D9BX84R5,B0D9BX84R5,sourdough starter jars,2,kw,3,1,1063,0,61,0,17,1,1063,23,2,-1,3,1,1063,3,15,-1,18,4,34,0,2,-2,205,1,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+TRUE,B0D9BX84R5,B0D9BX84R5,glass sourdough starter jar,2,kw,15,1,1244,0,60,0,71,1,1244,103,0,-1,13,1,1244,18,3,-1,7,14,1,0,0,-2,205,1,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0D9BX84R5,B0D9BX84R5,best jars for sourdough starter,2,kw,6,1,703,0,38,0,33,1,703,47,1,-1,6,1,703,7,4,-1,18,6,6,0,0,-2,205,1,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+TRUE,B0D9BX84R5,B0D9BX84R5,bread starter jar,2,kw,5,1,641,0,35,0,29,1,641,41,1,-1,5,1,641,6,5,-1,18,6,6,0,0,-2,205,1,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0D9BX84R5,B0D9BX84R5,mason jar for sourdough starter,2,kw,13,1,711,0,34,-1,75,1,711,108,0,-2,12,1,711,16,2,-2,18,14,1,0,0,-3,205,1,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0D9BX84R5,B0D9BX84R5,best jar for sourdough starter,2,kw,6,1,561,0,29,0,28,1,561,40,1,-1,6,1,561,7,3,-1,18,6,6,0,0,-2,205,1,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0D9BX84R5,B0D9BX84R5,sourdough bread starter jar,2,kw,8,1,453,0,25,0,56,1,453,81,0,-1,7,1,453,9,2,-1,13,11,1,0,0,-2,205,1,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0D9BX84R5,B0D9BX84R5,glass jars for sourdough starter,2,kw,25,1,596,0,23,0,100,6,49,145,0,-2,22,1,596,31,1,-1,13,24,0,0,0,-2,205,1,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+TRUE,B0D9BX84R5,B0D9BX84R5,sour dough starter jars,3,sr_rc,3,1,6797,0,393,0,17,1,6497,23,12,-1,3,1,6797,3,94,-1,13,4,171,0,9,-1,205,1,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+TRUE,B0D9BX84R5,B0D9BX84R5,sour dough jars,3,sr_rc,13,1,829,0,42,0,66,1,829,95,0,-1,11,1,829,15,3,-1,13,13,1,0,0,-2,205,1,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+TRUE,B0D9BX84R5,B0D9BX84R5,sour dough starter jar,3,sr_rc,9,1,707,0,36,0,56,1,707,81,0,-1,8,1,707,10,3,-1,13,11,1,0,0,-2,205,1,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0D9BX84R5,B0D9BX84R5,sour dough,3,pr,94,1,8479,0,21,0,59,36,9,85,0,-2,81,1,8479,117,0,-1,18,38,2,0,0,-2,205,1,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0D9BX84R5,B0D9BX84R5,best sourdough starter,4,pr,5,1,1580,0,86,-1,28,1,1580,40,1,-2,4,1,1580,4,15,-2,51,3,86,0,5,-2,205,1,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0D9BX84R5,B0D9BX84R5,sour dough kit,5,sr_rc,31,1,11331,0,447,-1,100,16,223,145,0,-2,26,1,11331,37,12,-2,13,34,1,0,0,-3,205,1,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+TRUE,B0D9BX84R5,B0D9BX84R5,sour dough starter kit,5,sr_rc,11,1,4307,0,244,0,67,1,4307,97,1,-1,10,1,4307,13,16,-1,2,13,1,0,0,-2,205,1,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0D9BX84R5,B0D9BX84R5,sour dough starter kits,5,sr_rc,7,1,463,0,21,-1,39,1,457,56,0,-2,6,1,463,7,2,-2,2,8,0,0,0,-3,205,1,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0D9BX84R5,B0D9BX84R5,sour dough kits,5,sr_rc,19,1,344,0,15,-1,100,2,160,145,0,-2,17,1,344,23,1,-2,14,20,0,0,0,-3,205,1,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0D9BX84R5,B0D9BX84R5,sour dough starter kit for beginners,5,sr_rc,2,1,202,0,12,0,7,1,202,9,1,-1,2,1,202,1,5,-1,13,2,16,0,1,-2,205,1,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0D9BX84R5,B0D9BX84R5,sour dough kit starter,5,sr_rc,5,1,153,0,8,-1,23,1,153,32,0,-2,4,1,126,4,1,-2,13,5,1,0,0,-3,205,1,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+TRUE,B0D9BX84R5,B0D9BX84R5,sourdough crock,6,sr_rc,11,1,645,0,30,0,34,1,645,48,0,-1,9,1,645,12,2,-1,18,7,2,0,0,-2,205,1,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0D9BX84R5,B0D9BX84R5,glass sourdough crock,6,sr_rc,7,1,348,0,21,0,16,1,374,22,1,-1,6,1,374,7,2,-1,18,4,8,0,0,-2,205,1,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0D9BX84R5,B0D9BX84R5,sourdough jar kit,7,sr_rc,3,1,269,0,16,-1,18,1,269,25,1,-2,3,1,269,3,4,-2,13,4,6,0,0,-3,205,1,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+TRUE,B0D9BX84R5,B0D9BX84R5,sourdough starter container,8,sr_rc,7,1,556,0,31,0,39,1,556,56,0,-1,7,1,556,9,3,-1,18,7,5,0,0,-2,205,1,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0D9BX84R5,B0D9BX84R5,sourdough container,8,sr_rc,26,1,486,0,20,0,81,1,486,117,0,-1,19,1,486,26,1,-1,18,22,0,0,0,-2,205,1,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0D9BX84R5,B0D9BX84R5,wet jars for sourdough,9,sr_rc,11,1,339,0,16,-1,26,1,339,37,0,-2,8,1,339,10,1,-2,18,9,1,0,0,-3,205,1,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+TRUE,B0D9BX84R5,B0D9BX84R5,sourdough bread jar,10,sr_rc,10,1,530,0,28,0,45,1,530,64,0,-1,9,1,530,12,2,-1,18,9,2,0,0,-2,205,1,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0D9BX84R5,B0D9BX84R5,bread starter kit,11,sr_rc,20,1,1005,0,49,0,100,10,43,145,0,-2,18,1,1005,25,2,-1,15,28,0,0,0,-2,205,1,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0D9BX84R5,B0D9BX84R5,sour dough bread starter kit,11,sr_rc,8,1,431,0,20,-1,39,1,431,56,0,-2,7,1,431,9,2,-2,14,8,1,0,0,-3,205,1,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0D9BX84R5,B0D9BX84R5,sour dough bread kit,11,sr_rc,12,1,309,0,17,-1,39,1,309,56,0,-2,10,1,309,13,1,-2,14,8,0,0,0,-3,205,1,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0D9BX84R5,B0D9BX84R5,sour dough bread,11,sr_rc,100,48,59,0,0,-1,97,89,2,141,0,-2,100,45,67,145,0,-1,18,91,0,0,0,-2,205,1,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0D9BX84R5,B0D9BX84R5,sourdough starter crock,12,pr,7,1,176,0,10,0,29,1,176,41,0,-1,6,1,176,7,1,-1,18,5,3,0,0,-2,205,1,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0D9BX84R5,B0D9BX84R5,sourdough for beginners,13,pr,48,1,430,0,11,-1,65,1,430,94,0,-2,31,1,430,44,0,-2,18,12,2,0,0,-3,205,1,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0D9BX84R5,B0D9BX84R5,sourdough book for beginners,13,sr_rc,100,85,1,0,0,-2,100,99,0,145,0,-3,100,58,2,145,0,-3,18,124,0,0,0,-3,205,1,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0D9BX84R5,B0D9BX84R5,sourdough starter jar wide mouth,14,sr_rc,9,1,301,0,15,-1,39,1,301,56,0,-2,8,1,301,10,1,-2,7,8,1,0,0,-3,205,1,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0D9BX84R5,B0D9BX84R5,sourdough jars wide mouth,14,sr_rc,28,1,249,0,11,0,100,11,7,145,0,-2,25,1,249,35,0,-1,13,22,0,0,0,-2,205,1,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0D9BX84R5,B0D9BX84R5,sourdough crock with lid,15,sr_rc,15,1,318,0,13,-1,44,1,318,63,0,-2,11,1,318,15,1,-2,13,9,1,0,0,-3,205,1,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+TRUE,B0D9BX84R5,B0D9BX84R5,active sourdough starter,16,sr_rc,33,1,913,0,38,0,83,1,913,120,0,-1,23,1,913,32,1,-1,18,15,1,0,0,-2,205,1,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0D9BX84R5,B0D9BX84R5,bread maker kit,17,sr_rc,20,1,340,0,15,-1,66,1,340,95,0,-2,18,1,340,25,1,-2,13,13,0,0,0,-3,205,1,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0D9BX84R5,B0D9BX84R5,sourdough glass jar,18,sr_rc,15,1,414,0,20,0,70,1,409,101,0,-1,13,1,414,18,1,-1,13,13,1,0,0,-2,205,1,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0D9BX84R5,B0D9BX84R5,sourdough jar glass,18,sr_rc,19,1,294,0,18,0,100,8,16,145,0,-2,18,1,297,25,1,-1,18,18,0,0,0,-2,205,1,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0D9BX84R5,B0D9BX84R5,glass sourdough jar,18,sr_rc,14,1,212,0,11,0,71,1,212,103,0,-1,12,1,212,16,1,-1,18,13,0,0,0,-2,205,1,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0D9BX84R5,B0D9BX84R5,sourdough glass jar with lid,18,sr_rc,61,1,443,0,10,-1,100,32,2,145,0,-3,49,1,443,70,0,-2,13,42,0,0,0,-3,205,1,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0D9BX84R5,B0D9BX84R5,weak jars for sourdough,19,sr_rc,17,1,336,0,16,-1,82,1,336,119,0,-2,15,1,336,21,1,-2,18,15,0,0,0,-3,205,1,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0D9BX84R5,B0D9BX84R5,sourdough starter supplies,20,sr_rc,11,1,259,0,13,-1,88,1,259,127,0,-2,10,1,259,13,1,-2,13,17,0,0,0,-3,205,1,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0D9BX84R5,B0D9BX84R5,sourdough bread baking supplies starter,20,sr_rc,16,1,157,0,8,-1,100,2,74,145,0,-3,14,1,157,19,0,-2,7,20,0,0,0,-3,205,1,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0D9BX84R5,B0D9BX84R5,sourdough supplies,20,sr_rc,91,13,208,0,1,0,100,49,15,145,0,-2,84,1,5656,122,0,-1,51,67,0,0,0,-2,205,1,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0D9BX84R5,B0D9BX84R5,sourdough bread kit,21,sr_rc,38,1,1823,0,62,-1,100,24,18,145,0,-3,33,1,1823,47,1,-2,13,42,0,0,0,-3,205,1,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0D9BX84R5,B0D9BX84R5,sourdough baking kit,21,sr_rc,34,1,1556,0,57,-1,100,21,19,145,0,-3,29,1,1556,41,1,-2,2,39,0,0,0,-3,205,1,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0D9BX84R5,B0D9BX84R5,sourdough bread baking kit,21,sr_rc,20,1,641,0,28,-1,94,1,641,136,0,-2,17,1,641,23,1,-2,13,18,0,0,0,-3,205,1,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0D9BX84R5,B0D9BX84R5,sourdough kit sourdough bread baking,21,sr_rc,44,1,697,0,20,-1,100,23,7,145,0,-3,37,1,697,53,0,-2,8,41,0,0,0,-3,205,1,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0D9BX84R5,B0D9BX84R5,sourdough bread baking supplies kit,21,sr_rc,29,1,491,0,19,-1,100,12,16,145,0,-3,25,1,491,35,0,-2,8,30,0,0,0,-3,205,1,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0D9BX84R5,B0D9BX84R5,baking kits,21,sr_rc,65,1,495,0,9,-1,100,46,1,145,0,-3,53,1,495,76,0,-2,18,58,0,0,0,-3,205,1,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0D9BX84R5,B0D9BX84R5,sourdough baking,21,sr_rc,100,9,49,0,0,-1,12,31,1,16,0,-2,99,1,966,144,0,-1,8,33,0,0,0,-2,205,1,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0D9BX84R5,B0D9BX84R5,baking kit,21,sr_rc,100,31,19,0,0,-2,100,95,1,145,0,-3,100,19,40,145,0,-3,7,107,0,0,0,-3,205,1,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0D9BX84R5,B0D9BX84R5,bread baking,21,sr_rc,100,43,10,0,0,-2,32,69,1,45,0,-2,100,35,16,145,0,-2,7,73,0,0,0,-2,205,1,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0D9BX84R5,B0D9BX84R5,baking bread,21,sr_rc,100,53,2,0,0,-2,3,89,0,3,0,-2,100,47,2,145,0,-2,29,88,0,0,0,-2,205,1,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0D9BX84R5,B0D9BX84R5,sourdough bread baking,21,sr_rc,100,16,7,0,0,-2,100,36,1,145,0,-2,100,5,38,145,0,-2,4,47,0,0,0,-2,205,1,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0D9BX84R5,B0D9BX84R5,bread accessories,22,sr_rc,97,1,697,0,1,-1,100,59,1,145,0,-3,79,1,697,114,0,-2,57,70,0,0,0,-3,205,1,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0D9BX84R5,B0D9BX84R5,bread making accessories,22,sr_rc,100,13,152,0,0,-2,100,59,8,145,0,-3,89,1,4383,129,0,-2,35,78,0,0,0,-3,205,1,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0D9BX84R5,B0D9BX84R5,accessories for bread,22,sr_rc,100,85,0,0,0,-2,100,133,0,145,0,-3,100,65,1,145,0,-3,18,151,0,0,0,-3,205,1,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0D9BX84R5,B0D9BX84R5,bread baking accessories,22,sr_rc,100,17,8,0,0,-3,60,74,0,86,0,-3,100,3,75,145,0,-2,18,82,0,0,0,-3,205,1,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0D9BX84R5,B0D9BX84R5,bread maker accessories,22,sr_rc,64,117,1,0,0,-3,100,150,0,145,0,-3,100,86,1,145,0,-3,18,165,0,0,0,-3,205,1,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0D9BX84R5,B0D9BX84R5,sourdough bread accessories,22,sr_rc,100,30,5,0,0,-3,100,80,0,145,0,-3,100,16,14,145,0,-3,51,92,0,0,0,-3,205,1,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0D9BX84R5,B0D9BX84R5,bagel making kit,23,sr_rc,44,1,95,0,3,-1,100,12,3,145,0,-3,35,1,95,50,0,-2,13,30,0,0,0,-3,205,1,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0D9BX84R5,B0D9BX84R5,bakers must haves,24,sr_rc,67,1,107,0,2,0,60,36,0,86,0,-2,53,1,107,76,0,-1,51,43,0,0,0,-2,205,1,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0D9BX84R5,B0D9BX84R5,baking accessories,25,sr_rc,100,101,5,0,0,-3,63,154,1,91,0,-3,100,87,7,145,0,-3,18,164,0,0,0,-3,205,1,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0D9BX84R5,B0D9BX84R5,baking accessories and gadgets,25,sr_rc,100,58,3,0,0,-3,86,101,0,124,0,-3,100,44,5,145,0,-3,18,113,0,0,0,-3,205,1,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0D9BX84R5,B0D9BX84R5,baking accessories gifts,25,sr_rc,100,37,2,0,0,-3,20,78,0,28,0,-3,100,30,3,145,0,-3,19,80,0,0,0,-3,205,1,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0D9BX84R5,B0D9BX84R5,sourdough baking supplies,26,sr_rc,65,1,1914,0,41,-1,100,29,13,145,0,-2,45,1,1914,64,1,-1,7,48,0,0,0,-2,205,1,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0D9BX84R5,B0D9BX84R5,sour dough bread baking supplies,26,sr_rc,21,1,336,0,14,-1,100,2,175,145,0,-2,18,1,336,25,0,-2,7,20,0,0,0,-3,205,1,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0D9BX84R5,B0D9BX84R5,sourdough bread baking supplies,26,sr_rc,92,17,2612,0,12,-1,100,59,173,145,0,-2,96,1,104648,139,2,-2,7,75,1,0,0,-3,205,1,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0D9BX84R5,B0D9BX84R5,baking bread supplies,26,sr_rc,91,1,289,0,2,0,32,63,0,45,0,-2,83,1,289,120,0,-1,7,65,0,0,0,-2,205,1,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0D9BX84R5,B0D9BX84R5,baking supplies,26,sr_rc,100,59,101,0,0,-1,65,118,8,93,0,-2,100,41,189,145,0,-1,7,131,0,0,0,-2,205,1,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0D9BX84R5,B0D9BX84R5,baking supplies sourdough,26,sr_rc,100,22,6,0,0,-1,100,64,1,145,0,-2,100,3,87,145,0,-1,7,83,0,0,0,-2,205,1,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0D9BX84R5,B0D9BX84R5,sourdough bread baking supplies proofing baskets,26,sr_rc,100,130,0,0,0,-3,100,167,0,145,0,-3,100,112,1,145,0,-3,7,185,0,0,0,-3,205,1,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0D9BX84R5,B0D9BX84R5,baking equipment,27,sr_rc,100,51,3,0,0,-3,3,115,0,3,0,-3,100,34,7,145,0,-3,18,117,0,0,0,-3,205,1,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0D9BX84R5,B0D9BX84R5,baking gifts,28,sr_rc,100,67,14,0,0,-2,25,95,1,35,0,-2,100,56,23,145,0,-2,19,98,0,0,0,-2,205,1,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0D9BX84R5,B0D9BX84R5,baking gift,28,sr_rc,100,71,2,0,0,-2,36,96,0,51,0,-2,99,63,3,144,0,-2,18,99,0,0,0,-2,205,1,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0D9BX84R5,B0D9BX84R5,baking items for gift,28,sr_rc,100,27,3,0,0,-2,95,46,1,138,0,-2,100,7,21,145,0,-2,18,64,0,0,0,-2,205,1,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0D9BX84R5,B0D9BX84R5,baking set gift,28,sr_rc,100,37,1,0,0,-1,4,70,0,4,0,-2,100,21,2,145,0,-2,18,71,0,0,0,-2,205,1,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0D9BX84R5,B0D9BX84R5,bread baking gifts,28,sr_rc,100,28,4,0,0,-3,100,55,1,145,0,-3,100,13,14,145,0,-3,19,68,0,0,0,-3,205,1,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0D9BX84R5,B0D9BX84R5,baking gift for friend,29,sr_rc,100,57,2,0,0,-2,100,74,0,145,0,-2,100,46,3,145,0,-2,18,84,0,0,0,-2,205,1,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0D9BX84R5,B0D9BX84R5,baking gift ideas,30,sr_rc,100,21,5,0,0,-2,100,40,1,145,0,-2,100,9,18,145,0,-2,7,52,0,0,0,-2,205,1,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0D9BX84R5,B0D9BX84R5,baking needs,31,sr_rc,100,12,13,0,0,-3,94,54,1,136,0,-3,87,1,336,126,0,-2,7,73,0,0,0,-3,205,1,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0D9BX84R5,B0D9BX84R5,baking needs for home baker,31,sr_rc,100,25,4,0,0,-3,63,62,0,91,0,-3,100,10,13,145,0,-3,7,73,0,0,0,-3,205,1,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0D9BX84R5,B0D9BX84R5,baking stuff for women,32,sr_rc,100,18,5,0,0,-1,100,30,1,145,0,-2,100,4,47,145,0,-2,7,44,0,0,0,-2,205,1,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0D9BX84R5,B0D9BX84R5,baking supplies for home bakers,33,sr_rc,100,86,5,0,0,-3,56,145,1,80,0,-3,100,66,8,145,0,-3,18,158,0,0,0,-3,205,1,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0D9BX84R5,B0D9BX84R5,baking tools,34,sr_rc,63,116,2,0,0,-2,56,143,1,80,0,-2,68,101,4,98,0,-2,7,154,0,0,0,-2,205,1,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0D9BX84R5,B0D9BX84R5,bread baking tools,34,sr_rc,78,66,2,0,0,-3,99,93,1,144,0,-3,100,42,6,145,0,-3,51,109,0,0,0,-3,205,1,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0D9BX84R5,B0D9BX84R5,best gifts for homesteaders,35,sr_rc,100,36,1,0,0,-2,100,50,0,145,0,-2,100,25,3,145,0,-2,7,61,0,0,0,-2,205,1,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0D9BX84R5,B0D9BX84R5,gifts for homesteaders,35,sr_rc,100,82,1,0,0,-2,100,95,0,145,0,-2,100,71,1,145,0,-2,7,106,0,0,0,-2,205,1,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0D9BX84R5,B0D9BX84R5,homesteading gifts,35,sr_rc,100,44,4,0,0,-2,100,50,2,145,0,-2,100,33,9,145,0,-2,7,61,0,0,0,-2,205,1,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0D9BX84R5,B0D9BX84R5,gifts for sourdough bakers,36,sr_rc,100,14,36,0,0,-3,100,63,1,145,0,-3,100,1,1080,145,0,-2,19,75,0,0,0,-3,205,1,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0D9BX84R5,B0D9BX84R5,bread gifts,36,sr_rc,100,15,12,0,0,-2,100,40,1,145,0,-2,100,3,125,145,0,-1,19,51,0,0,0,-2,205,1,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0D9BX84R5,B0D9BX84R5,bread baker gifts,36,sr_rc,100,42,2,0,0,-3,100,68,0,145,0,-3,100,29,4,145,0,-3,19,80,0,0,0,-3,205,1,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0D9BX84R5,B0D9BX84R5,gifts for bakers,36,sr_rc,100,83,7,0,0,-3,43,112,1,62,0,-3,100,68,12,145,0,-3,18,118,0,0,0,-3,205,1,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0D9BX84R5,B0D9BX84R5,gifts for bread bakers,36,sr_rc,100,35,8,0,0,-3,100,64,1,145,0,-3,100,21,19,145,0,-3,19,76,0,0,0,-3,205,1,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0D9BX84R5,B0D9BX84R5,gifts for sourdough bread bakers,36,sr_rc,100,49,1,0,0,-2,100,101,0,145,0,-3,100,36,2,145,0,-3,19,113,0,0,0,-3,205,1,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0D9BX84R5,B0D9BX84R5,gifts for the bread baker,36,sr_rc,100,31,1,0,0,-2,100,65,0,145,0,-3,100,19,3,145,0,-3,19,77,0,0,0,-3,205,1,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0D9BX84R5,B0D9BX84R5,sourdough gifts for bakers,36,sr_rc,100,57,2,0,0,-3,100,97,0,145,0,-3,100,44,4,145,0,-3,19,109,0,0,0,-3,205,1,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0D9BX84R5,B0D9BX84R5,bread baking bowl,37,sr_rc,95,112,0,0,0,-2,100,136,0,145,0,-2,100,96,0,145,0,-2,18,150,0,0,0,-2,205,1,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0D9BX84R5,B0D9BX84R5,bread flour for sourdough,38,sr_rc,100,30,21,0,0,-1,100,70,2,145,0,-2,100,19,46,145,0,-1,19,81,0,0,0,-2,205,1,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0D9BX84R5,B0D9BX84R5,bread kits for homemade bread,39,sr_rc,81,1,753,0,8,-1,100,46,2,145,0,-3,62,1,753,89,0,-2,7,64,0,0,0,-3,205,1,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0D9BX84R5,B0D9BX84R5,bread making kits for homemade bread,39,sr_rc,100,4,81,0,0,-2,100,65,0,145,0,-3,88,1,500,127,0,-2,7,76,0,0,0,-3,205,1,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0D9BX84R5,B0D9BX84R5,gifts for bread makers,40,sr_rc,100,19,14,0,0,-3,35,62,0,50,0,-3,100,14,21,145,0,-3,19,64,0,0,0,-3,205,1,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0D9BX84R5,B0D9BX84R5,bread maker gifts,40,sr_rc,100,29,3,0,0,-2,100,62,0,145,0,-3,100,10,13,145,0,-3,19,81,0,0,0,-3,205,1,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0D9BX84R5,B0D9BX84R5,sourdough bread making kit,41,sr_rc,40,1,521,0,17,-1,100,21,6,145,0,-3,33,1,521,47,0,-2,8,39,0,0,0,-3,205,1,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0D9BX84R5,B0D9BX84R5,bread making essentials,41,sr_rc,51,1,149,0,4,-1,100,20,2,145,0,-3,41,1,149,58,0,-2,7,32,0,0,0,-3,205,1,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0D9BX84R5,B0D9BX84R5,bread making supplies for homemade bread,41,sr_rc,93,1,318,0,1,-2,100,57,0,145,0,-3,75,1,318,108,0,-2,7,69,0,0,0,-3,205,1,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0D9BX84R5,B0D9BX84R5,bread making gifts,41,sr_rc,100,2,453,0,0,-1,100,40,3,145,0,-2,80,1,911,116,0,-1,18,53,0,0,0,-2,205,1,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0D9BX84R5,B0D9BX84R5,bread making tools,41,sr_rc,80,104,9,0,0,-1,36,143,0,51,0,-2,81,100,11,117,0,-2,51,144,0,0,0,-2,205,1,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0D9BX84R5,B0D9BX84R5,bread making,41,sr_rc,98,36,24,0,0,-2,60,60,4,86,0,-2,100,22,60,145,0,-2,18,68,0,0,0,-2,205,1,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0D9BX84R5,B0D9BX84R5,bread proofing bowl,42,sr_rc,100,146,0,0,0,-2,100,147,0,145,0,-2,100,128,0,145,0,-2,13,165,0,0,0,-2,205,1,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0D9BX84R5,B0D9BX84R5,bread proofing set,43,sr_rc,100,44,1,0,0,-2,100,56,1,145,0,-2,100,25,4,145,0,-2,7,74,0,0,0,-2,205,1,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0D9BX84R5,B0D9BX84R5,bread rising bowl,44,sr_rc,99,131,0,0,0,-2,100,153,0,145,0,-2,100,113,1,145,0,-2,7,171,0,0,0,-2,205,1,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0D9BX84R5,B0D9BX84R5,sourdough bowls for rising,44,sr_rc,100,76,0,0,0,-1,100,103,0,145,0,-2,100,57,1,145,0,-2,14,121,0,0,0,-2,205,1,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0D9BX84R5,B0D9BX84R5,bread rising container,45,sr_rc,74,1,171,0,2,0,100,28,1,145,0,-2,54,1,171,78,0,-1,18,46,0,0,0,-2,205,1,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0D9BX84R5,B0D9BX84R5,bread storage for sourdough,46,sr_rc,100,42,1,0,0,-2,100,82,0,145,0,-3,100,30,2,145,0,-3,18,93,0,0,0,-3,205,1,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0D9BX84R5,B0D9BX84R5,bread supplies for homemade bread,47,sr_rc,97,1,128,0,0,-2,100,60,0,145,0,-3,82,1,128,119,0,-2,7,73,0,0,0,-3,205,1,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0D9BX84R5,B0D9BX84R5,bread tools,48,sr_rc,100,88,1,0,0,-1,100,120,0,145,0,-2,100,75,2,145,0,-2,51,131,0,0,0,-2,205,1,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0D9BX84R5,B0D9BX84R5,bread tools for homemade bread,48,sr_rc,100,97,1,0,0,-2,100,119,0,145,0,-2,100,80,1,145,0,-2,18,135,0,0,0,-2,205,1,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0D9BX84R5,B0D9BX84R5,sourdough bread tools,48,sr_rc,72,102,1,0,0,-2,100,127,0,145,0,-3,100,73,1,145,0,-3,46,145,0,0,0,-3,205,1,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0D9BX84R5,B0D9BX84R5,tools for sourdough bread,48,sr_rc,100,80,1,0,0,-2,100,122,0,145,0,-3,100,64,1,145,0,-3,57,136,0,0,0,-3,205,1,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0D9BX84R5,B0D9BX84R5,breadmaking,49,sr_rc,56,1,220,0,5,-1,100,3,52,145,0,-2,40,1,220,57,0,-1,19,22,0,0,0,-2,205,1,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0D9BX84R5,B0D9BX84R5,dough rising bucket with lid,50,sr_rc,43,43,3,0,0,-1,100,38,5,145,0,-2,100,17,27,145,0,-2,2,56,0,0,0,-2,205,1,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0D9BX84R5,B0D9BX84R5,dough rising bucket,50,sr_rc,73,48,1,0,0,-1,100,56,1,145,0,-2,100,25,6,145,0,-2,2,74,0,0,0,-2,205,1,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0D9BX84R5,B0D9BX84R5,einkorn sourdough starter,51,sr_rc,44,1,254,0,8,-1,100,2,112,145,0,-2,33,1,254,47,0,-2,46,19,0,0,0,-3,205,1,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0D9BX84R5,B0D9BX84R5,fresh sourdough starter,52,sr_rc,37,1,406,0,15,-1,100,6,38,145,0,-3,28,1,406,40,0,-2,18,23,0,0,0,-3,205,1,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0D9BX84R5,B0D9BX84R5,gift for bakers women,53,sr_rc,100,71,0,0,0,-2,100,65,0,145,0,-2,100,55,1,145,0,-2,18,80,0,0,0,-2,205,1,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0D9BX84R5,B0D9BX84R5,gifts for baking lovers,54,sr_rc,94,1,247,0,1,-2,100,37,1,145,0,-3,76,1,247,110,0,-2,7,47,0,0,0,-3,205,1,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0D9BX84R5,B0D9BX84R5,glass bowl for sourdough bread,55,sr_rc,100,30,31,0,0,-2,100,64,4,145,0,-3,100,16,84,145,0,-2,13,78,0,0,0,-3,205,1,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0D9BX84R5,B0D9BX84R5,sourdough bowl,55,sr_rc,100,45,11,0,0,-2,100,76,2,145,0,-2,100,31,22,145,0,-2,13,90,0,0,0,-2,205,1,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0D9BX84R5,B0D9BX84R5,sourdough bowls,55,sr_rc,61,103,0,0,0,-2,100,123,0,145,0,-2,100,76,1,145,0,-2,7,137,0,0,0,-2,205,1,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0D9BX84R5,B0D9BX84R5,gluten free sourdough starter,56,sr_rc,89,1,4736,0,22,-1,100,18,58,145,0,-3,57,1,4736,82,1,-2,18,28,1,0,0,-3,205,1,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0D9BX84R5,B0D9BX84R5,gluten free sourdough starter kit,56,sr_rc,28,1,548,0,21,-1,100,11,16,145,0,-3,22,1,548,31,1,-2,2,22,0,0,0,-3,205,1,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0D9BX84R5,B0D9BX84R5,gluten free sourdough bread starter,56,sr_rc,21,1,126,0,5,-1,92,1,127,133,0,-2,17,1,127,23,0,-2,29,10,0,0,0,-3,205,1,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0D9BX84R5,B0D9BX84R5,organic sourdough starter,57,sr_rc,57,1,844,0,19,-1,100,15,16,145,0,-3,43,1,844,62,0,-2,18,28,0,0,0,-3,205,1,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0D9BX84R5,B0D9BX84R5,proving baskets for sourdough,58,sr_rc,100,59,1,0,0,-3,100,105,0,145,0,-3,100,41,3,145,0,-3,7,123,0,0,0,-3,205,1,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0D9BX84R5,B0D9BX84R5,san francisco sourdough starter,59,sr_rc,100,2,419,0,0,-2,100,16,27,145,0,-3,58,1,1188,84,0,-1,18,42,0,0,0,-3,205,1,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0D9BX84R5,B0D9BX84R5,sour dough accessories,60,sr_rc,40,1,431,0,14,-1,100,19,6,145,0,-3,31,1,431,44,0,-2,7,38,0,0,0,-3,205,1,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0D9BX84R5,B0D9BX84R5,sour dough bread baking pan,61,sr_rc,98,48,4,0,0,-1,100,78,1,145,0,-2,100,36,8,145,0,-2,7,89,0,0,0,-2,205,1,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0D9BX84R5,B0D9BX84R5,sour dough baking pans,61,sr_rc,81,93,1,0,0,-1,100,126,0,145,0,-2,100,77,1,145,0,-2,11,137,0,0,0,-2,205,1,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0D9BX84R5,B0D9BX84R5,sour dough pan,61,sr_rc,100,37,3,0,0,-1,100,82,0,145,0,-2,100,24,5,145,0,-2,7,95,0,0,0,-2,205,1,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0D9BX84R5,B0D9BX84R5,sour dough baskets,62,sr_rc,68,119,0,0,0,-2,100,152,0,145,0,-3,100,88,1,145,0,-3,7,170,0,0,0,-3,205,1,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0D9BX84R5,B0D9BX84R5,sour dough bread basket,62,sr_rc,100,68,1,0,0,-3,100,108,0,145,0,-3,100,50,1,145,0,-3,7,126,0,0,0,-3,205,1,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0D9BX84R5,B0D9BX84R5,sour dough proofing baskets,62,sr_rc,99,134,3,0,0,-3,100,167,1,145,0,-3,100,116,4,145,0,-3,13,185,0,0,0,-3,205,1,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0D9BX84R5,B0D9BX84R5,sour dough bowl,63,sr_rc,81,1,626,0,7,-1,100,26,5,145,0,-2,55,1,618,79,0,-1,7,44,0,0,0,-2,205,1,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0D9BX84R5,B0D9BX84R5,sour dough gifts,64,sr_rc,42,1,217,0,7,-1,100,15,4,145,0,-3,36,1,217,51,0,-2,19,27,0,0,0,-3,205,1,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0D9BX84R5,B0D9BX84R5,sour dough supplies,65,sr_rc,33,1,566,0,21,-1,100,17,10,145,0,-3,27,1,566,38,1,-2,7,35,0,0,0,-3,205,1,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0D9BX84R5,B0D9BX84R5,sour dough tools,66,sr_rc,100,3,1947,0,1,-2,100,36,32,145,0,-3,70,1,6983,101,1,-2,57,53,1,0,0,-3,205,1,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0D9BX84R5,B0D9BX84R5,sourdough accessories,67,sr_rc,100,30,72,0,0,-2,100,68,9,145,0,-3,100,9,376,145,0,-2,57,86,0,0,0,-3,205,1,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0D9BX84R5,B0D9BX84R5,sourdough accessories gift,67,sr_rc,100,12,37,0,0,-3,100,47,3,145,0,-3,89,1,944,129,0,-2,19,65,0,0,0,-3,205,1,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0D9BX84R5,B0D9BX84R5,sourdough basket,68,sr_rc,60,122,4,0,0,-3,100,149,1,145,0,-3,100,87,11,145,0,-3,7,167,0,0,0,-3,205,1,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0D9BX84R5,B0D9BX84R5,sourdough bread mix,69,sr_rc,79,1,406,0,5,0,100,25,3,145,0,-2,63,1,406,91,0,-1,30,34,0,0,0,-2,205,1,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0D9BX84R5,B0D9BX84R5,sourdough bread supplies,70,sr_rc,82,1,521,0,6,0,100,49,1,145,0,-2,65,1,521,94,0,-1,8,62,0,0,0,-2,205,1,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0D9BX84R5,B0D9BX84R5,sourdough tools,71,sr_rc,100,80,14,0,0,-2,100,119,2,145,0,-3,100,67,21,145,0,-3,46,130,0,0,0,-3,205,1,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0D9BX84R5,B0D9BX84R5,sourdough design tools,71,sr_rc,33,151,0,0,0,-3,100,159,0,145,0,-3,100,102,0,145,0,-3,63,173,0,0,0,-3,205,1,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0D9BX84R5,B0D9BX84R5,sourdough discard jar,72,sr_rc,34,1,612,0,18,-1,100,7,46,145,0,-3,27,1,612,38,0,-2,18,24,0,0,0,-3,205,1,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0D9BX84R5,B0D9BX84R5,sourdough essentials,73,sr_rc,100,22,34,0,0,-3,36,65,0,51,0,-3,100,18,47,145,0,-3,13,67,0,0,0,-3,205,1,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0D9BX84R5,B0D9BX84R5,sourdough gifts,74,sr_rc,100,18,38,0,0,-3,100,56,2,145,0,-3,100,5,242,145,0,-2,19,68,0,0,0,-3,205,1,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0D9BX84R5,B0D9BX84R5,sourdough gifts for women,74,sr_rc,100,12,10,0,0,-3,100,45,1,145,0,-3,91,1,251,132,0,-2,19,60,0,0,0,-3,205,1,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0D9BX84R5,B0D9BX84R5,sourdough gift,74,sr_rc,100,55,2,0,0,-3,100,92,0,145,0,-3,100,43,3,145,0,-3,19,103,0,0,0,-3,205,1,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0D9BX84R5,B0D9BX84R5,sourdough home,75,sr_rc,53,1,1422,0,36,-1,100,8,88,145,0,-2,33,1,1422,47,1,-2,51,28,0,0,0,-3,205,1,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0D9BX84R5,B0D9BX84R5,sourdough starter kit with dutch oven,76,sr_rc,100,10,84,0,0,-2,100,55,3,145,0,-3,89,1,1721,129,0,-1,7,73,0,0,0,-3,205,1,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0D9BX84R5,B0D9BX84R5,sourdough kit with dutch oven,76,sr_rc,100,49,0,0,0,-2,51,90,0,73,0,-3,100,31,1,145,0,-3,13,108,0,0,0,-3,205,1,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0D9BX84R5,B0D9BX84R5,sourdough kit with scale,77,sr_rc,69,1,764,0,14,-1,100,33,3,145,0,-3,52,1,764,75,0,-2,13,45,0,0,0,-3,205,1,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0D9BX84R5,B0D9BX84R5,sourdough making kit,78,sr_rc,33,1,427,0,15,-1,100,17,8,145,0,-3,26,1,427,37,0,-2,14,35,0,0,0,-3,205,1,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0D9BX84R5,B0D9BX84R5,sourdough mixer,79,sr_rc,100,83,2,0,0,-2,100,108,0,145,0,-2,100,64,3,145,0,-2,46,125,0,0,0,-2,205,1,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0D9BX84R5,B0D9BX84R5,sourdough must haves,80,sr_rc,100,3,275,0,0,-2,100,42,3,145,0,-3,80,1,889,116,0,-2,51,60,0,0,0,-3,205,1,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0D9BX84R5,B0D9BX84R5,sourdough necessities,81,sr_rc,38,1,329,0,11,-1,100,7,22,145,0,-3,26,1,329,37,0,-2,51,25,0,0,0,-3,205,1,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0D9BX84R5,B0D9BX84R5,sourdough pan,82,sr_rc,44,154,1,0,0,-2,100,175,0,145,0,-3,100,117,2,145,0,-3,8,187,0,0,0,-3,205,1,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0D9BX84R5,B0D9BX84R5,sourdough proofing box,83,sr_rc,41,146,0,0,0,-2,100,161,0,145,0,-3,100,104,1,145,0,-3,18,179,0,0,0,-3,205,1,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0D9BX84R5,B0D9BX84R5,sourdough proofing kit,84,sr_rc,38,105,0,0,0,-3,100,131,0,145,0,-3,100,57,2,145,0,-3,14,149,0,0,0,-3,205,1,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0D9BX84R5,B0D9BX84R5,sourdough recipe book beginners,85,sr_rc,94,95,1,0,0,-2,100,110,0,145,0,-3,94,70,1,136,0,-3,18,136,0,0,0,-3,205,1,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0D9BX84R5,B0D9BX84R5,sourdough starter incubator,86,sr_rc,26,1,203,0,8,-1,89,1,203,128,0,-2,21,1,203,29,0,-2,8,17,0,0,0,-3,205,1,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0D9BX84R5,B0D9BX84R5,sourdough starter tools,87,sr_rc,82,1,200,0,2,-2,100,24,2,145,0,-3,58,1,200,84,0,-2,14,42,0,0,0,-3,205,1,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0D9BX84R5,B0D9BX84R5,sourdough starter￼,88,sr_rc,19,1,237,0,9,0,100,3,53,145,0,-2,17,1,237,23,0,-1,29,13,0,0,0,-2,205,1,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0D9BX84R5,B0D9BX84R5,sourdough stuff,89,sr_rc,100,25,7,0,0,-3,100,35,3,145,0,-3,100,7,58,145,0,-3,19,53,0,0,0,-3,205,1,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0D9BX84R5,B0D9BX84R5,sourdough tools and supplies,90,sr_rc,98,12,47,0,0,-2,100,52,3,145,0,-3,88,1,1142,127,0,-2,13,71,0,0,0,-3,205,1,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0D9BX84R5,B0D9BX84R5,sourdough utensils,91,sr_rc,44,81,0,0,0,-3,100,94,0,145,0,-3,100,42,2,145,0,-3,57,111,0,0,0,-3,205,1,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
+FALSE,B0D9BX84R5,B0D9BX84R5,sourdough warmer,92,sr_rc,53,135,1,0,0,-1,100,142,1,145,0,-2,53,130,1,76,0,-2,7,153,0,0,0,-2,205,1,108,1,09ca7ff9-14a9-454e-8ee2-e9d68a17dec5,items
