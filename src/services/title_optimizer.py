@@ -414,40 +414,140 @@ Now optimize the title:
             else:
                 original_features = None
             
-            # Parse each line with more flexible matching
-            for line in lines:
-                line = line.strip()
+            # Parse each line with more flexible matching - handle multi-line fields
+            i = 0
+            field_keywords = ['OPTIMIZED_TITLE', 'CONFIDENCE', 'REASONING', 'PRESERVATION_SCORE', 
+                            'KEYWORDS_USED', 'CHANGES_MADE', 'WARNINGS', 'REFINED_FEATURES']
+            
+            while i < len(lines):
+                line = lines[i].strip()
                 
                 # More flexible parsing - handle variations in format
                 if 'OPTIMIZED_TITLE' in line and ':' in line:
-                    optimized_title = line.split(':', 1)[1].strip()
+                    # Capture multi-line optimized title
+                    title_parts = [line.split(':', 1)[1].strip()]
+                    i += 1
+                    # Continue capturing until we hit the next field or end
+                    while i < len(lines):
+                        next_line = lines[i].strip()
+                        # Check if this is the start of a new field
+                        if next_line and any(field + ':' in next_line.upper() for field in field_keywords):
+                            break
+                        if next_line:  # Include non-empty lines
+                            title_parts.append(next_line)
+                        i += 1
+                    optimized_title = ' '.join(title_parts).strip()
+                    # Remove markdown artifacts
+                    optimized_title = optimized_title.replace('**', '').replace('***', '').strip()
+                    continue  # Don't increment i again
+                    
                 elif 'CONFIDENCE' in line and ':' in line:
                     try:
                         confidence_score = float(line.split(':', 1)[1].strip())
                     except ValueError:
                         confidence_score = 0.5
+                    i += 1
+                    
                 elif 'REASONING' in line and ':' in line:
-                    reasoning = line.split(':', 1)[1].strip()
+                    # Capture multi-line reasoning
+                    reasoning_parts = [line.split(':', 1)[1].strip()]
+                    i += 1
+                    # Continue capturing until we hit the next field or end
+                    while i < len(lines):
+                        next_line = lines[i].strip()
+                        # Check if this is the start of a new field
+                        if next_line and any(field + ':' in next_line.upper() for field in field_keywords):
+                            break
+                        if next_line:  # Include non-empty lines
+                            reasoning_parts.append(next_line)
+                        i += 1
+                    reasoning = ' '.join(reasoning_parts).strip()
+                    # Remove markdown artifacts
+                    reasoning = reasoning.replace('**', '').replace('***', '').strip()
+                    continue  # Don't increment i again since the while loop already did
+                    
                 elif 'PRESERVATION_SCORE' in line and ':' in line:
                     try:
                         preservation_score = float(line.split(':', 1)[1].strip())
                     except ValueError:
                         preservation_score = 0
+                    i += 1
+                    
                 elif 'KEYWORDS_USED' in line and ':' in line:
-                    keywords_str = line.split(':', 1)[1].strip()
+                    # Capture multi-line keywords
+                    keywords_parts = [line.split(':', 1)[1].strip()]
+                    i += 1
+                    # Continue capturing until we hit the next field or end
+                    while i < len(lines):
+                        next_line = lines[i].strip()
+                        # Check if this is the start of a new field
+                        if next_line and any(field + ':' in next_line.upper() for field in field_keywords):
+                            break
+                        if next_line:  # Include non-empty lines
+                            keywords_parts.append(next_line)
+                        i += 1
+                    keywords_str = ' '.join(keywords_parts).strip()
                     keywords_used = [kw.strip() for kw in keywords_str.split(',') if kw.strip()]
+                    continue  # Don't increment i again
+                    
                 elif 'CHANGES_MADE' in line and ':' in line:
-                    changes_str = line.split(':', 1)[1].strip()
+                    # Capture multi-line changes
+                    changes_parts = [line.split(':', 1)[1].strip()]
+                    i += 1
+                    # Continue capturing until we hit the next field or end
+                    while i < len(lines):
+                        next_line = lines[i].strip()
+                        # Check if this is the start of a new field
+                        if next_line and any(field + ':' in next_line.upper() for field in field_keywords):
+                            break
+                        if next_line:  # Include non-empty lines
+                            changes_parts.append(next_line)
+                        i += 1
+                    changes_str = ' '.join(changes_parts).strip()
                     changes_made = [c.strip() for c in changes_str.split(',') if c.strip()]
+                    continue  # Don't increment i again
+                    
                 elif 'WARNINGS' in line and ':' in line:
-                    warnings_str = line.split(':', 1)[1].strip()
+                    # Capture multi-line warnings
+                    warnings_parts = [line.split(':', 1)[1].strip()]
+                    i += 1
+                    # Continue capturing until we hit the next field or end
+                    while i < len(lines):
+                        next_line = lines[i].strip()
+                        # Check if this is the start of a new field
+                        if next_line and any(field + ':' in next_line.upper() for field in field_keywords):
+                            break
+                        if next_line:  # Include non-empty lines
+                            warnings_parts.append(next_line)
+                        i += 1
+                    warnings_str = ' '.join(warnings_parts).strip()
                     if warnings_str.lower() not in ['none', 'n/a', '']:
                         warnings = [w.strip() for w in warnings_str.split(',') if w.strip()]
                     else:
                         warnings = []
+                    continue  # Don't increment i again
+                    
                 elif 'REFINED_FEATURES' in line and ':' in line:
-                    refined_features = line.split(':', 1)[1].strip()
+                    # Capture multi-line refined features
+                    refined_parts = [line.split(':', 1)[1].strip()]
+                    i += 1
+                    # Continue capturing until we hit the next field or end
+                    while i < len(lines):
+                        next_line = lines[i].strip()
+                        # Check if this is the start of a new field
+                        if next_line and any(field + ':' in next_line.upper() for field in field_keywords):
+                            break
+                        if next_line:  # Include non-empty lines
+                            refined_parts.append(next_line)
+                        i += 1
+                    refined_features = '\n'.join(refined_parts).strip()
+                    # Remove markdown artifacts
+                    refined_features = refined_features.replace('**', '').replace('***', '').strip()
                     self.logger.info(f"Found REFINED_FEATURES: {refined_features[:100]}...")
+                    continue  # Don't increment i again
+                    
+                else:
+                    i += 1
             
             # If we couldn't parse anything meaningful, try to extract title from the response
             if optimized_title == product_data.current_title and len(response.strip()) > 50:

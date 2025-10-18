@@ -14,6 +14,10 @@ from src.services.llm_client import LLMClient
 from src.services.title_optimizer import TitleOptimizer
 from src.services.data_models import ProductData
 from src.services.encoding_service import EncodingService
+from src.services.content_optimizer import ContentOptimizer
+from src.services.description_generator import DescriptionGenerator, DescriptionGenerationResult
+from src.services.csv_manager import CSVManager
+from StreamlitTools.description_ui import DescriptionUI
 
 
 # Configuration
@@ -157,6 +161,16 @@ def main():
         st.session_state.optimized_title = None
     if 'cluster_optimize_scores' not in st.session_state:
         st.session_state.cluster_optimize_scores = {}
+    if 'description_generator' not in st.session_state:
+        st.session_state.description_generator = None
+    if 'csv_manager' not in st.session_state:
+        st.session_state.csv_manager = CSVManager()
+    if 'description_ui' not in st.session_state:
+        st.session_state.description_ui = None
+    if 'description_generated' not in st.session_state:
+        st.session_state.description_generated = False
+    if 'uploaded_files' not in st.session_state:
+        st.session_state.uploaded_files = {}
     
     # Sidebar for file uploads
     with st.sidebar:
@@ -212,8 +226,32 @@ def main():
                     required_columns = ['product_id', 'title']
                     if validate_csv_structure(df, required_columns, "Products"):
                         st.session_state.products_df = df
+                        # Store the uploaded file and its path for later use
+                        st.session_state.uploaded_files['titles'] = products_file
+                        st.session_state.uploaded_files['titles_path'] = products_file.name
+                        
+                        # Save the uploaded file to a known location with full path
+                        import os
+                        import shutil
+                        
+                        # Create uploads directory if it doesn't exist
+                        uploads_dir = "uploads"
+                        os.makedirs(uploads_dir, exist_ok=True)
+                        
+                        # Save the file with a known name
+                        saved_file_path = os.path.join(uploads_dir, "current_titles.csv")
+                        with open(saved_file_path, "wb") as f:
+                            f.write(products_file.getbuffer())
+                        
+                        # Store the full path
+                        st.session_state.uploaded_files['titles_full_path'] = os.path.abspath(saved_file_path)
+                        
+                        # Print file info
+                        st.success(f"✅ Loaded {len(df)} products from: {products_file.name}")
+                        st.info(f"📊 File details: {products_file.name} ({len(df)} rows)")
+                        st.info(f"💾 Saved to: {st.session_state.uploaded_files['titles_full_path']}")
+                        
                         # save_dataframe_to_cache(df, PRODUCTS_CACHE)  # Cache disabled
-                        st.success(f"Loaded {len(df)} products")
                         # st.rerun()  # Removed to prevent hiding second uploader
                     
             except Exception as e:
@@ -236,6 +274,8 @@ def main():
                     required_columns = ['product_id', 'search_term', 'cluster_id']
                     if validate_csv_structure(df, required_columns, "Search Terms Clusters"):
                         st.session_state.keywords_df = df
+                        # Store the uploaded file for later use
+                        st.session_state.uploaded_files['keywords'] = keywords_file
                         
                         # save_dataframe_to_cache(df, KEYWORDS_CACHE)  # Cacheadd the selected product and show the list of the cluster 
                         st.success(f"Loaded {len(df)} keyword entries")
@@ -504,27 +544,82 @@ def main():
             
             # Product selection (only for Products file)
             if selected_file == "Products":
+                # Add checkbox to filter products with description
+                show_only_with_description = st.checkbox(
+                    "Show only products with description",
+                    value=True,
+                    help="Filter the product list to only show products that have a non-null description"
+                )
+                
                 # Add checkbox to filter products with search terms
                 show_only_with_search_terms = st.checkbox(
                     "Show only products with search terms", 
-                    value=False,
+                    value=True,
                     help="Filter the product list to only show products that have associated search terms"
                 )
                 
-                # Filter products based on checkbox selection
+                # Add minimum search terms filter (only show if checkbox is checked)
+                min_search_terms = 1  # default value
                 if show_only_with_search_terms and st.session_state.keywords_df is not None:
-                    # Get product IDs that have search terms
-                    products_with_search_terms = set(st.session_state.keywords_df['product_id'].astype(str))
+                    # Calculate max search terms for any product to set slider range
+                    search_term_counts = st.session_state.keywords_df.groupby('product_id').size()
+                    max_terms = int(search_term_counts.max()) if len(search_term_counts) > 0 else 10
                     
-                    # Filter df_to_show to only include products with search terms
-                    filtered_df = df_to_show[df_to_show['product_id'].astype(str).isin(products_with_search_terms)]
+                    col1, col2 = st.columns([3, 1])
+                    with col1:
+                        min_search_terms = st.number_input(
+                            "Minimum search terms per product:",
+                            min_value=1,
+                            max_value=max_terms,
+                            value=2,
+                            step=1,
+                            help="Only show products with at least this many search terms"
+                        )
+                    with col2:
+                        # Show quick stats
+                        with st.expander("📊 Stats"):
+                            st.write(f"Max: {max_terms} terms")
+                            st.write(f"Avg: {search_term_counts.mean():.1f} terms")
+                
+                # Apply description filter first (if checked)
+                if show_only_with_description:
+                    # Check if 'description' column exists
+                    if 'description' in df_to_show.columns:
+                        # Filter to only products with non-null, non-empty descriptions
+                        description_filtered_df = df_to_show[
+                            df_to_show['description'].notna() & 
+                            (df_to_show['description'].astype(str).str.strip() != '')
+                        ]
+                        
+                        if len(description_filtered_df) == 0:
+                            st.warning("⚠️ No products found with description. Showing all products.")
+                            description_filtered_df = df_to_show
+                        else:
+                            st.info(f"📝 Showing {len(description_filtered_df)} products with description (out of {len(df_to_show)} total)")
+                        
+                        df_to_show = description_filtered_df
+                    else:
+                        st.warning("⚠️ 'description' column not found in products data.")
+                
+                # Filter products based on search terms checkbox selection
+                if show_only_with_search_terms and st.session_state.keywords_df is not None:
+                    # Count search terms per product
+                    search_term_counts = st.session_state.keywords_df.groupby('product_id').size()
+                    
+                    # Filter by minimum count
+                    products_with_min_search_terms = set(
+                        search_term_counts[search_term_counts >= min_search_terms].index.astype(str)
+                    )
+                    
+                    # Filter df_to_show to only include products with minimum search terms
+                    filtered_df = df_to_show[df_to_show['product_id'].astype(str).isin(products_with_min_search_terms)]
                     
                     if len(filtered_df) == 0:
-                        st.warning("⚠️ No products found with search terms. Showing all products.")
+                        st.warning(f"⚠️ No products found with at least {min_search_terms} search terms. Showing all products.")
                         filtered_df = df_to_show
                         show_only_with_search_terms = False
                     else:
-                        st.info(f"🔍 Showing {len(filtered_df)} products with search terms (out of {len(df_to_show)} total)")
+                        st.info(f"🔍 Showing {len(filtered_df)} products with ≥{min_search_terms} search terms (out of {len(df_to_show)} total)")
                 else:
                     filtered_df = df_to_show
                 
@@ -632,16 +727,50 @@ def main():
                         if 'product_type' in selected_product and pd.notna(selected_product['product_type']):
                             st.write(f"**Type:** {selected_product['product_type']}")
                 
-                # Add button to set this product for cluster exploration
+                # Add buttons to set this product for cluster exploration and description generation
                 st.write("---")
-                if st.button(f"🔍 Use This Product for Search Terms Analysis", type="primary"):
-                    st.session_state.selected_product_id_for_clusters = str(selected_product['product_id'])
-                    st.success(f"✅ Product {selected_product['product_id']} is now selected for search terms analysis!")
-                    st.info("Scroll down to the 'Product-Specific Search Terms Cluster Explorer' section to explore this product's search terms.")
+                col1, col2 = st.columns([2, 1])
+                
+                with col1:
+                    if st.button(f"🔍 Use This Product for Search Terms Analysis", type="primary"):
+                        st.session_state.selected_product_id_for_clusters = str(selected_product['product_id'])
+                        st.success(f"✅ Product {selected_product['product_id']} is now selected for search terms analysis!")
+                        st.info("Scroll down to the 'Product-Specific Search Terms Cluster Explorer' section to explore this product's search terms.")
+                
+                with col2:
+                    if st.session_state.description_ui:
+                        # Debug: Show description status
+                        description = selected_product.get('description', '')
+                        has_description = not (pd.isna(description) or str(description).strip() == '' or str(description).lower() in ['none', 'n/a', ''])
+                        st.caption(f"Description: {'✅ Has' if has_description else '❌ Missing'}")
+                        
+                        description_generated = st.session_state.description_ui.render_description_button(selected_product)
+                        if description_generated:
+                            st.session_state.description_generated = True
+                            st.rerun()
                 
                 # Show full product details in an expander
                 with st.expander("📋 Full Product Details", expanded=False):
                     st.json(selected_product.to_dict())
+                
+                # Description generation modal
+                if st.session_state.get('description_generated', False) and st.session_state.description_ui:
+                    # Get the CSV file path from the uploaded titles file
+                    csv_path = None
+                    
+                    # Use the stored full path from the uploaded titles file
+                    if hasattr(st.session_state, 'uploaded_files') and 'titles_full_path' in st.session_state.uploaded_files:
+                        csv_path = st.session_state.uploaded_files['titles_full_path']
+                        st.info(f"🔍 Using uploaded titles file: {csv_path}")
+                    else:
+                        st.warning("⚠️ No titles CSV file uploaded. Please upload a titles CSV file first.")
+                        csv_path = None
+                    
+                    if csv_path:
+                        st.session_state.description_ui.show_description_generation_modal(
+                            selected_product,
+                            csv_path
+                        )
                 
                 # Similarity Analysis - Product-Specific Search Terms
                 if st.session_state.keywords_df is not None:
@@ -773,19 +902,26 @@ def main():
                                 )
                                 
                                 if selected_cluster_for_detail is not None:
-                                    # Get search terms for selected cluster
-                                    cluster_terms = product_search_terms[
-                                        product_search_terms['cluster_id'] == selected_cluster_for_detail
-                                    ]
-                                    
-                                    # Show search terms for this cluster
-                                    st.write(f"**All Search Terms in Cluster {selected_cluster_for_detail}:**")
-                                    search_terms_for_cluster = cluster_terms['search_term'].unique()
-                                    search_terms_for_cluster = sorted(search_terms_for_cluster)
-                                    
-                                    for i, term in enumerate(search_terms_for_cluster, 1):
-                                        st.write(f"{i}. {term}")
-                                    
+                                    try:
+                                        # Get search terms for selected cluster
+                                        cluster_terms = product_search_terms[
+                                            product_search_terms['cluster_id'] == selected_cluster_for_detail
+                                        ]
+                                        
+                                        # Show search terms for this cluster
+                                        st.write(f"**All Search Terms in Cluster {selected_cluster_for_detail}:**")
+                                        search_terms_for_cluster = cluster_terms['search_term'].unique()
+                                        search_terms_for_cluster = sorted(search_terms_for_cluster)
+                                        
+                                        for i, term in enumerate(search_terms_for_cluster, 1):
+                                            st.write(f"{i}. {term}")
+                                        
+                                    except Exception as e:
+                                        st.error(f"❌ Error calculating similarities: {e}")
+                                        st.write("Debug info:")
+                                        st.write(f"Product title: {selected_product['title']}")
+                                        st.write(f"Product search terms shape: {product_search_terms.shape}")
+                            
                             except Exception as e:
                                 st.error(f"❌ Error calculating similarities: {e}")
                                 st.write("Debug info:")
@@ -830,7 +966,14 @@ def main():
                                 
                                 # Initialize title optimizer
                                 st.session_state.title_optimizer = TitleOptimizer(llm_client)
-                                st.success("✅ Title optimizer initialized successfully")
+                                
+                                # Initialize description generator
+                                st.session_state.description_generator = DescriptionGenerator(llm_client)
+                                st.session_state.description_ui = DescriptionUI(
+                                    st.session_state.description_generator, 
+                                    st.session_state.csv_manager
+                                )
+                                st.success("✅ Title optimizer and description generator initialized successfully")
                                 
                         except ImportError as e:
                             st.error(f"❌ Missing dependencies: {e}")
@@ -899,25 +1042,53 @@ def main():
                             help="Preserve Max Info keeps most of the original title. Standard is more aggressive optimization."
                         )
                         
-                        # Feature refinement mode checkbox
-                        st.write("**Feature Refinement Options:**")
+                        # Element selection checkboxes
+                        st.write("**Select Elements to Optimize:**")
+                        col1, col2, col3 = st.columns(3)
                         
-                        # Check if product has features
-                        has_features = 'features' in selected_product and pd.notna(selected_product['features']) and str(selected_product['features']).strip()
-                        
-                        if has_features:
-                            feature_refinement_mode = st.checkbox(
-                                "Enable Feature Refinement Mode",
-                                value=False,
-                                help="When enabled, the AI can refine both the title AND add one new feature to better incorporate search terms. Similarity will be calculated against title + refined features."
+                        with col1:
+                            optimize_title = st.checkbox(
+                                "📝 Title",
+                                value=True,
+                                help="Optimize the product title"
                             )
+                        with col2:
+                            # Check if product has features
+                            has_features = 'features' in selected_product and pd.notna(selected_product['features']) and str(selected_product['features']).strip()
+                            optimize_features = st.checkbox(
+                                "🔖 Features",
+                                value=has_features,  # Checked by default if features are available
+                                disabled=not has_features,
+                                help="Optimize product features" if has_features else "No features available for this product"
+                            )
+                        with col3:
+                            # Check if product has description
+                            has_description = 'description' in selected_product and pd.notna(selected_product['description']) and str(selected_product['description']).strip()
+                            optimize_description = st.checkbox(
+                                "📄 Description",
+                                value=False,
+                                disabled=not has_description,
+                                help="Optimize product description" if has_description else "No description available for this product"
+                            )
+                        
+                        # Validate at least one is selected
+                        if not (optimize_title or optimize_features or optimize_description):
+                            st.error("⚠️ Please select at least one element to optimize")
+                            elements_selected = False
                         else:
-                            st.info("ℹ️ **No features available for this product. Feature refinement mode is disabled.**")
-                            feature_refinement_mode = False
+                            elements_selected = True
+                            selected_elements = []
+                            if optimize_title:
+                                selected_elements.append("Title")
+                            if optimize_features:
+                                selected_elements.append("Features")
+                            if optimize_description:
+                                selected_elements.append("Description")
+                            st.info(f"✅ Optimizing: {', '.join(selected_elements)}")
                         
                         # Show optimization button
-                        if st.button("🚀 Optimize Title", type="primary"):
-                            if 'title_optimizer' in st.session_state and all_search_terms:
+                        if st.button("🚀 Optimize Content", type="primary"):
+                            if elements_selected and all_search_terms:
                                 try:
                                     # Prepare product data
                                     # Handle features properly - convert string to list if needed
@@ -938,16 +1109,80 @@ def main():
                                         features=features
                                     )
                                     
-                                    # Set prompt mode
-                                    st.session_state.title_optimizer.set_prompt_mode(prompt_mode)
-                                    
-                                    # Optimize title
-                                    with st.spinner("🔍 Optimizing title with AI..."):
-                                        result = st.session_state.title_optimizer.optimize_title(
-                                            product_data, 
-                                            all_search_terms,
-                                            feature_refinement_mode
-                                        )
+                                    # Determine which optimizer to use based on selected elements
+                                    if optimize_description:
+                                        # Use ContentOptimizer when description is selected
+                                        if 'content_optimizer' not in st.session_state:
+                                            # Initialize ContentOptimizer with same LLM client
+                                            api_key = os.getenv("OPENAI_API_KEY") or os.getenv("OPENAI_KEY")
+                                            llm_client = LLMClient(
+                                                api_key=api_key,
+                                                model_name=os.getenv("LLM_MODEL_NAME", "gpt-3.5-turbo")
+                                            )
+                                            st.session_state.content_optimizer = ContentOptimizer(llm_client)
+                                        
+                                        st.session_state.content_optimizer.set_prompt_mode(prompt_mode)
+                                        
+                                        # Optimize with ContentOptimizer
+                                        with st.spinner("🔍 Optimizing content with AI..."):
+                                            # Prepare search terms with priority (default priority 1)
+                                            search_terms_with_priority = [{"term": term, "priority": 1} for term in all_search_terms]
+                                            
+                                            # Determine element order based on what's selected
+                                            element_order = []
+                                            if optimize_title:
+                                                element_order.append("title")
+                                            if optimize_features:
+                                                element_order.append("features")
+                                            if optimize_description:
+                                                element_order.append("description")
+                                            
+                                            # Get current content
+                                            current_title = selected_product.get('title', '')
+                                            current_features = str(selected_product.get('features', ''))
+                                            current_description = selected_product.get('description', '')
+                                            
+                                            # Call ContentOptimizer
+                                            content_result = st.session_state.content_optimizer.optimize_content(
+                                                current_title=current_title,
+                                                current_features=current_features,
+                                                current_description=current_description,
+                                                search_terms=search_terms_with_priority,
+                                                element_order=element_order,
+                                                product_data=product_data
+                                            )
+                                            
+                                            # Convert ContentOptimizationResult to OptimizationResult format for compatibility
+                                            result = type('obj', (object,), {
+                                                'original_title': content_result.original_title,
+                                                'optimized_title': content_result.optimized_title,
+                                                'target_search_term': ', '.join(all_search_terms),
+                                                'confidence_score': content_result.confidence_score,
+                                                'optimization_reasoning': content_result.reasoning,
+                                                'keywords_used': all_search_terms,
+                                                'warnings': content_result.warnings,
+                                                'processing_time': content_result.processing_time,
+                                                'model_used': content_result.model_used,
+                                                'original_features': content_result.original_features,
+                                                'refined_features': content_result.optimized_features,
+                                                'optimized_description': content_result.optimized_description,
+                                                'feature_refinement_mode': optimize_features
+                                            })()
+                                    else:
+                                        # Use TitleOptimizer for title and/or features only
+                                        if 'title_optimizer' not in st.session_state:
+                                            st.error("❌ Title optimizer not initialized")
+                                            raise Exception("Title optimizer not initialized")
+                                        
+                                        st.session_state.title_optimizer.set_prompt_mode(prompt_mode)
+                                        
+                                        # Optimize with TitleOptimizer
+                                        with st.spinner("🔍 Optimizing with AI..."):
+                                            result = st.session_state.title_optimizer.optimize_title(
+                                                product_data, 
+                                                all_search_terms,
+                                                feature_refinement_mode=optimize_features
+                                            )
                                     
                                     # Store the optimized title for similarity calculation
                                     st.session_state.optimized_title = result.optimized_title
@@ -969,9 +1204,9 @@ def main():
                                                 first_term = cluster_terms['search_term'].iloc[0]
                                                 
                                                 # Calculate similarity between optimized title and first term
-                                                # Use title + refined features if feature refinement mode is enabled
+                                                # Use title + refined features if features were optimized
                                                 text_for_similarity = result.optimized_title
-                                                if feature_refinement_mode and result.refined_features:
+                                                if hasattr(result, 'refined_features') and result.refined_features:
                                                     text_for_similarity = f"{result.optimized_title} {result.refined_features}"
                                                 
                                                 if st.session_state.encoding_service is not None:
@@ -1003,7 +1238,11 @@ def main():
                                     st.subheader("🎯 Optimization Results")
                                     
                                     
-                                    # Side by side comparison
+                                    # Display results based on what was optimized
+                                    
+                                    # Title comparison (if optimized)
+                                    if optimize_title:
+                                        st.write("### 📝 Title Optimization")
                                     col1, col2 = st.columns(2)
                                     with col1:
                                         st.write("**Original Title:**")
@@ -1012,9 +1251,9 @@ def main():
                                         st.write("**Optimized Title:**")
                                         st.success(result.optimized_title)
                                     
-                                    # Show features section
-                                    if result.original_features or result.refined_features:
-                                        st.write("**🔧 Product Features:**")
+                                    # Features comparison (if optimized)
+                                    if optimize_features and (result.original_features or result.refined_features):
+                                        st.write("### 🔖 Features Optimization")
                                         
                                         if result.refined_features and result.refined_features.lower() != "no changes to features":
                                             # Show both original and refined features
@@ -1043,6 +1282,21 @@ def main():
                                                 st.info(result.original_features)
                                             else:
                                                 st.info("No features available")
+                                    
+                                    # Description comparison (if optimized)
+                                    if optimize_description and hasattr(result, 'optimized_description'):
+                                        st.write("### 📄 Description Optimization")
+                                        col1, col2 = st.columns(2)
+                                        with col1:
+                                            st.write("**Original Description:**")
+                                            original_desc = selected_product.get('description', 'No description')
+                                            st.info(original_desc)
+                                        with col2:
+                                            st.write("**Optimized Description:**")
+                                            if result.optimized_description:
+                                                st.success(result.optimized_description)
+                                            else:
+                                                st.warning("No optimized description generated")
                                     
                                     # Additional details
                                     col1, col2, col3 = st.columns(3)

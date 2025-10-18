@@ -163,6 +163,7 @@ TitleData/
 *.csv
 *.xlsx
 *.xls
+uploads/
 
 # Logs
 *.log
