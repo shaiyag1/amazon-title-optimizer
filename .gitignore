@@ -3,6 +3,9 @@ __pycache__/
 *.py[cod]
 *$py.class
 
+# Project-specific files
+product_content_list.csv
+
 # C extensions
 *.so
 

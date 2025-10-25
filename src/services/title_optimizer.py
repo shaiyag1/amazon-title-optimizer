@@ -7,7 +7,7 @@ import time
 import logging
 from typing import List, Dict, Any
 from .data_models import ProductData, OptimizationResult
-from src.services.llm_client import LLMClient
+from .llm_client import LLMClient
 
 
 class TitleOptimizer:

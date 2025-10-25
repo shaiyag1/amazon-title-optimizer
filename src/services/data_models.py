@@ -82,3 +82,36 @@ class OptimizationResult:
             result['refined_features'] = self.refined_features
             
         return result
+
+@dataclass
+class DescriptionOptimizationResult:
+    """Result of description optimization"""
+    original_description: str
+    optimized_description: str
+    target_search_terms: List[str]
+    confidence_score: float  # 0.0 to 1.0
+    optimization_reasoning: str
+    keywords_used: List[str]
+    warnings: List[str]
+    processing_time: float  # seconds
+    model_used: str
+    intense_directive: Optional[str] = None
+    intense_directive_applied: bool = False
+    preservation_score: float = 0.0  # 0-100 percentage
+    
+    def to_dict(self) -> Dict[str, Any]:
+        """Convert to dictionary for display"""
+        return {
+            'original_description': self.original_description,
+            'optimized_description': self.optimized_description,
+            'target_search_terms': self.target_search_terms,
+            'confidence_score': self.confidence_score,
+            'optimization_reasoning': self.optimization_reasoning,
+            'keywords_used': self.keywords_used,
+            'warnings': self.warnings,
+            'processing_time': self.processing_time,
+            'model_used': self.model_used,
+            'intense_directive': self.intense_directive,
+            'intense_directive_applied': self.intense_directive_applied,
+            'preservation_score': self.preservation_score
+        }
