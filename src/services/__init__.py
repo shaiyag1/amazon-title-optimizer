@@ -9,6 +9,7 @@ from .title_optimizer import TitleOptimizer
 from .encoding_service import EncodingService
 from .description_generator import DescriptionGenerator, DescriptionGenerationResult
 from .csv_manager import CSVManager
+from .bullets_optimizer import AmazonProductBulletsOptimizer, BulletsOptimizationResult
 
 __all__ = [
     'ProductData',
@@ -18,7 +19,9 @@ __all__ = [
     'EncodingService',
     'DescriptionGenerator',
     'DescriptionGenerationResult',
-    'CSVManager'
+    'CSVManager',
+    'AmazonProductBulletsOptimizer',
+    'BulletsOptimizationResult'
 ]
 
 # Package version

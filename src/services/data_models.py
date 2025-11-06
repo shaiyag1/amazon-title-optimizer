@@ -115,3 +115,5 @@ class DescriptionOptimizationResult:
             'intense_directive_applied': self.intense_directive_applied,
             'preservation_score': self.preservation_score
         }
+
+# Note: BulletsOptimizationResult is defined in bullets_optimizer.py to avoid circular imports
