@@ -1106,6 +1106,158 @@ class InfluencerAnalyzer:
         df = df.head(limit).reset_index(drop=True)
         
         return df
+    
+    def get_first_hour_engagement(self, usernames: List[str], days_back: int = 10) -> pd.DataFrame:
+        """
+        Get first hour engagement metrics for tweets created by specified users in the last N days
+        For each tweet, finds the first 3 samples within the first hour and calculates engagement
+        
+        Args:
+            usernames: List of usernames to analyze
+            days_back: Number of days to look back (default 10)
+        
+        Returns DataFrame with tweet details and first hour engagement metrics
+        """
+        if not usernames:
+            return pd.DataFrame()
+        
+        # Sanitize usernames and remove @ if present
+        sanitized_usernames = []
+        for username in usernames:
+            username = username.strip()
+            if username.startswith('@'):
+                username = username[1:]
+            sanitized_usernames.append(username.replace("'", "''"))  # SQL injection protection
+        
+        usernames_str = "', '".join(sanitized_usernames)
+        
+        sql = f"""
+        WITH user_tweets AS (
+            -- Get tweets created by these users in the last N days
+            SELECT 
+                t.id as tweet_id,
+                t.author_id,
+                t.author_username,
+                t.text as tweet_text,
+                t.created_at
+            FROM twitter.tweets t
+            WHERE t.author_username IN ('{usernames_str}')
+              AND t.created_at >= NOW() - INTERVAL '{days_back} days'
+              AND t.created_at <= NOW()
+        ),
+        first_hour_samples AS (
+            -- Get samples within the first hour (first 3 samples per tweet)
+            SELECT 
+                tmh.id as tweet_id,
+                tmh.author_id,
+                tmh.author_username,
+                tmh.like_count,
+                tmh.reply_count,
+                tmh.retweet_count,
+                tmh.impression_count as views,
+                tmh.x_fetched_at,
+                ut.created_at as tweet_created_at,
+                ut.tweet_text,
+                ROW_NUMBER() OVER (
+                    PARTITION BY tmh.id 
+                    ORDER BY tmh.x_fetched_at ASC
+                ) as sample_rank
+            FROM twitter.tweets_metrics_history tmh
+            INNER JOIN user_tweets ut ON tmh.id = ut.tweet_id
+            WHERE tmh.x_fetched_at >= ut.created_at
+              AND tmh.x_fetched_at <= ut.created_at + INTERVAL '1 hour'
+        ),
+        first_three_samples AS (
+            -- Get only the first 3 samples per tweet
+            SELECT *
+            FROM first_hour_samples
+            WHERE sample_rank <= 3
+        ),
+        tweet_first_hour_stats AS (
+            -- Aggregate metrics: first sample, last sample, and growth during first hour
+            SELECT 
+                tweet_id,
+                author_id,
+                author_username,
+                tweet_text,
+                tweet_created_at,
+                COUNT(*) as sample_count,
+                MIN(x_fetched_at) as first_sample_time,
+                MAX(x_fetched_at) as last_sample_time,
+                MAX(CASE WHEN sample_rank = 1 THEN like_count END) as first_likes,
+                MAX(CASE WHEN sample_rank = 1 THEN views END) as first_views,
+                MAX(CASE WHEN sample_rank = 1 THEN reply_count END) as first_replies,
+                MAX(CASE WHEN sample_rank = 1 THEN retweet_count END) as first_retweets,
+                MAX(like_count) as max_likes_first_hour,
+                MAX(views) as max_views_first_hour,
+                MAX(reply_count) as max_replies_first_hour,
+                MAX(retweet_count) as max_retweets_first_hour,
+                MAX(like_count) - COALESCE(MAX(CASE WHEN sample_rank = 1 THEN like_count END), 0) as likes_growth_first_hour,
+                MAX(views) - COALESCE(MAX(CASE WHEN sample_rank = 1 THEN views END), 0) as views_growth_first_hour,
+                MAX(reply_count) - COALESCE(MAX(CASE WHEN sample_rank = 1 THEN reply_count END), 0) as replies_growth_first_hour,
+                MAX(retweet_count) - COALESCE(MAX(CASE WHEN sample_rank = 1 THEN retweet_count END), 0) as retweets_growth_first_hour
+            FROM first_three_samples
+            GROUP BY tweet_id, author_id, author_username, tweet_text, tweet_created_at
+        ),
+        current_tweet_metrics AS (
+            -- Get the latest/current metrics for each tweet (not just first hour)
+            SELECT 
+                tmh.id as tweet_id,
+                MAX(tmh.like_count) as total_likes,
+                MAX(tmh.impression_count) as total_views,
+                MAX(tmh.reply_count) as total_replies,
+                MAX(tmh.retweet_count) as total_retweets
+            FROM twitter.tweets_metrics_history tmh
+            INNER JOIN user_tweets ut ON tmh.id = ut.tweet_id
+            GROUP BY tmh.id
+        )
+        SELECT 
+            tfhs.author_username,
+            tfhs.author_id,
+            tfhs.tweet_id,
+            tfhs.tweet_text,
+            tfhs.tweet_created_at,
+            tfhs.sample_count,
+            tfhs.first_sample_time,
+            tfhs.last_sample_time,
+            COALESCE(tfhs.first_likes, 0) as first_likes,
+            COALESCE(tfhs.first_views, 0) as first_views,
+            COALESCE(tfhs.first_replies, 0) as first_replies,
+            COALESCE(tfhs.first_retweets, 0) as first_retweets,
+            COALESCE(tfhs.max_likes_first_hour, 0) as max_likes_first_hour,
+            COALESCE(tfhs.max_views_first_hour, 0) as max_views_first_hour,
+            COALESCE(tfhs.max_replies_first_hour, 0) as max_replies_first_hour,
+            COALESCE(tfhs.max_retweets_first_hour, 0) as max_retweets_first_hour,
+            COALESCE(tfhs.likes_growth_first_hour, 0) as likes_growth_first_hour,
+            COALESCE(tfhs.views_growth_first_hour, 0) as views_growth_first_hour,
+            COALESCE(tfhs.replies_growth_first_hour, 0) as replies_growth_first_hour,
+            COALESCE(tfhs.retweets_growth_first_hour, 0) as retweets_growth_first_hour,
+            COALESCE(ctm.total_likes, 0) as total_likes,
+            COALESCE(ctm.total_views, 0) as total_views
+        FROM tweet_first_hour_stats tfhs
+        LEFT JOIN current_tweet_metrics ctm ON tfhs.tweet_id = ctm.tweet_id
+        ORDER BY tfhs.author_username, tfhs.tweet_created_at DESC;
+        """
+        
+        result = self.db.query(sql)
+        
+        if result and len(result) > 0:
+            df = pd.DataFrame(result)
+            
+            # Convert numeric columns
+            numeric_cols = [
+                'sample_count', 'first_likes', 'first_views', 'first_replies', 'first_retweets',
+                'max_likes_first_hour', 'max_views_first_hour', 'max_replies_first_hour', 'max_retweets_first_hour',
+                'likes_growth_first_hour', 'views_growth_first_hour', 'replies_growth_first_hour', 'retweets_growth_first_hour',
+                'total_likes', 'total_views'
+            ]
+            for col in numeric_cols:
+                if col in df.columns:
+                    df[col] = pd.to_numeric(df[col], errors='coerce').fillna(0)
+            
+            return df
+        else:
+            return pd.DataFrame()
 
 
 # Streamlit App
@@ -1771,6 +1923,209 @@ try:
                     )
                 else:
                     st.warning("⚠️ No tweets found for the specified time range")
+    
+    st.markdown("---")
+    
+    # First Hour Engagement Analysis Section
+    st.subheader("⏱️ First Hour Engagement Analysis")
+    with st.expander("📊 Analyze First Hour Engagement for User List", expanded=False):
+        st.markdown("Enter Twitter usernames separated by commas to analyze their first hour engagement")
+        
+        # Text input for comma-separated usernames
+        usernames_input = st.text_input(
+            "Twitter Usernames (comma-separated):",
+            placeholder="Example: netanyahu, amit_segal, DrEliDavid",
+            help="Enter usernames separated by commas. The @ symbol is optional."
+        )
+        
+        col_days, col_limit = st.columns(2)
+        with col_days:
+            days_back = st.selectbox("Days to look back:", [5, 7, 10, 14, 30], index=2, key="first_hour_days")
+        with col_limit:
+            max_tweets_per_user = st.number_input("Max tweets per user:", min_value=1, max_value=50, value=5, step=1, key="first_hour_max_tweets")
+        
+        col_sort_by, col_show_all = st.columns(2)
+        with col_sort_by:
+            sort_by_metric = st.radio(
+                "Sort by (for top tweets):",
+                options=['max_likes_first_hour', 'max_views_first_hour'],
+                index=1,
+                key="first_hour_sort_by",
+                horizontal=True,
+                help="Sort tweets by likes or views in first hour to find strongest tweets"
+            )
+        with col_show_all:
+            show_all_tweets = st.checkbox("Show all tweets (ignore limit)", value=False, key="first_hour_show_all")
+        
+        if st.button("🔍 Analyze First Hour Engagement", type="primary", key="btn_first_hour"):
+            if usernames_input:
+                # Parse usernames from comma-separated input
+                usernames_list = [username.strip().lstrip('@') for username in usernames_input.split(',') if username.strip()]
+                
+                if usernames_list:
+                    with st.spinner(f"Analyzing first hour engagement for {len(usernames_list)} users from last {days_back} days..."):
+                        first_hour_df = analyzer.get_first_hour_engagement(usernames_list, days_back=days_back)
+                        
+                        if not first_hour_df.empty:
+                            # Store raw data in session state
+                            st.session_state.first_hour_raw_data = first_hour_df
+                            st.success(f"✅ Found {len(first_hour_df)} tweets from {first_hour_df['author_username'].nunique()} users")
+                        else:
+                            st.warning("⚠️ No tweets found for the specified users and date range")
+        
+        # Process and display stored data with filters
+        if 'first_hour_raw_data' in st.session_state and not st.session_state.first_hour_raw_data.empty:
+            first_hour_df_raw = st.session_state.first_hour_raw_data.copy()
+            
+            st.info("💡 You can adjust the filters above to change the displayed results (max tweets per user, sort by, show all)")
+            
+            # Apply filtering: get top N tweets per user based on sort metric
+            if not show_all_tweets:
+                # Sort by selected metric and get top N per user
+                first_hour_df = first_hour_df_raw.sort_values(sort_by_metric, ascending=False).groupby('author_username').head(max_tweets_per_user).reset_index(drop=True)
+            else:
+                first_hour_df = first_hour_df_raw.copy()
+            
+            # Sort the final dataframe by the selected metric
+            first_hour_df = first_hour_df.sort_values(sort_by_metric, ascending=False).reset_index(drop=True)
+            
+            if not first_hour_df.empty:
+                # Show filter info
+                filter_info = f"Showing top {max_tweets_per_user} tweets per user" if not show_all_tweets else "Showing all tweets"
+                sort_label = "views" if sort_by_metric == 'max_views_first_hour' else "likes"
+                st.success(f"📊 {filter_info} (sorted by {sort_label} in first hour) | Total: {len(first_hour_df)} tweets from {first_hour_df['author_username'].nunique()} users")
+                
+                # Display summary metrics
+                col1, col2, col3, col4 = st.columns(4)
+                with col1:
+                    st.metric("Total Tweets", len(first_hour_df))
+                with col2:
+                    st.metric("Total Users", first_hour_df['author_username'].nunique())
+                with col3:
+                    st.metric("Total Likes (1h)", f"{first_hour_df['max_likes_first_hour'].sum():,}")
+                with col4:
+                    st.metric("Total Views (1h)", f"{first_hour_df['max_views_first_hour'].sum():,}")
+                
+                # Per-user summary
+                st.markdown("### Per-User Summary")
+                user_summary = first_hour_df.groupby('author_username').agg({
+                    'tweet_id': 'count',
+                    'max_likes_first_hour': 'sum',
+                    'max_views_first_hour': 'sum',
+                    'max_replies_first_hour': 'sum',
+                    'max_retweets_first_hour': 'sum',
+                    'likes_growth_first_hour': 'sum',
+                    'views_growth_first_hour': 'sum'
+                }).reset_index()
+                
+                user_summary.columns = [
+                    'Username', 'Tweet Count', 'Total Likes (1h)', 'Total Views (1h)',
+                    'Total Replies (1h)', 'Total Retweets (1h)', 'Likes Growth (1h)', 'Views Growth (1h)'
+                ]
+                
+                st.dataframe(
+                    user_summary.sort_values('Total Views (1h)', ascending=False),
+                    use_container_width=True,
+                    hide_index=True
+                )
+                
+                # Display detailed results
+                st.markdown(f"### Detailed Results - {len(first_hour_df)} Tweets")
+                
+                # Format the dataframe for display
+                display_first_hour = first_hour_df.copy()
+                
+                # Format datetime columns
+                if 'tweet_created_at' in display_first_hour.columns:
+                    display_first_hour['tweet_created_at'] = pd.to_datetime(display_first_hour['tweet_created_at']).apply(
+                        lambda x: x.strftime('%Y-%m-%d %H:%M:%S') if pd.notna(x) else 'N/A'
+                    )
+                if 'first_sample_time' in display_first_hour.columns:
+                    display_first_hour['first_sample_time'] = pd.to_datetime(display_first_hour['first_sample_time']).apply(
+                        lambda x: x.strftime('%Y-%m-%d %H:%M:%S') if pd.notna(x) else 'N/A'
+                    )
+                if 'last_sample_time' in display_first_hour.columns:
+                    display_first_hour['last_sample_time'] = pd.to_datetime(display_first_hour['last_sample_time']).apply(
+                        lambda x: x.strftime('%Y-%m-%d %H:%M:%S') if pd.notna(x) else 'N/A'
+                    )
+                
+                # Fill NaN for tweet_text
+                if 'tweet_text' in display_first_hour.columns:
+                    display_first_hour['tweet_text'] = display_first_hour['tweet_text'].fillna('(No text available)')
+                
+                # Generate tweet URLs
+                def generate_tweet_url(row):
+                    tweet_id = row.get('tweet_id')
+                    if pd.notna(tweet_id):
+                        try:
+                            return build_twitter_url('tweet', tweet_id=int(tweet_id))
+                        except (ValueError, TypeError):
+                            return ''
+                    return ''
+                
+                display_first_hour['tweet_url'] = display_first_hour.apply(generate_tweet_url, axis=1)
+                
+                # Select and rename columns for display
+                # Reorder: max metrics right after tweet_text, total metrics and URL at the end
+                # Create a mapping of original column names to display names
+                column_mapping = {
+                    'author_username': 'Username',
+                    'author_id': 'Author ID',
+                    'tweet_id': 'Tweet ID',
+                    'tweet_text': 'Tweet Text',
+                    'max_likes_first_hour': 'Max Likes (1h)',
+                    'max_views_first_hour': 'Max Views (1h)',
+                    'max_replies_first_hour': 'Max Replies (1h)',
+                    'max_retweets_first_hour': 'Max Retweets (1h)',
+                    'tweet_created_at': 'Created At',
+                    'sample_count': 'Samples',
+                    'first_sample_time': 'First Sample',
+                    'last_sample_time': 'Last Sample',
+                    'first_likes': 'First Likes',
+                    'first_views': 'First Views',
+                    'first_replies': 'First Replies',
+                    'first_retweets': 'First Retweets',
+                    'likes_growth_first_hour': 'Likes Growth (1h)',
+                    'views_growth_first_hour': 'Views Growth (1h)',
+                    'replies_growth_first_hour': 'Replies Growth (1h)',
+                    'retweets_growth_first_hour': 'Retweets Growth (1h)',
+                    'total_views': 'Total Views',
+                    'total_likes': 'Total Likes',
+                    'tweet_url': 'Tweet URL'
+                }
+                
+                # Define the desired column order
+                desired_order = [
+                    'author_username', 'author_id', 'tweet_id', 'tweet_text',
+                    'max_likes_first_hour', 'max_views_first_hour', 'max_replies_first_hour', 'max_retweets_first_hour',
+                    'tweet_created_at',
+                    'sample_count', 'first_sample_time', 'last_sample_time',
+                    'first_likes', 'first_views', 'first_replies', 'first_retweets',
+                    'likes_growth_first_hour', 'views_growth_first_hour', 'replies_growth_first_hour', 'retweets_growth_first_hour',
+                    'total_views', 'total_likes', 'tweet_url'
+                ]
+                
+                # Filter to only include columns that exist and maintain order
+                available_cols = [col for col in desired_order if col in display_first_hour.columns]
+                display_first_hour_filtered = display_first_hour[available_cols].copy()
+                
+                # Rename columns using the mapping
+                display_first_hour_filtered = display_first_hour_filtered.rename(columns=column_mapping)
+                
+                st.dataframe(
+                    display_first_hour_filtered,
+                    use_container_width=True,
+                    hide_index=True
+                )
+                
+                # Download button
+                csv_first_hour = first_hour_df.to_csv(index=False).encode('utf-8')
+                st.download_button(
+                    label="📥 Download First Hour Engagement as CSV",
+                    data=csv_first_hour,
+                    file_name=f"first_hour_engagement_{datetime.now().strftime('%Y%m%d_%H%M%S')}.csv",
+                    mime="text/csv"
+                )
     
     st.markdown("---")
     
